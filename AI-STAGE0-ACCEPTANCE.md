@@ -106,9 +106,60 @@ DeepSeek 实测返回的 `tool_calls` 结构（`id` / `type` / `function.name` /
 | 3 | `endpointUrl` 原样当 URL，不补 `/v1/chat/completions` | 用户必须手打全路径，是接入失败的头号原因 | P1 供应商预设里解决 |
 | 4 | `stream: false` | 长答案期间界面只有转圈 | P1 加 SSE |
 | 5 | 错误文案全英文硬编码（`_formatNetworkErrorText` 等） | 中文用户看不懂失败原因 | P1 |
+| 6 | **配置了视频源后，下次启动即崩**（详见 5.1） | QGC 完全打不开，且现象像"程序坏了" | **必须修**，演示前务必确认 `videoSource=Disabled` |
 
 未覆盖项（需后续补验）：控制台类工具在 MockLink 上的**成功路径**（本次只观察到
 `state: unavailable` 的降级返回，符合预期但非成功样本）；MAVLink 工具的确认弹窗未触发。
+
+### 5.1 视频源导致启动崩溃（2026-11-03 定位）
+
+**现象**：双击启动时弹出 MSVC 断言框，随后进程以 `0xC0000005` 退出。
+
+```
+ASSERT: "c->sender == q_ptr" in file ...\qtbase\src\corelib\kernel\qobject.cpp, line 275
+Program: D:\Qt\6.8.3\msvc2022_64\bin\Qt6Cored.dll
+```
+
+**根因**：`%APPDATA%\QGroundControl\QGroundControl Daily.ini` 里出现
+
+```ini
+[Video]
+videoSource=UDP h.264 Video Stream
+```
+
+本构建因 GStreamer 依赖装不上，视频后端改用 QtMultimedia（见交接文档第 7 节第 2 条），
+该后端在启动时初始化这路 UDP 流会触发 Qt 内部的对象连接断言。
+
+**定位过程**（三次启动对照，结论互相印证）：
+
+| 配置 | 结果 |
+|---|---|
+| 移走整个 INI，用全新配置 | ✅ 正常启动 |
+| 保留 INI、只删除 `[Video]` 段 | ✅ 正常启动 |
+| 保留 INI、只删除 `[AIConsole]` 段 | ❌ 崩溃（排除 AI 配置） |
+| 原样 INI | ❌ 崩溃 |
+| `videoSource` 改为 `Disabled` | ✅ 正常启动 |
+
+**与其他猜测的排除**：清空 QML 磁盘缓存（386 个 `.qmlc`）后仍崩溃，说明与 QML 缓存无关；
+PATH 中同时存在 Qt 6.8.3 与 6.12.0 时仍能正常启动，说明不是 DLL 混用。
+
+**修复方式（临时）**：
+
+```powershell
+$ini = "$env:APPDATA\QGroundControl\QGroundControl Daily.ini"
+(Get-Content $ini -Raw) -replace '(?m)^videoSource=.*$', 'videoSource=Disabled' |
+    Set-Content $ini -NoNewline
+```
+
+或直接把整个 `[Video]` 段删掉（`videoSource` 的默认值就是空字符串）。
+
+**为什么必须记为高优先级**：在"应用设置 → 视频"里把视频源从"禁用"改成任何一路流，
+下次启动就再也打不开。演示环境里只要有人点过这一项，现场就会无法启动，而且现象
+看起来像程序彻底坏了，很难当场联想到是视频设置。
+
+**后续该做的（P2 之后）**：排查 `VideoManager` 在 QtMultimedia 后端下创建 receiver 时
+的连接生命周期，让无流可接时安全降级为"禁用"，而不是断言崩溃。
+
 
 ---
 
