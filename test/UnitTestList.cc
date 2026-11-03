@@ -11,6 +11,9 @@
 #include "UnitTest.h"
 #include "QGCLoggingCategory.h"
 
+#include <QtCore/QDir>
+#include <QtCore/QFile>
+
 // ADSB
 #include "ADSBTest.h"
 
@@ -118,6 +121,22 @@
 
 QGC_LOGGING_CATEGORY(UnitTestsLog, "qgc.test.unittestlist")
 
+namespace {
+
+/// Where QtTest result files and the summary are written. QGC_UNITTEST_OUTPUT lets a CI
+/// job or a developer pick a directory; otherwise the current working directory is used.
+QString unitTestOutputDir()
+{
+    const QString overrideDir = qEnvironmentVariable("QGC_UNITTEST_OUTPUT");
+    if (!overrideDir.isEmpty()) {
+        QDir().mkpath(overrideDir);
+        return overrideDir;
+    }
+    return QDir::currentPath();
+}
+
+} // namespace
+
 int runTests(bool stress, QStringView unitTestOptions)
 {
     // ADSB
@@ -223,14 +242,28 @@ int runTests(bool stress, QStringView unitTestOptions)
 
     int result = 0;
 
+    const QString outputDir = unitTestOutputDir();
+
     for (int i=0; i < (stress ? 20 : 1); i++) {
         // Run the test
-        const int failures = UnitTest::run(unitTestOptions);
+        const int failures = UnitTest::run(unitTestOptions, outputDir);
+
+        const QString summaryLine = (failures == 0)
+            ? QStringLiteral("ALL TESTS PASSED")
+            : QStringLiteral("%1 TESTS FAILED").arg(failures);
+        qDebug() << summaryLine;
+
+        // Persist the verdict as well: a headless GUI-subsystem run has no usable
+        // stdout/stderr, so the exit code alone is the only other signal and it is
+        // indistinguishable from "no test matched the filter".
+        QFile summaryFile(QDir(outputDir).absoluteFilePath(QStringLiteral("qgc-unittest-summary.txt")));
+        if (summaryFile.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text)) {
+            summaryFile.write((summaryLine + QLatin1Char('\n')).toUtf8());
+        }
+
         if (failures == 0) {
-            qDebug() << "ALL TESTS PASSED";
             result = 0;
         } else {
-            qDebug() << failures << " TESTS FAILED!";
             result = -failures;
             break;
         }

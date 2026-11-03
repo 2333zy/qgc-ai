@@ -56,7 +56,7 @@ QList<UnitTest*> &UnitTest::_testList()
     return tests;
 }
 
-int UnitTest::run(QStringView singleTest)
+int UnitTest::run(QStringView singleTest, const QString &outputDir)
 {
     int ret = 0;
 
@@ -67,6 +67,15 @@ int UnitTest::run(QStringView singleTest)
             }
             QStringList args;
             args << "*" << "-maxwarnings" << "0";
+            if (!outputDir.isEmpty()) {
+                // Let QtTest write its own report. Redirecting stdout/stderr does not work
+                // for this binary: QGroundControl is a GUI-subsystem executable, so a test
+                // run started without a console produces no captured output at all, and a
+                // silent run cannot be told apart from a passing one.
+                const QString resultsFile = QDir(outputDir).absoluteFilePath(
+                    QStringLiteral("qgc-unittest-%1.txt").arg(test->objectName()));
+                args << "-o" << (resultsFile + QStringLiteral(",txt"));
+            }
             ret += QTest::qExec(test, args);
         }
     }

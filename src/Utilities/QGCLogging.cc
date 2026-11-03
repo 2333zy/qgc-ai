@@ -14,9 +14,13 @@
 #include "SettingsManager.h"
 
 #include <QtConcurrent/QtConcurrentRun>
+#include <QtCore/QAbstractEventDispatcher>
 #include <QtCore/QGlobalStatic>
 #include <QtCore/QStringListModel>
 #include <QtCore/QTextStream>
+#include <QtCore/QThread>
+
+#include <cstdio>
 
 QGC_LOGGING_CATEGORY(QGCLoggingLog, "QGCLoggingLog")
 
@@ -26,23 +30,39 @@ static QtMessageHandler defaultHandler = nullptr;
 
 static void msgHandler(QtMsgType type, const QMessageLogContext &context, const QString &msg)
 {
-    // Filter via QLoggingCategory rules early
-    if (!QLoggingCategory(context.category).isDebugEnabled()) {
+    // Anything logged from inside the handler would re-enter here and recurse until
+    // the stack runs out. QGCLogging itself logs (log rotation, IO errors), so guard.
+    static thread_local bool handling = false;
+    if (handling) {
         return;
     }
+    handling = true;
 
-    // Format the message using Qt's pattern
-    const QString message = qFormatLogMessage(type, context, msg);
+    // Filter via QLoggingCategory rules early
+    if (QLoggingCategory(context.category).isDebugEnabled()) {
+        // Format the message using Qt's pattern
+        const QString message = qFormatLogMessage(type, context, msg);
 
-    // Filter out Qt Quick internals
-    if (!QString(context.category).startsWith("qt.quick")) {
-        QGCLogging::instance()->log(message);
+        // The in-app log model requires the application object: QGCLogging owns a
+        // QTimer and lives on the calling thread's event loop. Before the app exists
+        // that loop has no dispatcher, so building the singleton here would bind it
+        // to a thread that can never deliver queued emissions. Qt Quick internals are
+        // also dropped from the model to keep it readable.
+        if (qgcApp() && !QString(context.category).startsWith("qt.quick")) {
+            QGCLogging::instance()->log(message);
+        }
+
+        // Keep the message visible outside the GUI. Qt installs no handler by default,
+        // so defaultHandler is null and without this fallback every log line would be
+        // swallowed by the in-app model - which hides unit test results and CI output.
+        if (defaultHandler) {
+            defaultHandler(type, context, msg);
+        } else {
+            fputs(qPrintable(message + QLatin1Char('\n')), stderr);
+        }
     }
 
-    // Call the previous handler if it exists
-    if (defaultHandler) {
-        defaultHandler(type, context, msg);
-    }
+    handling = false;
 }
 
 QGCLogging *QGCLogging::instance()
@@ -58,7 +78,14 @@ QGCLogging::QGCLogging(QObject *parent)
     _flushTimer.setInterval(kFlushIntervalMSecs);
     _flushTimer.setSingleShot(false);
     (void) connect(&_flushTimer, &QTimer::timeout, this, &QGCLogging::_flushToDisk);
-    _flushTimer.start();
+
+    // A timer can only be started on a thread that already has an event dispatcher.
+    // QGCLogging may be constructed during startup before QApplication is up; in that
+    // case QTimer::start() would fail with "Timers can only be used with threads
+    // started with QThread" and the flush would never run. _threadsafeLog retries.
+    if (QAbstractEventDispatcher::instance(QThread::currentThread())) {
+        _flushTimer.start();
+    }
 
     // Connect the emitLog signal to threadsafeLog slot
 #if defined(Q_OS_ANDROID) || defined(Q_OS_IOS)
@@ -80,14 +107,32 @@ void QGCLogging::installHandler()
 
 void QGCLogging::log(const QString &message)
 {
-    // Emit the signal so threadsafeLog runs in the correct thread
-    if (!_ioError) {
+    if (_ioError) {
+        return;
+    }
+
+    // Only hand the message to the event loop when there is a loop to hand it to.
+    // Emitting across threads queues the call, and queuing onto a thread without an
+    // event dispatcher dereferences a null dispatcher and crashes (0xC0000005, which
+    // is what made --unittest die inside QGCLogging::log).
+    QThread *const receiverThread = thread();
+    const bool canQueue = (QThread::currentThread() != receiverThread)
+        && (QAbstractEventDispatcher::instance(receiverThread) != nullptr);
+
+    if (canQueue) {
         emit emitLog(message);
+    } else {
+        _threadsafeLog(message);
     }
 }
 
 void QGCLogging::_threadsafeLog(const QString &message)
 {
+    // Retry the deferred flush start once a usable event loop is available.
+    if (!_flushTimer.isActive() && QAbstractEventDispatcher::instance(QThread::currentThread())) {
+        _flushTimer.start();
+    }
+
     // Notify view of new row
     const int line = rowCount();
     beginInsertRows(QModelIndex(), line, line);
@@ -143,7 +188,9 @@ void QGCLogging::_rotateLogs()
     _logFile.setFileName(basePath);
     if (!_logFile.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text)) {
         _ioError = true;
-        qgcApp()->showAppMessage(tr("Unable to reopen log file %1: %2").arg(_logFile.fileName(), _logFile.errorString()));
+        if (QGCApplication *const app = qgcApp()) {
+            app->showAppMessage(tr("Unable to reopen log file %1: %2").arg(_logFile.fileName(), _logFile.errorString()));
+        }
     }
 }
 
@@ -153,9 +200,15 @@ void QGCLogging::_flushToDisk()
         return;
     }
 
+    // Nothing to flush until the application object exists; lines stay queued.
+    QGCApplication *const app = qgcApp();
+    if (!app) {
+        return;
+    }
+
     // Ensure log output enabled and file open
     if (!_logFile.isOpen()) {
-        if (!qgcApp()->logOutput()) {
+        if (!app->logOutput()) {
             _pendingDiskWrites.clear();
             return;
         }
@@ -167,7 +220,7 @@ void QGCLogging::_flushToDisk()
         _logFile.setFileName(saveFilePath);
         if (!_logFile.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text)) {
             _ioError = true;
-            qgcApp()->showAppMessage(tr("Open console log output file failed %1 : %2").arg(_logFile.fileName(), _logFile.errorString()));
+            app->showAppMessage(tr("Open console log output file failed %1 : %2").arg(_logFile.fileName(), _logFile.errorString()));
             return;
         }
     }

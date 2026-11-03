@@ -36,7 +36,11 @@ public:
 
     /// @brief Called to run all the registered unit tests
     ///     @param singleTest Name of test to just run a single test
-    static int run(QStringView singleTest);
+    ///     @param outputDir Directory for the per-test QtTest result files. QtTest writes
+    ///         these itself, which is the only result channel that survives a GUI-subsystem
+    ///         binary launched without a console (stdout/stderr are lost there).
+    ///         Empty: results are only reported through the message handler.
+    static int run(QStringView singleTest, const QString &outputDir = QString());
 
     bool standalone() const { return _standalone; }
     void setStandalone(bool standalone) { _standalone = standalone; }
