@@ -84,6 +84,7 @@ signals:
 
 private slots:
     void _replyFinished();
+    void _replyReadyRead();
     void _requestTimedOut();
     void _consoleCommandTimedOut();
     void _receiveConsoleData(uint8_t device, uint8_t flags, uint16_t timeout, uint32_t baudrate, const QByteArray &data);
@@ -129,6 +130,10 @@ private:
     QString _authorizationHeaderValue(AIAssistantSettings *settings) const;
     QByteArray _formData(const QList<QPair<QString, QString>> &fields) const;
     bool _postChatRequest(const QJsonArray &messages, bool includeTools, const QString &toolChoice = QString());
+    void _handleSseLine(const QByteArray &line);
+    void _applyStreamChunk(const QJsonObject &chunk);
+    void _handleAssistantReply(const QJsonObject &messageObject);
+    void _resetStreamState();
     QJsonArray _buildToolDefinitions() const;
     QJsonObject _buildVehicleSnapshot(Vehicle *vehicle) const;
     QJsonObject _buildRequestContext(Vehicle *vehicle, const QString &consoleText, bool *consoleTextTruncated = nullptr) const;
@@ -203,6 +208,11 @@ private:
     QString _pendingActionRisk;
     QString _pendingQuestion;
     QString _pendingToolChoice;
+    QByteArray _responseBody;
+    QByteArray _sseBuffer;
+    QJsonArray _streamToolCalls;
+    QString _streamContent;
+    QString _streamErrorText;
     int _remainingToolRounds = 0;
     int _remainingConsoleCommands = 0;
     int _remainingLowPrivilegeMavlinkCommands = 0;
@@ -214,6 +224,8 @@ private:
     bool _activeConsoleOutputTruncated = false;
     bool _pendingActionAvailable = false;
     bool _busy = false;
+    bool _streamDetected = false;
+    bool _answerStreamedThisQuestion = false;
 
     static constexpr int kRequestTimeoutMsec = 30000;
     static constexpr int kNetworkRetryDelayMsec = 1200;

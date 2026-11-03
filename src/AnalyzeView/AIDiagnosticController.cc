@@ -264,6 +264,7 @@ void AIDiagnosticController::askWithEvidence(const QString &question, const QStr
     _remainingLowPrivilegeMavlinkCommands = vehicle ? kMaxLowPrivilegeMavlinkCommandsPerQuestion : 0;
     _networkRetryCount = 0;
     _internalToolMarkupRetryUsed = false;
+    _answerStreamedThisQuestion = false;
     _pendingQuestion = trimmedQuestion;
     _setBusy(true);
 
@@ -415,7 +416,7 @@ bool AIDiagnosticController::_postChatRequest(const QJsonArray &messages, bool i
         { QStringLiteral("model"), modelName },
         { QStringLiteral("messages"), messages },
         { QStringLiteral("temperature"), 0.2 },
-        { QStringLiteral("stream"), false }
+        { QStringLiteral("stream"), true }
     };
 
     if (includeTools) {
@@ -432,11 +433,216 @@ bool AIDiagnosticController::_postChatRequest(const QJsonArray &messages, bool i
     if (!authorizationHeaderValue.isEmpty()) {
         request.setRawHeader(QByteArrayLiteral("Authorization"), authorizationHeaderValue.toUtf8());
     }
+    request.setAttribute(QNetworkRequest::CacheLoadControlAttribute, QNetworkRequest::AlwaysNetwork);
+    request.setAttribute(QNetworkRequest::CacheSaveControlAttribute, false);
+
+    _resetStreamState();
 
     _reply = _networkManager.post(request, QJsonDocument(requestObject).toJson(QJsonDocument::Compact));
     (void) connect(_reply, &QNetworkReply::finished, this, &AIDiagnosticController::_replyFinished);
+    (void) connect(_reply, &QNetworkReply::readyRead, this, &AIDiagnosticController::_replyReadyRead);
     _timeoutTimer.start();
     return true;
+}
+
+void AIDiagnosticController::_resetStreamState()
+{
+    _responseBody.clear();
+    _sseBuffer.clear();
+    _streamToolCalls = QJsonArray();
+    _streamContent.clear();
+    _streamErrorText.clear();
+    _streamDetected = false;
+}
+
+void AIDiagnosticController::_replyReadyRead()
+{
+    if (!_reply) {
+        return;
+    }
+
+    const QByteArray chunk = _reply->readAll();
+    if (chunk.isEmpty()) {
+        return;
+    }
+
+    // A streaming answer can legitimately run longer than one timeout window, so the
+    // timeout guards against a stalled connection rather than total duration. Any data
+    // from the server counts as progress.
+    if (_timeoutTimer.isActive()) {
+        _timeoutTimer.start();
+    }
+
+    // Keep the raw body so a server that ignores "stream": true and answers with a
+    // plain JSON document still works through the non-streaming fallback.
+    _responseBody.append(chunk);
+    _sseBuffer.append(chunk);
+
+    int newlineIndex = _sseBuffer.indexOf('\n');
+    while (newlineIndex >= 0) {
+        QByteArray line = _sseBuffer.left(newlineIndex);
+        _sseBuffer.remove(0, newlineIndex + 1);
+        if (line.endsWith('\r')) {
+            line.chop(1);
+        }
+        _handleSseLine(line);
+        newlineIndex = _sseBuffer.indexOf('\n');
+    }
+}
+
+void AIDiagnosticController::_handleSseLine(const QByteArray &line)
+{
+    if (line.isEmpty() || line.startsWith(':')) {
+        return;     // keep-alive comment
+    }
+    if (!line.startsWith("data:")) {
+        return;     // event:/id:/retry: carry nothing we need
+    }
+
+    const QByteArray payload = line.mid(5).trimmed();
+    if (payload.isEmpty()) {
+        return;
+    }
+    if (payload == "[DONE]") {
+        _streamDetected = true;
+        return;
+    }
+
+    QJsonParseError parseError{};
+    const QJsonDocument document = QJsonDocument::fromJson(payload, &parseError);
+    if (parseError.error != QJsonParseError::NoError || !document.isObject()) {
+        return;
+    }
+
+    _streamDetected = true;
+    _applyStreamChunk(document.object());
+}
+
+void AIDiagnosticController::_applyStreamChunk(const QJsonObject &chunk)
+{
+    if (chunk.contains(QStringLiteral("error"))) {
+        const QJsonValue errorValue = chunk.value(QStringLiteral("error"));
+        _streamErrorText = errorValue.isObject()
+            ? errorValue.toObject().value(QStringLiteral("message")).toString()
+            : errorValue.toString();
+        if (_streamErrorText.isEmpty()) {
+            _streamErrorText = tr("The AI endpoint reported an error while streaming.");
+        }
+        return;
+    }
+
+    const QJsonArray choices = chunk.value(QStringLiteral("choices")).toArray();
+    if (choices.isEmpty()) {
+        return;
+    }
+    const QJsonObject delta = choices.at(0).toObject().value(QStringLiteral("delta")).toObject();
+
+    const QString content = delta.value(QStringLiteral("content")).toString();
+    if (!content.isEmpty()) {
+        _streamContent.append(content);
+        _answerStreamedThisQuestion = true;
+        emit answerDelta(content);
+    }
+
+    // Tool calls arrive as fragments: the first chunk carries id/name, the argument
+    // string is split across many chunks. Accumulate per index and concatenate.
+    const QJsonArray toolCallDeltas = delta.value(QStringLiteral("tool_calls")).toArray();
+    for (const QJsonValue &toolCallValue : toolCallDeltas) {
+        const QJsonObject toolCallDelta = toolCallValue.toObject();
+        const int index = toolCallDelta.value(QStringLiteral("index")).toInt(0);
+        while (_streamToolCalls.size() <= index) {
+            _streamToolCalls.append(QJsonObject{});
+        }
+
+        QJsonObject accumulated = _streamToolCalls.at(index).toObject();
+        const QString id = toolCallDelta.value(QStringLiteral("id")).toString();
+        if (!id.isEmpty()) {
+            accumulated.insert(QStringLiteral("id"), id);
+        }
+        const QString type = toolCallDelta.value(QStringLiteral("type")).toString();
+        accumulated.insert(QStringLiteral("type"), type.isEmpty() ? QStringLiteral("function") : type);
+
+        const QJsonObject functionDelta = toolCallDelta.value(QStringLiteral("function")).toObject();
+        QJsonObject accumulatedFunction = accumulated.value(QStringLiteral("function")).toObject();
+        const QString name = functionDelta.value(QStringLiteral("name")).toString();
+        if (!name.isEmpty()) {
+            accumulatedFunction.insert(QStringLiteral("name"), name);
+        }
+        const QString arguments = functionDelta.value(QStringLiteral("arguments")).toString();
+        if (!arguments.isEmpty()) {
+            accumulatedFunction.insert(QStringLiteral("arguments"),
+                accumulatedFunction.value(QStringLiteral("arguments")).toString() + arguments);
+        }
+        accumulated.insert(QStringLiteral("function"), accumulatedFunction);
+        _streamToolCalls[index] = accumulated;
+    }
+}
+
+void AIDiagnosticController::_handleAssistantReply(const QJsonObject &messageObject)
+{
+    const QString answer = messageObject.value(QStringLiteral("content")).toString().trimmed();
+    const QJsonArray toolCalls = messageObject.value(QStringLiteral("tool_calls")).toArray();
+
+    if (!toolCalls.isEmpty() && (_remainingToolRounds > 0)) {
+        _remainingToolRounds--;
+        QJsonObject assistantToolMessage{
+            { QStringLiteral("role"), QStringLiteral("assistant") },
+            { QStringLiteral("tool_calls"), toolCalls }
+        };
+        if (!answer.isEmpty()) {
+            assistantToolMessage.insert(QStringLiteral("content"), answer);
+        } else {
+            assistantToolMessage.insert(QStringLiteral("content"), QJsonValue());
+        }
+        _pendingMessages.append(assistantToolMessage);
+        _startToolExecution(toolCalls);
+        return;
+    }
+
+    if (answer.isEmpty()) {
+        _pendingQuestion.clear();
+        _clearPendingChatState();
+        _setBusy(false);
+        _failRequest(tr("AI response did not contain an answer."));
+        return;
+    }
+
+    if (_answerContainsInternalToolMarkup(answer)) {
+        if (!_internalToolMarkupRetryUsed) {
+            _internalToolMarkupRetryUsed = true;
+            _networkRetryCount = 0;
+            _setErrorText(tr("AI returned internal tool-call text. Retrying without tools..."));
+            if (!_postChatRequest(_pendingMessages, false)) {
+                _pendingQuestion.clear();
+                _clearPendingChatState();
+                _setBusy(false);
+            }
+            return;
+        }
+
+        _pendingQuestion.clear();
+        _clearPendingChatState();
+        _setBusy(false);
+        _failRequest(tr("The AI endpoint returned internal tool-call markup instead of a user-facing answer. This model or endpoint may not support structured tool calls."));
+        return;
+    }
+
+    if (!_pendingQuestion.isEmpty()) {
+        _appendConversationMessage(QStringLiteral("user"), _pendingQuestion);
+        _appendConversationMessage(QStringLiteral("assistant"), answer);
+        _pendingQuestion.clear();
+    }
+
+    _clearPendingChatState();
+    _setBusy(false);
+
+    // Streamed text already reached the page through answerDelta, so ask it to replace
+    // that provisional text with the final trimmed answer instead of appending again.
+    if (_answerStreamedThisQuestion) {
+        emit answerFinalized(answer);
+    } else {
+        emit answerReady(answer);
+    }
 }
 
 QJsonArray AIDiagnosticController::_buildToolDefinitions() const
@@ -664,7 +870,9 @@ void AIDiagnosticController::_replyFinished()
     const QNetworkReply::NetworkError networkError = reply->error();
     const QUrl replyUrl = reply->url();
     const int httpStatusCode = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
-    const QByteArray payload = reply->readAll();
+    // readyRead normally consumed the socket, so the accumulated body is the payload.
+    _responseBody.append(reply->readAll());
+    const QByteArray payload = _responseBody;
     const QString networkErrorText = _formatNetworkErrorText(networkError, replyUrl, reply->errorString(), payload, httpStatusCode);
     _clearReply(false);
 
@@ -689,6 +897,30 @@ void AIDiagnosticController::_replyFinished()
         return;
     }
 
+    if (!_streamErrorText.isEmpty()) {
+        const QString streamErrorText = _streamErrorText;
+        _pendingQuestion.clear();
+        _clearPendingChatState();
+        _setBusy(false);
+        _failRequest(streamErrorText);
+        return;
+    }
+
+    if (_streamDetected) {
+        // Assemble the delta stream into the message object the rest of the flow expects.
+        QJsonObject messageObject;
+        if (!_streamContent.isEmpty()) {
+            messageObject.insert(QStringLiteral("content"), _streamContent);
+        }
+        if (!_streamToolCalls.isEmpty()) {
+            messageObject.insert(QStringLiteral("tool_calls"), _streamToolCalls);
+        }
+        _handleAssistantReply(messageObject);
+        return;
+    }
+
+    // Some servers and proxies ignore "stream": true and answer with a single JSON
+    // document, so keep the non-streaming path as a fallback.
     QJsonParseError parseError{};
     const QJsonDocument responseDocument = QJsonDocument::fromJson(payload, &parseError);
     if (parseError.error != QJsonParseError::NoError || !responseDocument.isObject()) {
@@ -708,63 +940,7 @@ void AIDiagnosticController::_replyFinished()
         return;
     }
 
-    const QJsonObject messageObject = choices.at(0).toObject().value(QStringLiteral("message")).toObject();
-    const QString answer = messageObject.value(QStringLiteral("content")).toString().trimmed();
-    const QJsonArray toolCalls = messageObject.value(QStringLiteral("tool_calls")).toArray();
-
-    if (!toolCalls.isEmpty() && (_remainingToolRounds > 0)) {
-        _remainingToolRounds--;
-        QJsonObject assistantToolMessage{
-            { QStringLiteral("role"), QStringLiteral("assistant") },
-            { QStringLiteral("tool_calls"), toolCalls }
-        };
-        if (!answer.isEmpty()) {
-            assistantToolMessage.insert(QStringLiteral("content"), answer);
-        } else {
-            assistantToolMessage.insert(QStringLiteral("content"), QJsonValue());
-        }
-        _pendingMessages.append(assistantToolMessage);
-        _startToolExecution(toolCalls);
-        return;
-    }
-
-    if (answer.isEmpty()) {
-        _pendingQuestion.clear();
-        _clearPendingChatState();
-        _setBusy(false);
-        _failRequest(tr("AI response did not contain an answer."));
-        return;
-    }
-
-    if (_answerContainsInternalToolMarkup(answer)) {
-        if (!_internalToolMarkupRetryUsed) {
-            _internalToolMarkupRetryUsed = true;
-            _networkRetryCount = 0;
-            _setErrorText(tr("AI returned internal tool-call text. Retrying without tools..."));
-            if (!_postChatRequest(_pendingMessages, false)) {
-                _pendingQuestion.clear();
-                _clearPendingChatState();
-                _setBusy(false);
-            }
-            return;
-        }
-
-        _pendingQuestion.clear();
-        _clearPendingChatState();
-        _setBusy(false);
-        _failRequest(tr("The AI endpoint returned internal tool-call markup instead of a user-facing answer. This model or endpoint may not support structured tool calls."));
-        return;
-    }
-
-    if (!_pendingQuestion.isEmpty()) {
-        _appendConversationMessage(QStringLiteral("user"), _pendingQuestion);
-        _appendConversationMessage(QStringLiteral("assistant"), answer);
-        _pendingQuestion.clear();
-    }
-
-    _clearPendingChatState();
-    _setBusy(false);
-    emit answerReady(answer);
+    _handleAssistantReply(choices.at(0).toObject().value(QStringLiteral("message")).toObject());
 }
 
 void AIDiagnosticController::_requestTimedOut()

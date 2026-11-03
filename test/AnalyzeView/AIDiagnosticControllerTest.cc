@@ -145,6 +145,65 @@ void AIDiagnosticControllerTest::_providerPresetAndEndpointNormalization_test()
     }
 }
 
+void AIDiagnosticControllerTest::_streamingDeltaAssembly_test()
+{
+    AIDiagnosticController controller;
+    QSignalSpy deltaSpy(&controller, &AIDiagnosticController::answerDelta);
+
+    // Content deltas accumulate and are surfaced to the page as they arrive.
+    controller._resetStreamState();
+    controller._handleSseLine(QByteArrayLiteral("data: {\"choices\":[{\"delta\":{\"content\":\"Hel\"}}]}"));
+    controller._handleSseLine(QByteArrayLiteral("data: {\"choices\":[{\"delta\":{\"content\":\"lo\"}}]}"));
+    // Keep-alive comments, unknown fields and the terminator must not add content.
+    controller._handleSseLine(QByteArrayLiteral(": ping"));
+    controller._handleSseLine(QByteArrayLiteral("event: message"));
+    controller._handleSseLine(QByteArrayLiteral(""));
+    controller._handleSseLine(QByteArrayLiteral("data: [DONE]"));
+    QCOMPARE(controller._streamContent, QStringLiteral("Hello"));
+    QCOMPARE(deltaSpy.count(), 2);
+    QVERIFY(controller._streamDetected);
+    QVERIFY(controller._streamToolCalls.isEmpty());
+
+    // Tool calls arrive as fragments and must be concatenated per index.
+    controller._resetStreamState();
+    controller._handleSseLine(QByteArrayLiteral(
+        "data: {\"choices\":[{\"delta\":{\"tool_calls\":[{\"index\":0,\"id\":\"call_1\",\"type\":\"function\",\"function\":{\"name\":\"get_battery\"}}]}}]}"));
+    controller._handleSseLine(QByteArrayLiteral(
+        "data: {\"choices\":[{\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"{\\\"param\\\":\"}}]}}]}"));
+    controller._handleSseLine(QByteArrayLiteral(
+        "data: {\"choices\":[{\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"\\\"BATT_CAPACITY\\\"}\"}}]}}]}"));
+
+    QCOMPARE(controller._streamToolCalls.size(), 1);
+    const QJsonObject toolCall = controller._streamToolCalls.at(0).toObject();
+    QCOMPARE(toolCall.value(QStringLiteral("id")).toString(), QStringLiteral("call_1"));
+    QCOMPARE(toolCall.value(QStringLiteral("type")).toString(), QStringLiteral("function"));
+    const QJsonObject function = toolCall.value(QStringLiteral("function")).toObject();
+    QCOMPARE(function.value(QStringLiteral("name")).toString(), QStringLiteral("get_battery"));
+    QCOMPARE(function.value(QStringLiteral("arguments")).toString(), QStringLiteral("{\"param\":\"BATT_CAPACITY\"}"));
+
+    // Two concurrent tool calls keep separate accumulation slots.
+    controller._resetStreamState();
+    controller._handleSseLine(QByteArrayLiteral(
+        "data: {\"choices\":[{\"delta\":{\"tool_calls\":[{\"index\":0,\"id\":\"a\",\"function\":{\"name\":\"first\",\"arguments\":\"{}\"}}]}}]}"));
+    controller._handleSseLine(QByteArrayLiteral(
+        "data: {\"choices\":[{\"delta\":{\"tool_calls\":[{\"index\":1,\"id\":\"b\",\"function\":{\"name\":\"second\",\"arguments\":\"{}\"}}]}}]}"));
+    QCOMPARE(controller._streamToolCalls.size(), 2);
+    QCOMPARE(controller._streamToolCalls.at(1).toObject().value(QStringLiteral("function")).toObject()
+                 .value(QStringLiteral("name")).toString(), QStringLiteral("second"));
+
+    // An error object inside the stream is captured rather than silently dropped.
+    controller._resetStreamState();
+    controller._handleSseLine(QByteArrayLiteral("data: {\"error\":{\"message\":\"quota exceeded\"}}"));
+    QCOMPARE(controller._streamErrorText, QStringLiteral("quota exceeded"));
+
+    // Malformed JSON is ignored instead of aborting the stream.
+    controller._resetStreamState();
+    controller._handleSseLine(QByteArrayLiteral("data: {not json"));
+    QVERIFY(controller._streamContent.isEmpty());
+    QVERIFY(controller._streamToolCalls.isEmpty());
+    QVERIFY(controller._streamErrorText.isEmpty());
+}
+
 void AIDiagnosticControllerTest::_px4ProviderBoundaryAndPolicy_test()
 {
     PX4DiagnosticProvider provider;

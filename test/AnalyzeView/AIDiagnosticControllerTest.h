@@ -21,6 +21,7 @@ private slots:
     void _contextSchemaWithoutVehicle_test();
     void _responseLanguagePolicy_test();
     void _providerPresetAndEndpointNormalization_test();
+    void _streamingDeltaAssembly_test();
     void _px4ProviderBoundaryAndPolicy_test();
     void _vehicleSwitchAndStaleEventIsolation_test();
     void _externalVisionInputPresentButNotConfigured_test();
