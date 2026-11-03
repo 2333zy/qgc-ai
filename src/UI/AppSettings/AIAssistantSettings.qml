@@ -13,7 +13,6 @@ import QtQuick.Layouts
 
 import QGroundControl
 import QGroundControl.Controls
-import QGroundControl.Controllers
 import QGroundControl.FactControls
 import QGroundControl.FactSystem
 import QGroundControl.Palette
@@ -22,35 +21,22 @@ import QGroundControl.ScreenTools
 SettingsPage {
     property var  _aiAssistantSettings: QGroundControl.settingsManager.aiAssistantSettings
     property real _fieldWidth:        ScreenTools.defaultFontPixelWidth * 42
-    property bool _isChatGpt:         _aiAssistantSettings.authMethod.rawValue === 1
 
     QGCPalette {
         id: qgcPal
     }
 
-    AIDiagnosticController {
-        id: aiAuthController
-    }
-
     SettingsGroupLayout {
         Layout.fillWidth:   true
         heading:            qsTr("AI Assistant")
-        headingDescription: qsTr("The PX4 AI flight diagnostic assistant sends active vehicle status and any console evidence you explicitly attach to the selected provider.")
-
-        LabelledFactComboBox {
-            Layout.fillWidth:           true
-            comboBoxPreferredWidth:     _fieldWidth
-            label:                      qsTr("Authentication")
-            fact:                       _aiAssistantSettings.authMethod
-            indexModel:                 false
-        }
+        headingDescription: qsTr("The PX4 AI flight diagnostic assistant sends active vehicle status and any console evidence you explicitly attach to the selected OpenAI-compatible endpoint.")
 
         LabelledFactTextField {
             Layout.fillWidth:           true
             textFieldPreferredWidth:    _fieldWidth
             label:                      qsTr("Endpoint URL")
             fact:                       _aiAssistantSettings.endpointUrl
-            visible:                    !_isChatGpt
+            textField.placeholderText:  qsTr("e.g. https://api.deepseek.com/v1/chat/completions")
         }
 
         LabelledFactTextField {
@@ -58,7 +44,7 @@ SettingsPage {
             textFieldPreferredWidth:    _fieldWidth
             label:                      qsTr("Model")
             fact:                       _aiAssistantSettings.modelName
-            visible:                    !_isChatGpt
+            textField.placeholderText:  qsTr("e.g. deepseek-chat")
         }
 
         LabelledFactTextField {
@@ -67,131 +53,12 @@ SettingsPage {
             label:                      qsTr("API key (optional)")
             fact:                       _aiAssistantSettings.apiKey
             textField.echoMode:         TextInput.Password
-            visible:                    !_isChatGpt
-        }
-    }
-
-    SettingsGroupLayout {
-        Layout.fillWidth:   true
-        heading:            qsTr("ChatGPT Account")
-        headingDescription: qsTr("ChatGPT authentication, account state, and models are managed by the local Codex App Server.")
-        visible:            _isChatGpt
-
-        LabelledFactTextField {
-            Layout.fillWidth:           true
-            textFieldPreferredWidth:    _fieldWidth
-            label:                      qsTr("ChatGPT proxy URL")
-            fact:                       _aiAssistantSettings.chatGptProxyUrl
-            textField.placeholderText:  qsTr("Optional, e.g. http://127.0.0.1:7890")
         }
 
         QGCLabel {
             Layout.fillWidth: true
             wrapMode:         Text.WordWrap
-            text:             qsTr("Saved for ChatGPT sign-in and requests. Leave empty to use proxy environment variables. Restart QGroundControl after changing this setting.")
-        }
-
-        QGCLabel {
-            Layout.fillWidth: true
-            wrapMode:         Text.WordWrap
-            text:             qsTr("Status: %1").arg(aiAuthController.chatGptStatusText.length > 0 ? aiAuthController.chatGptStatusText : qsTr("Not signed in"))
-            color:            aiAuthController.chatGptSignedIn ? qgcPal.text : qgcPal.warningText
-        }
-
-        QGCLabel {
-            Layout.fillWidth: true
-            wrapMode:         Text.WordWrap
-            text:             aiAuthController.chatGptLoginInProgress
-                                  ? qsTr("Login steps:\n1. Click Open login page.\n2. If the browser says device code login is disabled, enable Codex device code authorization in ChatGPT Settings > Security.\n3. Click Continue in the browser and enter the code shown below.")
-                                  : qsTr("Click Sign in with ChatGPT to get a login code. If the browser reports that device-code login is disabled, enable it in ChatGPT Settings > Security (or ask your workspace administrator).")
-            visible:          !aiAuthController.chatGptSignedIn
-            color:            qgcPal.text
-        }
-
-        QGCLabel {
-            Layout.fillWidth: true
-            wrapMode:         Text.WordWrap
-            text:             qsTr("Account: %1").arg(aiAuthController.chatGptAccountEmail.length > 0 ? aiAuthController.chatGptAccountEmail : qsTr("Not available"))
-            visible:          aiAuthController.chatGptSignedIn
-        }
-
-        QGCLabel {
-            Layout.fillWidth: true
-            wrapMode:         Text.WordWrap
-            text:             qsTr("Plan: %1").arg(aiAuthController.chatGptPlanType.length > 0 ? aiAuthController.chatGptPlanType : qsTr("Not available"))
-            visible:          aiAuthController.chatGptSignedIn
-        }
-
-        RowLayout {
-            Layout.fillWidth: true
-            visible:          !aiAuthController.chatGptSignedIn
-
-            QGCButton {
-                text:    aiAuthController.chatGptLoginInProgress ? qsTr("Waiting for authorization") : qsTr("Sign in with ChatGPT")
-                enabled: !aiAuthController.chatGptLoginInProgress
-                onClicked: aiAuthController.startChatGptLogin()
-            }
-        }
-
-        ColumnLayout {
-            Layout.fillWidth: true
-            spacing:          ScreenTools.defaultFontPixelHeight * 0.5
-            visible:          aiAuthController.chatGptLoginInProgress && aiAuthController.chatGptUserCode.length > 0
-
-            QGCLabel {
-                Layout.fillWidth: true
-                wrapMode:         Text.WordWrap
-                text:             qsTr("Open the following page and enter the code:")
-            }
-
-            QGCLabel {
-                Layout.fillWidth: true
-                wrapMode:         Text.WordWrap
-                text:             qsTr("Verification URL: %1").arg(aiAuthController.chatGptVerificationUrl)
-            }
-
-            QGCLabel {
-                Layout.fillWidth: true
-                text:             qsTr("Code: %1").arg(aiAuthController.chatGptUserCode)
-                font.bold:        true
-            }
-
-            RowLayout {
-                Layout.fillWidth: true
-
-                QGCButton {
-                    text:    qsTr("Open login page")
-                    onClicked: aiAuthController.openChatGptLoginPage()
-                }
-
-                QGCButton {
-                    text:    qsTr("Copy code")
-                    onClicked: aiAuthController.copyChatGptUserCode()
-                }
-
-                QGCButton {
-                    text:    qsTr("Cancel")
-                    onClicked: aiAuthController.cancelChatGptLogin()
-                }
-            }
-        }
-
-        LabelledComboBox {
-            id:                         chatGptModelCombo
-            Layout.fillWidth:           true
-            comboBoxPreferredWidth:     _fieldWidth
-            label:                      qsTr("Model")
-            model:                      aiAuthController.chatGptModelNames
-            currentIndex:               aiAuthController.chatGptModelIndex
-            visible:                    aiAuthController.chatGptSignedIn
-            onActivated: (index) => aiAuthController.selectChatGptModel(index)
-        }
-
-        QGCButton {
-            text:    qsTr("Sign out")
-            enabled: aiAuthController.chatGptSignedIn && !aiAuthController.chatGptLoginInProgress
-            visible: enabled
-            onClicked: aiAuthController.signOutChatGpt()
+            text:             qsTr("Any OpenAI-compatible chat completions endpoint works. The model must support structured tool calls for full diagnostics; endpoints without tool support still answer from the vehicle snapshot.")
         }
     }
 }

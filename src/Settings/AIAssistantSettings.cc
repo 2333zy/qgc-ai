@@ -18,13 +18,6 @@ DECLARE_SETTINGGROUP(AIAssistant, "AIConsole")
     qmlRegisterUncreatableType<AIAssistantSettings>("QGroundControl.SettingsManager", 1, 0, "AIAssistantSettings", "Reference only");
 }
 
-DECLARE_SETTINGSFACT(AIAssistantSettings, authMethod)
 DECLARE_SETTINGSFACT(AIAssistantSettings, endpointUrl)
 DECLARE_SETTINGSFACT(AIAssistantSettings, modelName)
-DECLARE_SETTINGSFACT(AIAssistantSettings, chatGptModelName)
-DECLARE_SETTINGSFACT(AIAssistantSettings, chatGptProxyUrl)
 DECLARE_SETTINGSFACT(AIAssistantSettings, apiKey)
-DECLARE_SETTINGSFACT(AIAssistantSettings, oauthDeviceAuthorizationUrl)
-DECLARE_SETTINGSFACT(AIAssistantSettings, oauthTokenUrl)
-DECLARE_SETTINGSFACT(AIAssistantSettings, oauthClientId)
-DECLARE_SETTINGSFACT(AIAssistantSettings, oauthScope)

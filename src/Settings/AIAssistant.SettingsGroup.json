@@ -4,15 +4,6 @@
     "QGC.MetaData.Facts":
 [
 {
-    "name": "authMethod",
-    "shortDesc": "Authentication",
-    "longDesc": "Authentication method used by the PX4 AI flight diagnostic assistant.",
-    "type": "uint32",
-    "enumStrings": "API Key,Sign in with ChatGPT",
-    "enumValues": "0,1",
-    "default": 0
-},
-{
     "name": "endpointUrl",
     "shortDesc": "Endpoint URL",
     "longDesc": "OpenAI-compatible chat completions endpoint used by the PX4 AI flight diagnostic assistant.",
@@ -27,51 +18,9 @@
     "default": ""
 },
 {
-    "name": "chatGptModelName",
-    "shortDesc": "ChatGPT model",
-    "longDesc": "Model identifier selected from the models provided by Codex App Server.",
-    "type": "string",
-    "default": ""
-},
-{
-    "name": "chatGptProxyUrl",
-    "shortDesc": "ChatGPT proxy URL",
-    "longDesc": "Proxy used for ChatGPT sign-in and requests. Supports http, https, socks5 and socks5h URLs. Leave empty to inherit proxy environment variables. Restart QGroundControl after changing this setting.",
-    "type": "string",
-    "default": ""
-},
-{
     "name": "apiKey",
     "shortDesc": "API key",
     "longDesc": "Personal bearer token sent to the configured endpoint. Leave empty for local endpoints that do not require authentication.",
-    "type": "string",
-    "default": ""
-},
-{
-    "name": "oauthDeviceAuthorizationUrl",
-    "shortDesc": "Device authorization URL",
-    "longDesc": "Deprecated OAuth 2.0 device authorization endpoint. This field is retained for settings compatibility and is not used by ChatGPT sign-in.",
-    "type": "string",
-    "default": ""
-},
-{
-    "name": "oauthTokenUrl",
-    "shortDesc": "Token URL",
-    "longDesc": "Deprecated OAuth 2.0 token endpoint. This field is retained for settings compatibility and is not used by ChatGPT sign-in.",
-    "type": "string",
-    "default": ""
-},
-{
-    "name": "oauthClientId",
-    "shortDesc": "Client ID",
-    "longDesc": "Deprecated OAuth client ID. This field is retained for settings compatibility and is not used by ChatGPT sign-in.",
-    "type": "string",
-    "default": ""
-},
-{
-    "name": "oauthScope",
-    "shortDesc": "Scope",
-    "longDesc": "Deprecated OAuth scope. This field is retained for settings compatibility and is not used by ChatGPT sign-in.",
     "type": "string",
     "default": ""
 }

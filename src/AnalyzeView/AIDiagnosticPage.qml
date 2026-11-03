@@ -179,7 +179,7 @@ AnalyzePage {
             QGCLabel {
                 Layout.fillWidth: true
                 visible:          !aiController.configured
-                text:             qsTr("Configure an AI endpoint or sign in with ChatGPT before asking a question.")
+                text:             qsTr("Configure an AI endpoint and model in Application Settings before asking a question.")
                 color:            qgcPal.warningText
                 wrapMode:         Text.WordWrap
             }

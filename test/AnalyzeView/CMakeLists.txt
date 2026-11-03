@@ -10,8 +10,6 @@ target_sources(${CMAKE_PROJECT_NAME}
         MavlinkLogTest.h
         AIDiagnosticControllerTest.cc
         AIDiagnosticControllerTest.h
-        CodexAppServerClientTest.cc
-        CodexAppServerClientTest.h
         PX4LogParserTest.cc
         PX4LogParserTest.h
         # ULogParserTest.cc

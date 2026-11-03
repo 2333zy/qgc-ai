@@ -101,18 +101,6 @@ void AIDiagnosticControllerTest::_responseLanguagePolicy_test()
     const QString standardPrompt = controller._standardSystemPrompt();
     QCOMPARE(standardPrompt.count(policy), 1);
     QVERIFY(!standardPrompt.contains(QStringLiteral("Answer in the user's language")));
-
-    const QStringList questions{
-        QStringLiteral("Diagnose the current flight status"),
-        QStringLiteral("诊断当前飞行状态"),
-        QStringLiteral("诊断当前飞行状态，请用英文回答")
-    };
-    for (const QString &question : questions) {
-        const QString chatGptPrompt = controller._chatGptPrompt(question, QString());
-        QCOMPARE(chatGptPrompt.count(policy), 1);
-        QVERIFY(chatGptPrompt.contains(question));
-        QVERIFY(!chatGptPrompt.contains(QStringLiteral("Answer in the user's language")));
-    }
 }
 
 void AIDiagnosticControllerTest::_px4ProviderBoundaryAndPolicy_test()
@@ -151,7 +139,6 @@ void AIDiagnosticControllerTest::_vehicleSwitchAndStaleEventIsolation_test()
     QSignalSpy clearedSpy(&controller, &AIDiagnosticController::conversationCleared);
 
     controller._bindRequestVehicle(&firstVehicle);
-    controller._requestUsesChatGpt = true;
     controller._busy = true;
     const quint64 requestGeneration = controller._requestGeneration;
 
@@ -162,28 +149,6 @@ void AIDiagnosticControllerTest::_vehicleSwitchAndStaleEventIsolation_test()
     QVERIFY(controller._requestGeneration > requestGeneration);
     QVERIFY(!controller.pendingActionAvailable());
     QCOMPARE(clearedSpy.count(), 1);
-
-    controller._busy = true;
-    controller._requestUsesChatGpt = true;
-    controller._chatGptThreadId = QStringLiteral("current-thread");
-    controller._chatGptTurnId = QStringLiteral("current-turn");
-    QSignalSpy deltaSpy(&controller, &AIDiagnosticController::answerDelta);
-
-    controller._handleCodexNotification(QStringLiteral("item/agentMessage/delta"), QJsonObject{
-        { QStringLiteral("threadId"), QStringLiteral("old-thread") },
-        { QStringLiteral("turnId"), QStringLiteral("old-turn") },
-        { QStringLiteral("delta"), QStringLiteral("stale") }
-    });
-    QCOMPARE(deltaSpy.count(), 0);
-    QVERIFY(controller._chatGptAnswer.isEmpty());
-
-    controller._handleCodexNotification(QStringLiteral("item/agentMessage/delta"), QJsonObject{
-        { QStringLiteral("threadId"), QStringLiteral("current-thread") },
-        { QStringLiteral("turnId"), QStringLiteral("current-turn") },
-        { QStringLiteral("delta"), QStringLiteral("accepted") }
-    });
-    QCOMPARE(deltaSpy.count(), 1);
-    QCOMPARE(controller._chatGptAnswer, QStringLiteral("accepted"));
 
     controller.clearConversation();
 }
