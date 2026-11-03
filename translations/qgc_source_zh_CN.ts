@@ -44,11 +44,6 @@
       <translation>清除</translation>
     </message>
     <message>
-      <location filename="../src/AnalyzeView/AIDiagnosticPage.qml" line="182"/>
-      <source>Configure an AI endpoint or sign in with ChatGPT before asking a question.</source>
-      <translation>请先配置 AI 端点或登录 ChatGPT，然后再提问。</translation>
-    </message>
-    <message>
       <location filename="../src/AnalyzeView/AIDiagnosticPage.qml" line="190"/>
       <source>Waiting for tool confirmation…</source>
       <translation>正在等待工具确认…</translation>
@@ -118,22 +113,12 @@
       <source>Cancel</source>
       <translation>取消</translation>
     </message>
-  </context>
+            <message>
+      <source>Configure an AI endpoint and model in Application Settings before asking a question.</source>
+      <translation>请先在 Application Settings 中配置 AI 端点与模型，然后再提问。</translation>
+    </message>  </context>
   <context>
     <name>AIDiagnosticController</name>
-    <message>
-      <location filename="../src/AnalyzeView/AIDiagnosticController.cc" line="119"/>
-      <location filename="../src/AnalyzeView/AIDiagnosticController.cc" line="526"/>
-      <location filename="../src/AnalyzeView/AIDiagnosticController.cc" line="557"/>
-      <location filename="../src/AnalyzeView/AIDiagnosticController.cc" line="647"/>
-      <source>Not signed in</source>
-      <translation>未登录</translation>
-    </message>
-    <message>
-      <location filename="../src/AnalyzeView/AIDiagnosticController.cc" line="148"/>
-      <source>Authentication service exited unexpectedly.</source>
-      <translation>身份验证服务意外退出。</translation>
-    </message>
     <message>
       <location filename="../src/AnalyzeView/AIDiagnosticController.cc" line="195"/>
       <source>No active vehicle. Attach PX4 console evidence for a read-only, attachment-only diagnosis.</source>
@@ -205,82 +190,9 @@
       <translation>AI 请求已取消。</translation>
     </message>
     <message>
-      <location filename="../src/AnalyzeView/AIDiagnosticController.cc" line="451"/>
-      <location filename="../src/AnalyzeView/AIDiagnosticController.cc" line="464"/>
-      <source>Waiting for authorization</source>
-      <translation>等待授权</translation>
-    </message>
-    <message>
-      <location filename="../src/AnalyzeView/AIDiagnosticController.cc" line="458"/>
-      <location filename="../src/AnalyzeView/AIDiagnosticController.cc" line="612"/>
-      <location filename="../src/AnalyzeView/AIDiagnosticController.cc" line="709"/>
-      <source>Starting authentication service</source>
-      <translation>正在启动身份验证服务</translation>
-    </message>
-    <message>
-      <location filename="../src/AnalyzeView/AIDiagnosticController.cc" line="471"/>
-      <location filename="../src/AnalyzeView/AIDiagnosticController.cc" line="626"/>
-      <location filename="../src/AnalyzeView/AIDiagnosticController.cc" line="848"/>
-      <source>Authorization failed: %1</source>
-      <translation>授权失败：%1</translation>
-    </message>
-    <message>
       <location filename="../src/AnalyzeView/AIDiagnosticController.cc" line="479"/>
       <source>Authorization failed: the authentication service did not return a verification URL and code.</source>
       <translation>授权失败：身份验证服务未返回验证 URL 和代码。</translation>
-    </message>
-    <message>
-      <location filename="../src/AnalyzeView/AIDiagnosticController.cc" line="506"/>
-      <source>Authorization cancelled</source>
-      <translation>授权已取消</translation>
-    </message>
-    <message>
-      <location filename="../src/AnalyzeView/AIDiagnosticController.cc" line="544"/>
-      <source>Sign out failed: %1</source>
-      <translation>退出登录失败：%1</translation>
-    </message>
-    <message>
-      <location filename="../src/AnalyzeView/AIDiagnosticController.cc" line="568"/>
-      <source>Authorization failed: the verification URL is invalid.</source>
-      <translation>授权失败：验证 URL 无效。</translation>
-    </message>
-    <message>
-      <location filename="../src/AnalyzeView/AIDiagnosticController.cc" line="641"/>
-      <location filename="../src/AnalyzeView/AIDiagnosticController.cc" line="689"/>
-      <location filename="../src/AnalyzeView/AIDiagnosticController.cc" line="843"/>
-      <source>Signed in</source>
-      <translation>已登录</translation>
-    </message>
-    <message>
-      <location filename="../src/AnalyzeView/AIDiagnosticController.cc" line="673"/>
-      <source>Codex CLI version does not support model/list: %1</source>
-      <translation>Codex CLI 版本不支持 model/list：%1</translation>
-    </message>
-    <message>
-      <location filename="../src/AnalyzeView/AIDiagnosticController.cc" line="691"/>
-      <location filename="../src/AnalyzeView/AIDiagnosticController.cc" line="705"/>
-      <source>No ChatGPT models are available.</source>
-      <translation>没有可用的 ChatGPT 模型。</translation>
-    </message>
-    <message>
-      <location filename="../src/AnalyzeView/AIDiagnosticController.cc" line="701"/>
-      <source>Sign in with ChatGPT in AI Assistant settings first.</source>
-      <translation>请先在 AI 助手设置中使用 ChatGPT 登录。</translation>
-    </message>
-    <message>
-      <location filename="../src/AnalyzeView/AIDiagnosticController.cc" line="734"/>
-      <source>Select a ChatGPT model first.</source>
-      <translation>请先选择 ChatGPT 模型。</translation>
-    </message>
-    <message>
-      <location filename="../src/AnalyzeView/AIDiagnosticController.cc" line="763"/>
-      <source>Codex App Server did not return a thread ID.</source>
-      <translation>Codex App Server 未返回会话 ID。</translation>
-    </message>
-    <message>
-      <location filename="../src/AnalyzeView/AIDiagnosticController.cc" line="809"/>
-      <source>Codex App Server did not return a turn ID.</source>
-      <translation>Codex App Server 未返回轮次 ID。</translation>
     </message>
     <message>
       <location filename="../src/AnalyzeView/AIDiagnosticController.cc" line="894"/>
@@ -438,180 +350,202 @@
       <source>code=%1</source>
       <translation>代码=%1</translation>
     </message>
+      <message>
+      <source>The AI endpoint reported an error while streaming.</source>
+      <translation>AI 端点在流式返回过程中报告了错误。</translation>
+    </message>
+    <message>
+      <source>The user rejected the low-privilege MAVLink action before it was sent.</source>
+      <translation>用户已拒绝该低权限 MAVLink 操作，消息未发送。</translation>
+    </message>
+    <message>
+      <source>Running matching PX4 read-only diagnostic queries.</source>
+      <translation>正在执行匹配的 PX4 只读诊断查询。</translation>
+    </message>
+    <message>
+      <source>The read-only diagnostic command limit for this question was reached.</source>
+      <translation>本次提问的只读诊断命令数量已达上限。</translation>
+    </message>
+    <message>
+      <source>The low-privilege MAVLink command limit for this question was reached.</source>
+      <translation>本次提问的低权限 MAVLink 命令数量已达上限。</translation>
+    </message>
+    <message>
+      <source>The requested AI tool cannot be executed.</source>
+      <translation>请求的 AI 工具无法执行。</translation>
+    </message>
+    <message>
+      <source>The AI tool request was malformed.</source>
+      <translation>AI 工具请求格式不正确。</translation>
+    </message>
+    <message>
+      <source>The requested PX4 diagnostic target is not in the read-only whitelist.</source>
+      <translation>请求的 PX4 诊断对象不在只读白名单内。</translation>
+    </message>
+    <message>
+      <source>No active vehicle is connected.</source>
+      <translation>当前没有已连接的飞行器。</translation>
+    </message>
+    <message>
+      <source>The read-only PX4 shell diagnostic tools only support PX4 vehicles.</source>
+      <translation>只读 PX4 shell 诊断工具仅支持 PX4 飞行器。</translation>
+    </message>
+    <message>
+      <source>The vehicle is armed or flying, so automatic PX4 console diagnostics were skipped. Use the provided QGroundControl telemetry snapshot instead.</source>
+      <translation>飞行器已解锁或正在飞行，已跳过自动 PX4 控制台诊断。请改用提供的 QGroundControl 遥测快照。</translation>
+    </message>
+    <message>
+      <source>Vehicle communication is currently lost.</source>
+      <translation>飞行器通信当前中断。</translation>
+    </message>
+    <message>
+      <source>The requested PX4 parameter name is invalid.</source>
+      <translation>请求的 PX4 参数名无效。</translation>
+    </message>
+    <message>
+      <source>The requested MAVLink message id is not in the low-privilege data whitelist.</source>
+      <translation>请求的 MAVLink 消息 ID 不在低权限数据白名单内。</translation>
+    </message>
+    <message>
+      <source>The requested MAVLink component id is invalid for this tool.</source>
+      <translation>该工具不接受此 MAVLink 组件 ID。</translation>
+    </message>
+    <message>
+      <source>The requested MAVLink message id is not in the low-privilege telemetry whitelist.</source>
+      <translation>请求的 MAVLink 消息 ID 不在低权限遥测白名单内。</translation>
+    </message>
+    <message>
+      <source>The requested MAVLink stream rate must be greater than 0 and no more than %1 Hz.</source>
+      <translation>请求的 MAVLink 流速率必须大于 0 且不超过 %1 Hz。</translation>
+    </message>
+    <message>
+      <source>The requested AI tool is not supported.</source>
+      <translation>不支持请求的 AI 工具。</translation>
+    </message>
+    <message>
+      <source>The mapped PX4 console command is not in the read-only whitelist.</source>
+      <translation>映射到的 PX4 控制台命令不在只读白名单内。</translation>
+    </message>
+    <message>
+      <source>Current QGroundControl active vehicle status snapshot.</source>
+      <translation>当前 QGroundControl 活动飞行器状态快照。</translation>
+    </message>
+    <message>
+      <source>The AI vehicle information tools currently support PX4 vehicles only.</source>
+      <translation>AI 飞行器信息工具目前仅支持 PX4 飞行器。</translation>
+    </message>
+    <message>
+      <source>The requested FactGroup name is empty.</source>
+      <translation>请求的 FactGroup 名称为空。</translation>
+    </message>
+    <message>
+      <source>The requested FactGroup is not available on the active vehicle.</source>
+      <translation>当前活动飞行器上没有该 FactGroup。</translation>
+    </message>
+    <message>
+      <source>QGroundControl FactGroup returned.</source>
+      <translation>已返回 QGroundControl FactGroup。</translation>
+    </message>
+    <message>
+      <source>Vehicle parameters are not ready yet.</source>
+      <translation>飞行器参数尚未就绪。</translation>
+    </message>
+    <message>
+      <source>The requested parameter is not available in QGroundControl's loaded parameters.</source>
+      <translation>请求的参数不在 QGroundControl 已加载的参数中。</translation>
+    </message>
+    <message>
+      <source>PX4 parameter returned from QGroundControl ParameterManager.</source>
+      <translation>已从 QGroundControl ParameterManager 返回 PX4 参数。</translation>
+    </message>
+    <message>
+      <source>The parameter search query is empty.</source>
+      <translation>参数搜索关键字为空。</translation>
+    </message>
+    <message>
+      <source>PX4 parameter search results returned from QGroundControl ParameterManager.</source>
+      <translation>已从 QGroundControl ParameterManager 返回 PX4 参数搜索结果。</translation>
+    </message>
+    <message>
+      <source>PX4 health and arming check report returned.</source>
+      <translation>已返回 PX4 健康与解锁检查报告。</translation>
+    </message>
+    <message>
+      <source>QGroundControl MAVLink link status returned.</source>
+      <translation>已返回 QGroundControl MAVLink 链路状态。</translation>
+    </message>
+    <message>
+      <source>The requested AI tool is not implemented.</source>
+      <translation>请求的 AI 工具尚未实现。</translation>
+    </message>
+    <message>
+      <source>The read-only diagnostic tools only support PX4 vehicles.</source>
+      <translation>只读诊断工具仅支持 PX4 飞行器。</translation>
+    </message>
+    <message>
+      <source>The requested AI MAVLink action is not executable.</source>
+      <translation>请求的 AI MAVLink 操作不可执行。</translation>
+    </message>
+    <message>
+      <source>PX4 read-only diagnostic command completed or timed out after the capture window.</source>
+      <translation>PX4 只读诊断命令已结束，或在采集窗口之后超时。</translation>
+    </message>
+    <message>
+      <source>MAV_CMD_REQUEST_MESSAGE completed and the requested message was received.</source>
+      <translation>MAV_CMD_REQUEST_MESSAGE 已完成，已收到请求的消息。</translation>
+    </message>
+    <message>
+      <source>MAV_CMD_REQUEST_MESSAGE did not return the requested message.</source>
+      <translation>MAV_CMD_REQUEST_MESSAGE 未返回请求的消息。</translation>
+    </message>
+    <message>
+      <source>Low-privilege MAVLink command was accepted by the vehicle.</source>
+      <translation>飞行器已接受该低权限 MAVLink 命令。</translation>
+    </message>
+    <message>
+      <source>Low-privilege MAVLink command was not accepted by the vehicle.</source>
+      <translation>飞行器未接受该低权限 MAVLink 命令。</translation>
+    </message>
   </context>
-  <context>
-    <name>CodexAppServerClient</name>
-    <message>
-      <location filename="../src/AnalyzeView/CodexAppServerClient.cc" line="216"/>
-      <location filename="../src/AnalyzeView/CodexAppServerClient.cc" line="507"/>
-      <source>Codex CLI was not found. Install or update Codex CLI and try again.</source>
-      <translation>未找到 Codex CLI。请安装或更新 Codex CLI 后重试。</translation>
-    </message>
-    <message>
-      <location filename="../src/AnalyzeView/CodexAppServerClient.cc" line="223"/>
-      <source>Unable to create the application-specific Codex home directory.</source>
-      <translation>无法创建此应用专用的 Codex 主目录。</translation>
-    </message>
-    <message>
-      <location filename="../src/AnalyzeView/CodexAppServerClient.cc" line="245"/>
-      <source>Codex authentication service stopped.</source>
-      <translation>Codex 身份验证服务已停止。</translation>
-    </message>
-    <message>
-      <location filename="../src/AnalyzeView/CodexAppServerClient.cc" line="278"/>
-      <source>Codex App Server initialization failed: %1</source>
-      <translation>Codex App Server 初始化失败：%1</translation>
-    </message>
-    <message>
-      <location filename="../src/AnalyzeView/CodexAppServerClient.cc" line="394"/>
-      <source>Codex App Server returned invalid JSON.</source>
-      <translation>Codex App Server 返回了无效的 JSON。</translation>
-    </message>
-    <message>
-      <location filename="../src/AnalyzeView/CodexAppServerClient.cc" line="487"/>
-      <source>Codex App Server request timed out.</source>
-      <translation>Codex App Server 请求超时。</translation>
-    </message>
-    <message>
-      <location filename="../src/AnalyzeView/CodexAppServerClient.cc" line="517"/>
-      <location filename="../src/AnalyzeView/CodexAppServerClient.cc" line="522"/>
-      <location filename="../src/AnalyzeView/CodexAppServerClient.cc" line="526"/>
-      <source>Authentication service exited unexpectedly.</source>
-      <translation>身份验证服务意外退出。</translation>
-    </message>
-  </context>
-  <context>
+      <context>
     <name>AIAssistantSettings</name>
     <message>
-      <location filename="../src/UI/AppSettings/AIAssistantSettings.qml" line="37"/>
       <source>AI Assistant</source>
       <translation>AI 助手</translation>
     </message>
     <message>
-      <location filename="../src/UI/AppSettings/AIAssistantSettings.qml" line="38"/>
-      <source>The PX4 AI flight diagnostic assistant sends active vehicle status and any console evidence you explicitly attach to the selected provider.</source>
-      <translation>PX4 AI 飞行诊断助手会将活动飞行器状态以及你明确附加的控制台诊断信息发送给所选服务提供方。</translation>
+      <source>The PX4 AI flight diagnostic assistant sends active vehicle status and any console evidence you explicitly attach to the selected OpenAI-compatible endpoint.</source>
+      <translation>PX4 AI 飞行诊断助手会把活动飞行器状态，以及你主动附加的控制台证据，发送到所选的 OpenAI 兼容端点。</translation>
     </message>
     <message>
-      <location filename="../src/UI/AppSettings/AIAssistantSettings.qml" line="43"/>
-      <source>Authentication</source>
-      <translation>身份验证</translation>
+      <source>Provider</source>
+      <translation>服务商</translation>
     </message>
     <message>
-      <location filename="../src/UI/AppSettings/AIAssistantSettings.qml" line="51"/>
       <source>Endpoint URL</source>
       <translation>端点 URL</translation>
     </message>
     <message>
-      <location filename="../src/UI/AppSettings/AIAssistantSettings.qml" line="59"/>
-      <location filename="../src/UI/AppSettings/AIAssistantSettings.qml" line="169"/>
+      <source>Base URL or full /v1/chat/completions URL</source>
+      <translation>基础 URL，或完整的 /v1/chat/completions URL</translation>
+    </message>
+    <message>
       <source>Model</source>
       <translation>模型</translation>
     </message>
     <message>
-      <location filename="../src/UI/AppSettings/AIAssistantSettings.qml" line="67"/>
+      <source>e.g. deepseek-chat</source>
+      <translation>例如 deepseek-chat</translation>
+    </message>
+    <message>
       <source>API key (optional)</source>
       <translation>API 密钥（可选）</translation>
     </message>
     <message>
-      <location filename="../src/UI/AppSettings/AIAssistantSettings.qml" line="76"/>
-      <source>ChatGPT Account</source>
-      <translation>ChatGPT 账户</translation>
+      <source>A base URL is completed to /v1/chat/completions automatically. The model must support structured tool calls for full diagnostics; endpoints without tool support still answer from the vehicle snapshot.</source>
+      <translation>填写基础 URL 会自动补全为 /v1/chat/completions。模型需支持结构化工具调用才能获得完整诊断；不支持工具调用的端点仍可基于飞行器快照作答。</translation>
     </message>
-    <message>
-      <location filename="../src/UI/AppSettings/AIAssistantSettings.qml" line="77"/>
-      <source>ChatGPT authentication, account state, and models are managed by the local Codex App Server.</source>
-      <translation>ChatGPT 身份验证、账户状态和模型由本地 Codex App Server 管理。</translation>
-    </message>
-    <message>
-      <location filename="../src/UI/AppSettings/AIAssistantSettings.qml" line="83"/>
-      <source>Status: %1</source>
-      <translation>状态：%1</translation>
-    </message>
-    <message>
-      <location filename="../src/UI/AppSettings/AIAssistantSettings.qml" line="83"/>
-      <source>Not signed in</source>
-      <translation>未登录</translation>
-    </message>
-    <message>
-      <location filename="../src/UI/AppSettings/AIAssistantSettings.qml" line="91"/>
-      <source>Login steps:
-1. Click Open login page.
-2. If the browser says device code login is disabled, enable Codex device code authorization in ChatGPT Settings &gt; Security.
-3. Click Continue in the browser and enter the code shown below.</source>
-      <translation>登录步骤：
-1. 点击“打开登录页面”。
-2. 如果浏览器提示设备代码登录已禁用，请在 ChatGPT 设置 &gt; 安全中启用 Codex 设备代码授权。
-3. 在浏览器中点击“继续”，然后输入下方显示的代码。</translation>
-    </message>
-    <message>
-      <location filename="../src/UI/AppSettings/AIAssistantSettings.qml" line="92"/>
-      <source>Before signing in, enable Codex device code authorization in ChatGPT Settings &gt; Security, then click Sign in with ChatGPT.</source>
-      <translation>登录前，请在 ChatGPT 设置 &gt; 安全中启用 Codex 设备代码授权，然后点击“使用 ChatGPT 登录”。</translation>
-    </message>
-    <message>
-      <location filename="../src/UI/AppSettings/AIAssistantSettings.qml" line="100"/>
-      <source>Account: %1</source>
-      <translation>账户：%1</translation>
-    </message>
-    <message>
-      <location filename="../src/UI/AppSettings/AIAssistantSettings.qml" line="100"/>
-      <location filename="../src/UI/AppSettings/AIAssistantSettings.qml" line="107"/>
-      <source>Not available</source>
-      <translation>不可用</translation>
-    </message>
-    <message>
-      <location filename="../src/UI/AppSettings/AIAssistantSettings.qml" line="107"/>
-      <source>Plan: %1</source>
-      <translation>套餐：%1</translation>
-    </message>
-    <message>
-      <location filename="../src/UI/AppSettings/AIAssistantSettings.qml" line="116"/>
-      <source>Waiting for authorization</source>
-      <translation>等待授权</translation>
-    </message>
-    <message>
-      <location filename="../src/UI/AppSettings/AIAssistantSettings.qml" line="116"/>
-      <source>Sign in with ChatGPT</source>
-      <translation>使用 ChatGPT 登录</translation>
-    </message>
-    <message>
-      <location filename="../src/UI/AppSettings/AIAssistantSettings.qml" line="130"/>
-      <source>Open the following page and enter the code:</source>
-      <translation>打开以下页面并输入代码：</translation>
-    </message>
-    <message>
-      <location filename="../src/UI/AppSettings/AIAssistantSettings.qml" line="136"/>
-      <source>Verification URL: %1</source>
-      <translation>验证 URL：%1</translation>
-    </message>
-    <message>
-      <location filename="../src/UI/AppSettings/AIAssistantSettings.qml" line="141"/>
-      <source>Code: %1</source>
-      <translation>代码：%1</translation>
-    </message>
-    <message>
-      <location filename="../src/UI/AppSettings/AIAssistantSettings.qml" line="149"/>
-      <source>Open login page</source>
-      <translation>打开登录页面</translation>
-    </message>
-    <message>
-      <location filename="../src/UI/AppSettings/AIAssistantSettings.qml" line="154"/>
-      <source>Copy code</source>
-      <translation>复制代码</translation>
-    </message>
-    <message>
-      <location filename="../src/UI/AppSettings/AIAssistantSettings.qml" line="159"/>
-      <source>Cancel</source>
-      <translation>取消</translation>
-    </message>
-    <message>
-      <location filename="../src/UI/AppSettings/AIAssistantSettings.qml" line="177"/>
-      <source>Sign out</source>
-      <translation>退出登录</translation>
-    </message>
-  </context>
-  <context>
+  </context>  <context>
     <name>APMAirframeComponent</name>
     <message>
       <location filename="../src/AutoPilotPlugins/APM/APMAirframeComponent.qml" line="71"/>
