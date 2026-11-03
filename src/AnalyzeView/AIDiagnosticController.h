@@ -124,6 +124,8 @@ private:
     QString _formatNetworkErrorText(QNetworkReply::NetworkError networkError, const QUrl &url, const QString &errorText, const QByteArray &payload = QByteArray(), int httpStatusCode = 0) const;
     QString _responseErrorText(const QByteArray &payload) const;
     bool _shouldRetryNetworkError(QNetworkReply::NetworkError networkError) const;
+    static QString _resolvedEndpointUrl(AIAssistantSettings *settings);
+    void _applyProviderPreset(AIAssistantSettings *settings);
     QString _authorizationHeaderValue(AIAssistantSettings *settings) const;
     QByteArray _formData(const QList<QPair<QString, QString>> &fields) const;
     bool _postChatRequest(const QJsonArray &messages, bool includeTools, const QString &toolChoice = QString());

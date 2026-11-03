@@ -4,9 +4,18 @@
     "QGC.MetaData.Facts":
 [
 {
+    "name": "providerPreset",
+    "shortDesc": "Provider",
+    "longDesc": "Provider preset that fills in the endpoint URL and model. Selecting Custom leaves both values untouched.",
+    "type": "uint32",
+    "enumStrings": "DeepSeek,OpenAI,Ollama,Qwen (DashScope),Custom",
+    "enumValues": "0,1,2,3,4",
+    "default": 4
+},
+{
     "name": "endpointUrl",
     "shortDesc": "Endpoint URL",
-    "longDesc": "OpenAI-compatible chat completions endpoint used by the PX4 AI flight diagnostic assistant.",
+    "longDesc": "OpenAI-compatible chat completions endpoint used by the PX4 AI flight diagnostic assistant. A bare base URL is completed to /v1/chat/completions automatically.",
     "type": "string",
     "default": ""
 },

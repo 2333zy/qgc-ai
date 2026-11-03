@@ -17,6 +17,8 @@ target_sources(${CMAKE_PROJECT_NAME}
         AIDiagnosticController.cc
         AIDiagnosticController.h
         AIDiagnosticProvider.h
+        AIProviderPreset.cc
+        AIProviderPreset.h
         PX4DiagnosticEvidence.cc
         PX4DiagnosticEvidence.h
         PX4DiagnosticProvider.cc

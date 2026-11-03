@@ -10,6 +10,7 @@
 #include "AIDiagnosticController.h"
 #include "AIDiagnosticContextBuilder.h"
 #include "AIAssistantSettings.h"
+#include "AIProviderPreset.h"
 #include "Fact.h"
 #include "FactGroup.h"
 #include "HealthAndArmingCheckReport.h"
@@ -95,6 +96,9 @@ AIDiagnosticController::AIDiagnosticController(QObject *parent)
     _consoleCommandTimer.setInterval(kConsoleCommandTimeoutMsec);
     (void) connect(&_consoleCommandTimer, &QTimer::timeout, this, &AIDiagnosticController::_consoleCommandTimedOut);
     if (AIAssistantSettings *settings = SettingsManager::instance()->aiAssistantSettings()) {
+        (void) connect(settings->providerPreset(), &Fact::rawValueChanged, this, [this, settings] {
+            _applyProviderPreset(settings);
+        });
         (void) connect(settings->endpointUrl(), &Fact::rawValueChanged, this, [this] { emit configuredChanged(); });
         (void) connect(settings->modelName(), &Fact::rawValueChanged, this, [this] { emit configuredChanged(); });
     }
@@ -140,8 +144,38 @@ bool AIDiagnosticController::configured() const
 {
     AIAssistantSettings *settings = SettingsManager::instance()->aiAssistantSettings();
     return settings
-        && !settings->endpointUrl()->rawValueString().trimmed().isEmpty()
+        && !_resolvedEndpointUrl(settings).isEmpty()
         && !settings->modelName()->rawValueString().trimmed().isEmpty();
+}
+
+QString AIDiagnosticController::_resolvedEndpointUrl(AIAssistantSettings *settings)
+{
+    if (!settings) {
+        return QString();
+    }
+
+    // Users routinely paste a base URL (https://api.deepseek.com) rather than the full
+    // chat completions route, which used to fail with an opaque HTTP error. Accept both.
+    return AIProviderPreset::normalizedEndpointUrl(settings->endpointUrl()->rawValueString());
+}
+
+void AIDiagnosticController::_applyProviderPreset(AIAssistantSettings *settings)
+{
+    if (!settings) {
+        return;
+    }
+
+    const auto preset = static_cast<AIProviderPreset::Preset>(settings->providerPreset()->rawValue().toInt());
+    if (preset == AIProviderPreset::Custom) {
+        // Custom means the user owns these fields, so never overwrite them.
+        return;
+    }
+
+    settings->endpointUrl()->setRawValue(AIProviderPreset::endpointUrl(preset));
+    const QString model = AIProviderPreset::defaultModel(preset);
+    if (!model.isEmpty()) {
+        settings->modelName()->setRawValue(model);
+    }
 }
 
 void AIDiagnosticController::ask(const QString &question)
@@ -179,7 +213,7 @@ void AIDiagnosticController::askWithEvidence(const QString &question, const QStr
         return;
     }
 
-    const QString endpointUrl = settings->endpointUrl()->rawValueString().trimmed();
+    const QString endpointUrl = _resolvedEndpointUrl(settings);
     const QString modelName = settings->modelName()->rawValueString().trimmed();
     if (endpointUrl.isEmpty() || modelName.isEmpty()) {
         _failRequest(tr("Configure an AI endpoint URL and model first."));
@@ -359,7 +393,7 @@ bool AIDiagnosticController::_postChatRequest(const QJsonArray &messages, bool i
         return false;
     }
 
-    const QString endpointUrl = settings->endpointUrl()->rawValueString().trimmed();
+    const QString endpointUrl = _resolvedEndpointUrl(settings);
     const QString modelName = settings->modelName()->rawValueString().trimmed();
     const QString authorizationHeaderValue = _authorizationHeaderValue(settings);
     if (endpointUrl.isEmpty() || modelName.isEmpty()) {

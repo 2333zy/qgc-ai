@@ -18,6 +18,7 @@ DECLARE_SETTINGGROUP(AIAssistant, "AIConsole")
     qmlRegisterUncreatableType<AIAssistantSettings>("QGroundControl.SettingsManager", 1, 0, "AIAssistantSettings", "Reference only");
 }
 
+DECLARE_SETTINGSFACT(AIAssistantSettings, providerPreset)
 DECLARE_SETTINGSFACT(AIAssistantSettings, endpointUrl)
 DECLARE_SETTINGSFACT(AIAssistantSettings, modelName)
 DECLARE_SETTINGSFACT(AIAssistantSettings, apiKey)

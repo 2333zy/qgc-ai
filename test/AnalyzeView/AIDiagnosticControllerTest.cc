@@ -11,6 +11,7 @@
 #include "AIAssistantSettings.h"
 #include "AIDiagnosticContextBuilder.h"
 #include "AIDiagnosticController.h"
+#include "AIProviderPreset.h"
 #include "PX4DiagnosticEvidence.h"
 #include "PX4DiagnosticProvider.h"
 #include "QGCMAVLink.h"
@@ -101,6 +102,47 @@ void AIDiagnosticControllerTest::_responseLanguagePolicy_test()
     const QString standardPrompt = controller._standardSystemPrompt();
     QCOMPARE(standardPrompt.count(policy), 1);
     QVERIFY(!standardPrompt.contains(QStringLiteral("Answer in the user's language")));
+}
+
+void AIDiagnosticControllerTest::_providerPresetAndEndpointNormalization_test()
+{
+    // A bare base URL must be completed to the chat completions route: pasting only
+    // the host used to produce an opaque HTTP failure instead of a usable request.
+    QCOMPARE(AIProviderPreset::normalizedEndpointUrl(QStringLiteral("https://api.deepseek.com")),
+             QStringLiteral("https://api.deepseek.com/v1/chat/completions"));
+    QCOMPARE(AIProviderPreset::normalizedEndpointUrl(QStringLiteral("https://api.deepseek.com/")),
+             QStringLiteral("https://api.deepseek.com/v1/chat/completions"));
+    QCOMPARE(AIProviderPreset::normalizedEndpointUrl(QStringLiteral("  https://api.deepseek.com  ")),
+             QStringLiteral("https://api.deepseek.com/v1/chat/completions"));
+    QCOMPARE(AIProviderPreset::normalizedEndpointUrl(QStringLiteral("https://host/v1")),
+             QStringLiteral("https://host/v1/chat/completions"));
+    QCOMPARE(AIProviderPreset::normalizedEndpointUrl(QStringLiteral("https://dashscope.aliyuncs.com/compatible-mode")),
+             QStringLiteral("https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions"));
+
+    // A complete route is left alone.
+    QCOMPARE(AIProviderPreset::normalizedEndpointUrl(QStringLiteral("https://host/v1/chat/completions")),
+             QStringLiteral("https://host/v1/chat/completions"));
+    QCOMPARE(AIProviderPreset::normalizedEndpointUrl(QStringLiteral("https://host/v1/chat/completions/")),
+             QStringLiteral("https://host/v1/chat/completions"));
+
+    QVERIFY(AIProviderPreset::normalizedEndpointUrl(QString()).isEmpty());
+    QVERIFY(AIProviderPreset::normalizedEndpointUrl(QStringLiteral("   ")).isEmpty());
+
+    // Presets carry a base URL, a route and a suggested model.
+    QCOMPARE(AIProviderPreset::endpointUrl(AIProviderPreset::DeepSeek),
+             QStringLiteral("https://api.deepseek.com/v1/chat/completions"));
+    QCOMPARE(AIProviderPreset::defaultModel(AIProviderPreset::DeepSeek), QStringLiteral("deepseek-chat"));
+    QCOMPARE(AIProviderPreset::endpointUrl(AIProviderPreset::Ollama),
+             QStringLiteral("http://127.0.0.1:11434/v1/chat/completions"));
+    QCOMPARE(AIProviderPreset::endpointUrl(AIProviderPreset::QwenDashScope),
+             QStringLiteral("https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions"));
+
+    // Custom must never supply a value: it means the user owns the fields.
+    QVERIFY(AIProviderPreset::endpointUrl(AIProviderPreset::Custom).isEmpty());
+    QVERIFY(AIProviderPreset::defaultModel(AIProviderPreset::Custom).isEmpty());
+    for (int i = 0; i < AIProviderPreset::PresetCount; i++) {
+        QVERIFY(!AIProviderPreset::displayName(static_cast<AIProviderPreset::Preset>(i)).isEmpty());
+    }
 }
 
 void AIDiagnosticControllerTest::_px4ProviderBoundaryAndPolicy_test()

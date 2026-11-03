@@ -20,6 +20,7 @@ public:
 
     DEFINE_SETTING_NAME_GROUP()
 
+    DEFINE_SETTINGFACT(providerPreset)
     DEFINE_SETTINGFACT(endpointUrl)
     DEFINE_SETTINGFACT(modelName)
     DEFINE_SETTINGFACT(apiKey)

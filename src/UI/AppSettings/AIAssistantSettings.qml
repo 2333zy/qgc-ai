@@ -13,6 +13,7 @@ import QtQuick.Layouts
 
 import QGroundControl
 import QGroundControl.Controls
+import QGroundControl.Controllers
 import QGroundControl.FactControls
 import QGroundControl.FactSystem
 import QGroundControl.Palette
@@ -26,17 +27,31 @@ SettingsPage {
         id: qgcPal
     }
 
+    // Owns the preset wiring: selecting a provider preset fills the endpoint URL and
+    // model, so those fields update live while this page is open.
+    AIDiagnosticController {
+        id: aiSettingsController
+    }
+
     SettingsGroupLayout {
         Layout.fillWidth:   true
         heading:            qsTr("AI Assistant")
         headingDescription: qsTr("The PX4 AI flight diagnostic assistant sends active vehicle status and any console evidence you explicitly attach to the selected OpenAI-compatible endpoint.")
+
+        LabelledFactComboBox {
+            Layout.fillWidth:           true
+            comboBoxPreferredWidth:     _fieldWidth
+            label:                      qsTr("Provider")
+            fact:                       _aiAssistantSettings.providerPreset
+            indexModel:                 false
+        }
 
         LabelledFactTextField {
             Layout.fillWidth:           true
             textFieldPreferredWidth:    _fieldWidth
             label:                      qsTr("Endpoint URL")
             fact:                       _aiAssistantSettings.endpointUrl
-            textField.placeholderText:  qsTr("e.g. https://api.deepseek.com/v1/chat/completions")
+            textField.placeholderText:  qsTr("Base URL or full /v1/chat/completions URL")
         }
 
         LabelledFactTextField {
@@ -58,7 +73,7 @@ SettingsPage {
         QGCLabel {
             Layout.fillWidth: true
             wrapMode:         Text.WordWrap
-            text:             qsTr("Any OpenAI-compatible chat completions endpoint works. The model must support structured tool calls for full diagnostics; endpoints without tool support still answer from the vehicle snapshot.")
+            text:             qsTr("A base URL is completed to /v1/chat/completions automatically. The model must support structured tool calls for full diagnostics; endpoints without tool support still answer from the vehicle snapshot.")
         }
     }
 }
