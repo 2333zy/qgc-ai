@@ -125,31 +125,31 @@
       <extracomment>.QGC.MetaData.Facts[gimbalRoll].shortDesc, </extracomment>
       <location filename="../src/Gimbal/GimbalFact.json"/>
       <source>Gimbal Roll</source>
-      <translation type="unfinished">Gimbal Roll</translation>
+      <translation>云台横滚</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[gimbalPitch].shortDesc, </extracomment>
       <location filename="../src/Gimbal/GimbalFact.json"/>
       <source>Gimbal Pitch</source>
-      <translation type="unfinished">Gimbal Pitch</translation>
+      <translation>云台俯仰</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[gimbalYaw].shortDesc, </extracomment>
       <location filename="../src/Gimbal/GimbalFact.json"/>
       <source>Gimbal Yaw</source>
-      <translation type="unfinished">Gimbal Yaw</translation>
+      <translation>云台偏航</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[gimbalAzimuth].shortDesc, </extracomment>
       <location filename="../src/Gimbal/GimbalFact.json"/>
       <source>Azimuth</source>
-      <translation type="unfinished">Azimuth</translation>
+      <translation>方位角</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[deviceId].shortDesc, </extracomment>
       <location filename="../src/Gimbal/GimbalFact.json"/>
       <source>gimbal device Id</source>
-      <translation type="unfinished">gimbal device Id</translation>
+      <translation>云台设备 ID</translation>
     </message>
   </context>
   <context>
@@ -158,19 +158,19 @@
       <extracomment>.QGC.MetaData.Facts[minZoomLevelDownload].shortDesc, </extracomment>
       <location filename="../src/Settings/OfflineMaps.SettingsGroup.json"/>
       <source>Minimum zoom level for downloads.</source>
-      <translation type="unfinished">Minimum zoom level for downloads.</translation>
+      <translation>下载的最小缩放级别。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[maxZoomLevelDownload].shortDesc, </extracomment>
       <location filename="../src/Settings/OfflineMaps.SettingsGroup.json"/>
       <source>Maximum zoom level for downloads.</source>
-      <translation type="unfinished">Maximum zoom level for downloads.</translation>
+      <translation>下载的最大缩放级别。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[maxTilesForDownload].shortDesc, </extracomment>
       <location filename="../src/Settings/OfflineMaps.SettingsGroup.json"/>
       <source>Maximum number of tiles for download.</source>
-      <translation type="unfinished">Maximum number of tiles for download.</translation>
+      <translation>下载的最大瓦片数量。</translation>
     </message>
   </context>
   <context>
@@ -179,98 +179,98 @@
       <extracomment>.QGC.MetaData.Facts[guidedMinimumAltitude].shortDesc, </extracomment>
       <location filename="../src/Settings/FlyView.SettingsGroup.json"/>
       <source>Minimum altitude for guided actions altitude slider.</source>
-      <translation type="unfinished">Minimum altitude for guided actions altitude slider.</translation>
+      <translation>引导操作高度滑块的最小高度。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[guidedMaximumAltitude].shortDesc, </extracomment>
       <location filename="../src/Settings/FlyView.SettingsGroup.json"/>
       <source>Maximum altitude for guided actions altitude slider.</source>
-      <translation type="unfinished">Maximum altitude for guided actions altitude slider.</translation>
+      <translation>引导操作高度滑块的最大高度。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[showLogReplayStatusBar].shortDesc, </extracomment>
       <location filename="../src/Settings/FlyView.SettingsGroup.json"/>
       <source>Show/Hide Log Replay status bar</source>
-      <translation type="unfinished">Show/Hide Log Replay status bar</translation>
+      <translation>显示/隐藏日志回放状态栏</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[showAdditionalIndicatorsCompass].shortDesc, </extracomment>
       <location filename="../src/Settings/FlyView.SettingsGroup.json"/>
       <source>Show additional heading indicators on Compass</source>
-      <translation type="unfinished">Show additional heading indicators on Compass</translation>
+      <translation>在磁罗盘上显示额外的航向指示器</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[lockNoseUpCompass].shortDesc, </extracomment>
       <location filename="../src/Settings/FlyView.SettingsGroup.json"/>
       <source>Lock Compass Nose-Up</source>
-      <translation type="unfinished">Lock Compass Nose-Up</translation>
+      <translation>锁定磁罗盘机头朝上</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[keepMapCenteredOnVehicle].shortDesc, </extracomment>
       <location filename="../src/Settings/FlyView.SettingsGroup.json"/>
       <source>Keep map centered on vehicle</source>
-      <translation type="unfinished">Keep map centered on vehicle</translation>
+      <translation>保持地图以飞行器为中心</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[showSimpleCameraControl].shortDesc, </extracomment>
       <location filename="../src/Settings/FlyView.SettingsGroup.json"/>
       <source>Show controls for camera triggering using MAV_CMD_DO_DIGICAM_CONTROL.</source>
-      <translation type="unfinished">Show controls for camera triggering using MAV_CMD_DO_DIGICAM_CONTROL.</translation>
+      <translation>显示使用 MAV_CMD_DO_DIGICAM_CONTROL 触发相机的控件。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[showObstacleDistanceOverlay].shortDesc, </extracomment>
       <location filename="../src/Settings/FlyView.SettingsGroup.json"/>
       <source>Show obstacle distance overlay on map and video.</source>
-      <translation type="unfinished">Show obstacle distance overlay on map and video.</translation>
+      <translation>在地图和视频上显示障碍物距离叠加层。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[maxGoToLocationDistance].shortDesc, </extracomment>
       <location filename="../src/Settings/FlyView.SettingsGroup.json"/>
       <source>Maximum distance allowed for Go To Location.</source>
-      <translation type="unfinished">Maximum distance allowed for Go To Location.</translation>
+      <translation>前往位置允许的最大距离。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[forwardFlightGoToLocationLoiterRad].shortDesc, </extracomment>
       <location filename="../src/Settings/FlyView.SettingsGroup.json"/>
       <source>Loiter radius for orbiting the Go To Location during forward flight. This only applies if the firmware supports a radius in MAV_CMD_DO_REPOSITION commands.</source>
-      <translation type="unfinished">Loiter radius for orbiting the Go To Location during forward flight. This only applies if the firmware supports a radius in MAV_CMD_DO_REPOSITION commands.</translation>
+      <translation>前飞时环绕前往位置的悬停半径。仅当固件在 MAV_CMD_DO_REPOSITION 命令中支持半径时适用。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[goToLocationRequiresConfirmInGuided].shortDesc, </extracomment>
       <location filename="../src/Settings/FlyView.SettingsGroup.json"/>
       <source>Require slide confirmation for Go To Location when the vehicle is already in Guided mode.</source>
-      <translation type="unfinished">Require slide confirmation for Go To Location when the vehicle is already in Guided mode.</translation>
+      <translation>当飞行器已处于引导模式时，前往位置需要滑动确认。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[updateHomePosition].shortDesc, </extracomment>
       <location filename="../src/Settings/FlyView.SettingsGroup.json"/>
       <source>Send updated GCS&apos; home position to autopilot in case of change of the home position</source>
-      <translation type="unfinished">Send updated GCS&apos; home position to autopilot in case of change of the home position</translation>
+      <translation>当原点位置发生变化时，将更新后的 GCS 原点位置发送给自驾仪</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[instrumentQmlFile2].shortDesc, </extracomment>
       <location filename="../src/Settings/FlyView.SettingsGroup.json"/>
       <source>Qml file for instrument panel</source>
-      <translation type="unfinished">Qml file for instrument panel</translation>
+      <translation>仪表盘的 Qml 文件</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[instrumentQmlFile2].enumStrings, </extracomment>
       <translatorcomment>Only use english comma &apos;,&apos; to separate strings</translatorcomment>
       <location filename="../src/Settings/FlyView.SettingsGroup.json"/>
       <source>Integrated Compass &amp; Attitude,Horizontal Compass &amp; Attitude,Large Vertical</source>
-      <translation type="unfinished">Integrated Compass &amp; Attitude,Horizontal Compass &amp; Attitude,Large Vertical</translation>
+      <translation>集成磁罗盘 &amp; 姿态,水平磁罗盘 &amp; 姿态,大型垂直</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[requestControlAllowTakeover].shortDesc, </extracomment>
       <location filename="../src/Settings/FlyView.SettingsGroup.json"/>
       <source>When requesting vehicle control, allow other GCS to override control automatically, or require this GCS to accept the request first.</source>
-      <translation type="unfinished">When requesting vehicle control, allow other GCS to override control automatically, or require this GCS to accept the request first.</translation>
+      <translation>请求飞行器控制时，允许其他 GCS 自动覆盖控制，或要求此 GCS 先接受请求。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[requestControlTimeout].shortDesc, </extracomment>
       <location filename="../src/Settings/FlyView.SettingsGroup.json"/>
       <source>Timeout in seconds before a request to a GCS to allow takeover is assumed to be rejected. This is used to display the timeout graphically on requestor and GCS in control.</source>
-      <translation type="unfinished">Timeout in seconds before a request to a GCS to allow takeover is assumed to be rejected. This is used to display the timeout graphically on requestor and GCS in control.</translation>
+      <translation>向 GCS 请求允许接管的超时秒数，超时后视为拒绝。用于在请求方和控制中的 GCS 上以图形方式显示超时。</translation>
     </message>
   </context>
   <context>
@@ -279,7 +279,7 @@
       <extracomment>.QGC.MetaData.Facts[offlineEditingFirmwareClass].shortDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Offline editing firmware class</source>
-      <translation type="unfinished">Offline editing firmware class</translation>
+      <translation>离线编辑固件类别</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[offlineEditingFirmwareClass].enumStrings, </extracomment>
@@ -292,7 +292,7 @@
       <extracomment>.QGC.MetaData.Facts[offlineEditingVehicleClass].shortDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Offline editing vehicle class</source>
-      <translation type="unfinished">Offline editing vehicle class</translation>
+      <translation>离线编辑飞行器类别</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[offlineEditingVehicleClass].enumStrings, </extracomment>
@@ -305,133 +305,133 @@
       <extracomment>.QGC.MetaData.Facts[offlineEditingCruiseSpeed].shortDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Offline editing cruise speed</source>
-      <translation type="unfinished">Offline editing cruise speed</translation>
+      <translation>离线编辑巡航速度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[offlineEditingCruiseSpeed].longDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>This value defines the default speed for calculating mission statistics for vehicles which do not support hover or VTOL vehicles in fixed wing mode. It does not modify the flight speed for a specific flight plan.</source>
-      <translation type="unfinished">This value defines the default speed for calculating mission statistics for vehicles which do not support hover or VTOL vehicles in fixed wing mode. It does not modify the flight speed for a specific flight plan.</translation>
+      <translation>此数值定义用于计算不支持悬停的飞行器或固定翼模式下的VTOL飞行器任务统计的默认速度。它不会修改特定飞行计划的飞行速度。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[offlineEditingHoverSpeed].shortDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Offline editing hover speed</source>
-      <translation type="unfinished">Offline editing hover speed</translation>
+      <translation>离线编辑悬停速度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[offlineEditingHoverSpeed].longDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>This value defines the default speed for calculating mission statistics for multi-rotor vehicles or VTOL vehicle in multi-rotor mode. It does not modify the flight speed for a specific flight plan.</source>
-      <translation type="unfinished">This value defines the default speed for calculating mission statistics for multi-rotor vehicles or VTOL vehicle in multi-rotor mode. It does not modify the flight speed for a specific flight plan.</translation>
+      <translation>此数值定义用于计算多旋翼飞行器或多旋翼模式下的VTOL飞行器任务统计的默认速度。它不会修改特定飞行计划的飞行速度。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[offlineEditingAscentSpeed].shortDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Offline editing ascent speed</source>
-      <translation type="unfinished">Offline editing ascent speed</translation>
+      <translation>离线编辑上升速度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[offlineEditingAscentSpeed].longDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>This value defines the ascent speed for multi-rotor vehicles for use in calculating mission duration.</source>
-      <translation type="unfinished">This value defines the ascent speed for multi-rotor vehicles for use in calculating mission duration.</translation>
+      <translation>此数值定义多旋翼飞行器的上升速度，用于计算任务时长。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[offlineEditingDescentSpeed].shortDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Offline editing descent speed</source>
-      <translation type="unfinished">Offline editing descent speed</translation>
+      <translation>离线编辑下降速度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[offlineEditingDescentSpeed].longDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>This value defines the cruising speed for multi-rotor vehicles for use in calculating mission duration.</source>
-      <translation type="unfinished">This value defines the cruising speed for multi-rotor vehicles for use in calculating mission duration.</translation>
+      <translation>此数值定义多旋翼飞行器的巡航速度，用于计算任务时长。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[batteryPercentRemainingAnnounce].shortDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Announce battery remaining percent</source>
-      <translation type="unfinished">Announce battery remaining percent</translation>
+      <translation>播报电池剩余百分比</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[batteryPercentRemainingAnnounce].longDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Announce the remaining battery percent when it falls below the specified percentage.</source>
-      <translation type="unfinished">Announce the remaining battery percent when it falls below the specified percentage.</translation>
+      <translation>当电池剩余百分比低于指定百分比时进行播报。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[defaultMissionItemAltitude].shortDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Default value for altitude</source>
-      <translation type="unfinished">Default value for altitude</translation>
+      <translation>高度默认值</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[defaultMissionItemAltitude].longDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>This value specifies the default altitude for new items added to a mission.</source>
-      <translation type="unfinished">This value specifies the default altitude for new items added to a mission.</translation>
+      <translation>此数值指定添加到任务中的新项目的默认高度。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[audioMuted].shortDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Mute audio output</source>
-      <translation type="unfinished">Mute audio output</translation>
+      <translation>静音音频输出</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[audioMuted].longDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>If this option is enabled all audio output will be muted.</source>
-      <translation type="unfinished">If this option is enabled all audio output will be muted.</translation>
+      <translation>如果启用此选项，所有音频输出将被静音。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[virtualJoystick].shortDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Show virtual joystick</source>
-      <translation type="unfinished">Show virtual joystick</translation>
+      <translation>显示虚拟摇杆</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[virtualJoystick].longDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>If this option is enabled the virtual joystick will be shown on the Fly view.</source>
-      <translation type="unfinished">If this option is enabled the virtual joystick will be shown on the Fly view.</translation>
+      <translation>如果启用此选项，虚拟摇杆将显示在飞行视图中。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[virtualJoystickAutoCenterThrottle].shortDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Auto-Center Throttle</source>
-      <translation type="unfinished">Auto-Center Throttle</translation>
+      <translation>油门自动回中</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[virtualJoystickAutoCenterThrottle].longDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>If enabled the throttle stick will snap back to center when released.</source>
-      <translation type="unfinished">If enabled the throttle stick will snap back to center when released.</translation>
+      <translation>如果启用，松开油门摇杆后将自动回中。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[virtualJoystickLeftHandedMode].shortDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Left Handed Mode</source>
-      <translation type="unfinished">Left Handed Mode</translation>
+      <translation>左手模式</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[virtualJoystickLeftHandedMode].longDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>If this option is enabled the virtual joystick layout will be reversed</source>
-      <translation type="unfinished">If this option is enabled the virtual joystick layout will be reversed</translation>
+      <translation>如果启用此选项，虚拟摇杆布局将反转</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[gstDebugLevel].shortDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Video streaming debug</source>
-      <translation type="unfinished">Video streaming debug</translation>
+      <translation>视频流调试</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[gstDebugLevel].longDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Sets the environment variable GST_DEBUG for all pipeline elements on boot.</source>
-      <translation type="unfinished">Sets the environment variable GST_DEBUG for all pipeline elements on boot.</translation>
+      <translation>在启动时为所有管道元素设置环境变量 GST_DEBUG。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[gstDebugLevel].enumStrings, </extracomment>
@@ -444,13 +444,13 @@
       <extracomment>.QGC.MetaData.Facts[useChecklist].shortDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Use preflight checklist</source>
-      <translation type="unfinished">Use preflight checklist</translation>
+      <translation>使用飞行前检查清单</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[useChecklist].longDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>If this option is enabled the preflight checklist will be used.</source>
-      <translation type="unfinished">If this option is enabled the preflight checklist will be used.</translation>
+      <translation>如果启用此选项，将使用飞行前检查清单。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[enforceChecklist].shortDesc, </extracomment>
@@ -468,13 +468,13 @@
       <extracomment>.QGC.MetaData.Facts[enableMultiVehiclePanel].shortDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Enable Multi-Vehicle Panel</source>
-      <translation type="unfinished">Enable Multi-Vehicle Panel</translation>
+      <translation>启用多飞行器面板</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[enableMultiVehiclePanel].longDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Enable Multi-Vehicle Panel when multiple vehicles are connected.</source>
-      <translation type="unfinished">Enable Multi-Vehicle Panel when multiple vehicles are connected.</translation>
+      <translation>当连接多个飞行器时启用多飞行器面板。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[appFontPointSize].shortDesc, </extracomment>
@@ -486,7 +486,7 @@
       <extracomment>.QGC.MetaData.Facts[appFontPointSize].longDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>The point size for the default font used.</source>
-      <translation type="unfinished">The point size for the default font used.</translation>
+      <translation>默认字体使用的点大小。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[indoorPalette].shortDesc, </extracomment>
@@ -498,7 +498,7 @@
       <extracomment>.QGC.MetaData.Facts[indoorPalette].longDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>The color scheme for the user interface.</source>
-      <translation type="unfinished">The color scheme for the user interface.</translation>
+      <translation>用户界面的配色方案。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[indoorPalette].enumStrings, </extracomment>
@@ -517,13 +517,13 @@
       <extracomment>.QGC.MetaData.Facts[savePath].longDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Directory to which all data files are saved/loaded from</source>
-      <translation type="unfinished">Directory to which all data files are saved/loaded from</translation>
+      <translation>所有数据文件保存/加载的目录</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[androidSaveToSDCard].shortDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Save to SD card</source>
-      <translation type="unfinished">Save to SD card</translation>
+      <translation>保存到 SD 卡</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[androidSaveToSDCard].longDesc, </extracomment>
@@ -535,79 +535,79 @@
       <extracomment>.QGC.MetaData.Facts[mapboxToken].shortDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Access token to Mapbox maps</source>
-      <translation type="unfinished">Access token to Mapbox maps</translation>
+      <translation>Mapbox 地图的访问令牌</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[mapboxToken].longDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Your personal access token for Mapbox maps</source>
-      <translation type="unfinished">Your personal access token for Mapbox maps</translation>
+      <translation>您的 Mapbox 地图个人访问令牌</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[mapboxAccount].shortDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Account name for Mapbox maps</source>
-      <translation type="unfinished">Account name for Mapbox maps</translation>
+      <translation>Mapbox 地图的账户名称</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[mapboxAccount].longDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Your personal account name for Mapbox maps</source>
-      <translation type="unfinished">Your personal account name for Mapbox maps</translation>
+      <translation>您的 Mapbox 地图个人账户名称</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[mapboxStyle].shortDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Map style ID</source>
-      <translation type="unfinished">Map style ID</translation>
+      <translation>地图样式 ID</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[mapboxStyle].longDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Map design style ID for Mapbox maps</source>
-      <translation type="unfinished">Map design style ID for Mapbox maps</translation>
+      <translation>Mapbox 地图的地图设计样式 ID</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[esriToken].shortDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Access token to Esri maps</source>
-      <translation type="unfinished">Access token to Esri maps</translation>
+      <translation>Esri 地图的访问令牌</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[esriToken].longDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Your personal access token for Esri maps</source>
-      <translation type="unfinished">Your personal access token for Esri maps</translation>
+      <translation>您的 Esri 地图个人访问令牌</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[customURL].shortDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Custom Map URL</source>
-      <translation type="unfinished">Custom Map URL</translation>
+      <translation>自定义地图 URL</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[customURL].longDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>URL for X Y Z map with {x} {y} {z} or {zoom} substitutions. Eg: https://basemaps.linz.govt.nz/v1/tiles/aerial/EPSG:3857/{z}/{x}/{y}.png?api=d01ev80nqcjxddfvc6amyvkk1ka</source>
-      <translation type="unfinished">URL for X Y Z map with {x} {y} {z} or {zoom} substitutions. Eg: https://basemaps.linz.govt.nz/v1/tiles/aerial/EPSG:3857/{z}/{x}/{y}.png?api=d01ev80nqcjxddfvc6amyvkk1ka</translation>
+      <translation>X Y Z 地图的 URL，使用 {x} {y} {z} 或 {zoom} 替换。例如：https://basemaps.linz.govt.nz/v1/tiles/aerial/EPSG:3857/{z}/{x}/{y}.png?api=d01ev80nqcjxddfvc6amyvkk1ka</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[vworldToken].shortDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>VWorld Token</source>
-      <translation type="unfinished">VWorld Token</translation>
+      <translation>VWorld 令牌</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[vworldToken].longDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Your personal access token for VWorld maps</source>
-      <translation type="unfinished">Your personal access token for VWorld maps</translation>
+      <translation>您的 VWorld 地图个人访问令牌</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[followTarget].shortDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Stream GCS&apos; coordinates to Autopilot</source>
-      <translation type="unfinished">Stream GCS&apos; coordinates to Autopilot</translation>
+      <translation>将 GCS 坐标流式传输到自驾仪</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[followTarget].enumStrings, </extracomment>
@@ -620,37 +620,37 @@
       <extracomment>.QGC.MetaData.Facts[qLocaleLanguage].shortDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Language</source>
-      <translation type="unfinished">Language</translation>
+      <translation>语言</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[disableAllPersistence].shortDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Disable all data persistence</source>
-      <translation type="unfinished">Disable all data persistence</translation>
+      <translation>禁用所有数据持久化</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[disableAllPersistence].longDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>If this option is set, nothing will be saved to disk.</source>
-      <translation type="unfinished">If this option is set, nothing will be saved to disk.</translation>
+      <translation>如果设置此选项，则不会向磁盘保存任何内容。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[firstRunPromptIdsShown].shortDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Comma separated list of first run prompt ids which have already been shown.</source>
-      <translation type="unfinished">Comma separated list of first run prompt ids which have already been shown.</translation>
+      <translation>已显示的首次运行提示 ID 的逗号分隔列表。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[loginAirLink].shortDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>AirLink User Name</source>
-      <translation type="unfinished">AirLink User Name</translation>
+      <translation>AirLink 用户名</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[passAirLink].shortDesc, </extracomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>AirLink Password</source>
-      <translation type="unfinished">AirLink Password</translation>
+      <translation>AirLink 密码</translation>
     </message>
   </context>
   <context>
@@ -659,13 +659,13 @@
       <extracomment>.QGC.MetaData.Facts[flyViewActionsFile].shortDesc, </extracomment>
       <location filename="../src/Settings/MavlinkActions.SettingsGroup.json"/>
       <source>Name of JSON custom actions file for Fly View</source>
-      <translation type="unfinished">Name of JSON custom actions file for Fly View</translation>
+      <translation>Fly View 的 JSON 自定义动作文件名</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[joystickActionsFile].shortDesc, </extracomment>
       <location filename="../src/Settings/MavlinkActions.SettingsGroup.json"/>
       <source>Name of JSON custom actions file for Joysticks</source>
-      <translation type="unfinished">Name of JSON custom actions file for Joysticks</translation>
+      <translation>Joysticks 的 JSON 自定义动作文件名</translation>
     </message>
   </context>
   <context>
@@ -674,7 +674,7 @@
       <extracomment>.QGC.MetaData.Facts[defaultFirmwareType].shortDesc, </extracomment>
       <location filename="../src/Settings/FirmwareUpgrade.SettingsGroup.json"/>
       <source>Default firmware type for flashing</source>
-      <translation type="unfinished">Default firmware type for flashing</translation>
+      <translation>刷写时的默认固件类型</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[apmChibiOS].enumStrings, </extracomment>
@@ -697,19 +697,19 @@
       <extracomment>.QGC.MetaData.Facts[userBrandImageIndoor].shortDesc, .QGC.MetaData.Facts[userBrandImageOutdoor].shortDesc, </extracomment>
       <location filename="../src/Settings/BrandImage.SettingsGroup.json"/>
       <source>User-selected brand image</source>
-      <translation type="unfinished">User-selected brand image</translation>
+      <translation>用户选择的品牌图像</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[userBrandImageIndoor].longDesc, </extracomment>
       <location filename="../src/Settings/BrandImage.SettingsGroup.json"/>
       <source>Location in file system of user-selected brand image (indoor)</source>
-      <translation type="unfinished">Location in file system of user-selected brand image (indoor)</translation>
+      <translation>用户选择的品牌图像在文件系统中的位置（室内）</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[userBrandImageOutdoor].longDesc, </extracomment>
       <location filename="../src/Settings/BrandImage.SettingsGroup.json"/>
       <source>Location in file system of user-selected brand image (outdoor)</source>
-      <translation type="unfinished">Location in file system of user-selected brand image (outdoor)</translation>
+      <translation>用户选择的品牌图像在文件系统中的位置（室外）</translation>
     </message>
   </context>
   <context>
@@ -718,43 +718,43 @@
       <extracomment>.QGC.MetaData.Facts[px4HiddenFlightModes].shortDesc, </extracomment>
       <location filename="../src/Settings/FlightMode.SettingsGroup.json"/>
       <source>Comma separated list of hidden flight modes</source>
-      <translation type="unfinished">Comma separated list of hidden flight modes</translation>
+      <translation>以逗号分隔的隐藏飞行模式列表</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[px4HiddenFlightModesMultiRotor].shortDesc, .QGC.MetaData.Facts[apmHiddenFlightModesMultiRotor].shortDesc, </extracomment>
       <location filename="../src/Settings/FlightMode.SettingsGroup.json"/>
       <source>Comma separated list of hidden flight modes for MultiRotor</source>
-      <translation type="unfinished">Comma separated list of hidden flight modes for MultiRotor</translation>
+      <translation>以逗号分隔的多旋翼隐藏飞行模式列表</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[px4HiddenFlightModesFixedWing].shortDesc, .QGC.MetaData.Facts[apmHiddenFlightModesFixedWing].shortDesc, </extracomment>
       <location filename="../src/Settings/FlightMode.SettingsGroup.json"/>
       <source>Comma separated list of hidden flight modes for FixedWing</source>
-      <translation type="unfinished">Comma separated list of hidden flight modes for FixedWing</translation>
+      <translation>以逗号分隔的固定翼隐藏飞行模式列表</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[px4HiddenFlightModesVTOL].shortDesc, .QGC.MetaData.Facts[apmHiddenFlightModesVTOL].shortDesc, </extracomment>
       <location filename="../src/Settings/FlightMode.SettingsGroup.json"/>
       <source>Comma separated list of hidden flight modes for VTOL</source>
-      <translation type="unfinished">Comma separated list of hidden flight modes for VTOL</translation>
+      <translation>以逗号分隔的 VTOL 隐藏飞行模式列表</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[px4HiddenFlightModesRoverBoat].shortDesc, .QGC.MetaData.Facts[apmHiddenFlightModesRoverBoat].shortDesc, </extracomment>
       <location filename="../src/Settings/FlightMode.SettingsGroup.json"/>
       <source>Comma separated list of hidden flight modes for RoverBoat</source>
-      <translation type="unfinished">Comma separated list of hidden flight modes for RoverBoat</translation>
+      <translation>以逗号分隔的车船隐藏飞行模式列表</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[px4HiddenFlightModesSub].shortDesc, .QGC.MetaData.Facts[apmHiddenFlightModesSub].shortDesc, </extracomment>
       <location filename="../src/Settings/FlightMode.SettingsGroup.json"/>
       <source>Comma separated list of hidden flight modes for Sub</source>
-      <translation type="unfinished">Comma separated list of hidden flight modes for Sub</translation>
+      <translation>以逗号分隔的潜艇隐藏飞行模式列表</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[px4HiddenFlightModesAirship].shortDesc, .QGC.MetaData.Facts[apmHiddenFlightModesAirship].shortDesc, </extracomment>
       <location filename="../src/Settings/FlightMode.SettingsGroup.json"/>
       <source>Comma separated list of hidden flight modes for Airship</source>
-      <translation type="unfinished">Comma separated list of hidden flight modes for Airship</translation>
+      <translation>以逗号分隔的飞艇隐藏飞行模式列表</translation>
     </message>
   </context>
   <context>
@@ -769,79 +769,79 @@
       <extracomment>.QGC.MetaData.Facts[surveyInAccuracyLimit].longDesc, </extracomment>
       <location filename="../src/Settings/RTK.SettingsGroup.json"/>
       <source>The minimum accuracy value that Survey-In must achieve before it can complete.</source>
-      <translation type="unfinished">The minimum accuracy value that Survey-In must achieve before it can complete.</translation>
+      <translation>Survey-In 完成前必须达到的最小精度值。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[surveyInMinObservationDuration].shortDesc, </extracomment>
       <location filename="../src/Settings/RTK.SettingsGroup.json"/>
       <source>Min observation time</source>
-      <translation type="unfinished">Min observation time</translation>
+      <translation>最短观测时间</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[surveyInMinObservationDuration].longDesc, </extracomment>
       <location filename="../src/Settings/RTK.SettingsGroup.json"/>
       <source>Defines the minimum amount of observation time for the position calculation.</source>
-      <translation type="unfinished">Defines the minimum amount of observation time for the position calculation.</translation>
+      <translation>定义位置计算的最短观测时间。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[useFixedBasePosition].shortDesc, </extracomment>
       <location filename="../src/Settings/RTK.SettingsGroup.json"/>
       <source>Use specified base position</source>
-      <translation type="unfinished">Use specified base position</translation>
+      <translation>使用指定的基准位置</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[useFixedBasePosition].longDesc, </extracomment>
       <location filename="../src/Settings/RTK.SettingsGroup.json"/>
       <source>Specify the values for the RTK base position without having to do a survey in.</source>
-      <translation type="unfinished">Specify the values for the RTK base position without having to do a survey in.</translation>
+      <translation>无需执行 Survey-In 即可指定 RTK 基准位置的值。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[fixedBasePositionLatitude].shortDesc, </extracomment>
       <location filename="../src/Settings/RTK.SettingsGroup.json"/>
       <source>Base Position Latitude</source>
-      <translation type="unfinished">Base Position Latitude</translation>
+      <translation>基准位置纬度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[fixedBasePositionLatitude].longDesc, </extracomment>
       <location filename="../src/Settings/RTK.SettingsGroup.json"/>
       <source>Defines the latitude of the fixed RTK base position.</source>
-      <translation type="unfinished">Defines the latitude of the fixed RTK base position.</translation>
+      <translation>定义固定 RTK 基准位置的纬度。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[fixedBasePositionLongitude].shortDesc, </extracomment>
       <location filename="../src/Settings/RTK.SettingsGroup.json"/>
       <source>Base Position Longitude</source>
-      <translation type="unfinished">Base Position Longitude</translation>
+      <translation>基准位置经度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[fixedBasePositionLongitude].longDesc, </extracomment>
       <location filename="../src/Settings/RTK.SettingsGroup.json"/>
       <source>Defines the longitude of the fixed RTK base position.</source>
-      <translation type="unfinished">Defines the longitude of the fixed RTK base position.</translation>
+      <translation>定义固定 RTK 基准位置的经度。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[fixedBasePositionAltitude].shortDesc, </extracomment>
       <location filename="../src/Settings/RTK.SettingsGroup.json"/>
       <source>Base Position Alt (WGS84)</source>
-      <translation type="unfinished">Base Position Alt (WGS84)</translation>
+      <translation>基准位置高度 (WGS84)</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[fixedBasePositionAltitude].longDesc, </extracomment>
       <location filename="../src/Settings/RTK.SettingsGroup.json"/>
       <source>Defines the altitude of the fixed RTK base position.</source>
-      <translation type="unfinished">Defines the altitude of the fixed RTK base position.</translation>
+      <translation>定义固定 RTK 基准位置的高度。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[fixedBasePositionAccuracy].shortDesc, </extracomment>
       <location filename="../src/Settings/RTK.SettingsGroup.json"/>
       <source>Base Position Accuracy</source>
-      <translation type="unfinished">Base Position Accuracy</translation>
+      <translation>基准位置精度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[fixedBasePositionAccuracy].longDesc, </extracomment>
       <location filename="../src/Settings/RTK.SettingsGroup.json"/>
       <source>Defines the accuracy of the fixed RTK base position.</source>
-      <translation type="unfinished">Defines the accuracy of the fixed RTK base position.</translation>
+      <translation>定义固定RTK基准位置的精度。</translation>
     </message>
   </context>
   <context>
@@ -859,19 +859,19 @@
       <extracomment>.QGC.MetaData.Facts[mapProvider].shortDesc, </extracomment>
       <location filename="../src/Settings/FlightMap.SettingsGroup.json"/>
       <source>Currently selected map provider for flight maps</source>
-      <translation type="unfinished">Currently selected map provider for flight maps</translation>
+      <translation>当前为飞行地图选择的地图提供商</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[mapType].shortDesc, </extracomment>
       <location filename="../src/Settings/FlightMap.SettingsGroup.json"/>
       <source>Currently selected map type for flight maps</source>
-      <translation type="unfinished">Currently selected map type for flight maps</translation>
+      <translation>当前为飞行地图选择的地图类型</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[elevationMapProvider].shortDesc, </extracomment>
       <location filename="../src/Settings/FlightMap.SettingsGroup.json"/>
       <source>Currently selected elevation map provider</source>
-      <translation type="unfinished">Currently selected elevation map provider</translation>
+      <translation>当前选择的高程地图提供商</translation>
     </message>
   </context>
   <context>
@@ -880,109 +880,109 @@
       <extracomment>.QGC.MetaData.Facts[autoConnectUDP].shortDesc, </extracomment>
       <location filename="../src/Settings/AutoConnect.SettingsGroup.json"/>
       <source>Automatically open a connection over UDP</source>
-      <translation type="unfinished">Automatically open a connection over UDP</translation>
+      <translation>通过UDP自动打开连接</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[autoConnectUDP].longDesc, </extracomment>
       <location filename="../src/Settings/AutoConnect.SettingsGroup.json"/>
       <source>If this option is enabled GroundControl will automatically connect to a vehicle which is detected on a UDP communication link.</source>
-      <translation type="unfinished">If this option is enabled GroundControl will automatically connect to a vehicle which is detected on a UDP communication link.</translation>
+      <translation>如果启用此选项，GroundControl将自动连接到在UDP通信链路上检测到的飞行器。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[autoConnectPixhawk].shortDesc, </extracomment>
       <location filename="../src/Settings/AutoConnect.SettingsGroup.json"/>
       <source>Automatically connect to a Pixhawk board</source>
-      <translation type="unfinished">Automatically connect to a Pixhawk board</translation>
+      <translation>自动连接到Pixhawk板</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[autoConnectPixhawk].longDesc, </extracomment>
       <location filename="../src/Settings/AutoConnect.SettingsGroup.json"/>
       <source>If this option is enabled GroundControl will automatically connect to a Pixhawk board which is connected via USB.</source>
-      <translation type="unfinished">If this option is enabled GroundControl will automatically connect to a Pixhawk board which is connected via USB.</translation>
+      <translation>如果启用此选项，GroundControl将自动连接到通过USB连接的Pixhawk板。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[autoConnectSiKRadio].shortDesc, </extracomment>
       <location filename="../src/Settings/AutoConnect.SettingsGroup.json"/>
       <source>Automatically connect to a SiK Radio</source>
-      <translation type="unfinished">Automatically connect to a SiK Radio</translation>
+      <translation>自动连接到SiK Radio</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[autoConnectSiKRadio].longDesc, </extracomment>
       <location filename="../src/Settings/AutoConnect.SettingsGroup.json"/>
       <source>If this option is enabled GroundControl will automatically connect to a vehicle which is detected on a SiK Radio communication link.</source>
-      <translation type="unfinished">If this option is enabled GroundControl will automatically connect to a vehicle which is detected on a SiK Radio communication link.</translation>
+      <translation>如果启用此选项，GroundControl将自动连接到在SiK Radio通信链路上检测到的飞行器。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[autoConnectRTKGPS].shortDesc, </extracomment>
       <location filename="../src/Settings/AutoConnect.SettingsGroup.json"/>
       <source>Automatically connect to an RTK GPS</source>
-      <translation type="unfinished">Automatically connect to an RTK GPS</translation>
+      <translation>自动连接到RTK GPS</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[autoConnectRTKGPS].longDesc, </extracomment>
       <location filename="../src/Settings/AutoConnect.SettingsGroup.json"/>
       <source>If this option is enabled GroundControl will automatically connect to an RTK GPS which is connected via USB.</source>
-      <translation type="unfinished">If this option is enabled GroundControl will automatically connect to an RTK GPS which is connected via USB.</translation>
+      <translation>如果启用此选项，GroundControl将自动连接到通过USB连接的RTK GPS。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[autoConnectLibrePilot].shortDesc, </extracomment>
       <location filename="../src/Settings/AutoConnect.SettingsGroup.json"/>
       <source>Automatically connect to a LibrePilot</source>
-      <translation type="unfinished">Automatically connect to a LibrePilot</translation>
+      <translation>自动连接到LibrePilot</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[autoConnectLibrePilot].longDesc, </extracomment>
       <location filename="../src/Settings/AutoConnect.SettingsGroup.json"/>
       <source>If this option is enabled GroundControl will automatically connect to a LibrePilot board which is connected via USB.</source>
-      <translation type="unfinished">If this option is enabled GroundControl will automatically connect to a LibrePilot board which is connected via USB.</translation>
+      <translation>如果启用此选项，GroundControl将自动连接到通过USB连接的LibrePilot板。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[autoConnectNmeaPort].shortDesc, .QGC.MetaData.Facts[autoConnectNmeaPort].longDesc, </extracomment>
       <location filename="../src/Settings/AutoConnect.SettingsGroup.json"/>
       <source>NMEA GPS device for GCS position</source>
-      <translation type="unfinished">NMEA GPS device for GCS position</translation>
+      <translation>用于GCS位置的NMEA GPS设备</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[autoConnectNmeaBaud].shortDesc, .QGC.MetaData.Facts[autoConnectNmeaBaud].longDesc, </extracomment>
       <location filename="../src/Settings/AutoConnect.SettingsGroup.json"/>
       <source>NMEA GPS Baudrate</source>
-      <translation type="unfinished">NMEA GPS Baudrate</translation>
+      <translation>NMEA GPS波特率</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[autoConnectZeroConf].shortDesc, </extracomment>
       <location filename="../src/Settings/AutoConnect.SettingsGroup.json"/>
       <source>Automatically open a connection with Zero-Conf</source>
-      <translation type="unfinished">Automatically open a connection with Zero-Conf</translation>
+      <translation>通过Zero-Conf自动打开连接</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[autoConnectZeroConf].longDesc, </extracomment>
       <location filename="../src/Settings/AutoConnect.SettingsGroup.json"/>
       <source>If this option is enabled GroundControl will automatically connect to a vehicle which is detected over Zero-Conf.</source>
-      <translation type="unfinished">If this option is enabled GroundControl will automatically connect to a vehicle which is detected over Zero-Conf.</translation>
+      <translation>如果启用此选项，GroundControl将自动连接到通过Zero-Conf检测到的飞行器。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[udpListenPort].shortDesc, </extracomment>
       <location filename="../src/Settings/AutoConnect.SettingsGroup.json"/>
       <source>UDP port for autoconnect</source>
-      <translation type="unfinished">UDP port for autoconnect</translation>
+      <translation>自动连接的UDP端口</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[udpTargetHostIP].shortDesc, </extracomment>
       <location filename="../src/Settings/AutoConnect.SettingsGroup.json"/>
       <source>UDP target host IP for autoconnect</source>
-      <translation type="unfinished">UDP target host IP for autoconnect</translation>
+      <translation>自动连接的UDP目标主机IP</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[udpTargetHostPort].shortDesc, </extracomment>
       <location filename="../src/Settings/AutoConnect.SettingsGroup.json"/>
       <source>UDP target host port for autoconnect</source>
-      <translation type="unfinished">UDP target host port for autoconnect</translation>
+      <translation>自动连接的UDP目标主机端口</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[nmeaUdpPort].shortDesc, </extracomment>
       <location filename="../src/Settings/AutoConnect.SettingsGroup.json"/>
       <source>Udp port to receive NMEA streams</source>
-      <translation type="unfinished">Udp port to receive NMEA streams</translation>
+      <translation>用于接收NMEA流的UDP端口</translation>
     </message>
   </context>
   <context>
@@ -991,25 +991,25 @@
       <extracomment>.QGC.MetaData.Facts[enabled].shortDesc, </extracomment>
       <location filename="../src/Settings/Viewer3D.SettingsGroup.json"/>
       <source>Enable the 3D viewer</source>
-      <translation type="unfinished">Enable the 3D viewer</translation>
+      <translation>启用3D查看器</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[osmFilePath].shortDesc, </extracomment>
       <location filename="../src/Settings/Viewer3D.SettingsGroup.json"/>
       <source>Path to the OSM file for the 3D viewer.</source>
-      <translation type="unfinished">Path to the OSM file for the 3D viewer.</translation>
+      <translation>3D查看器所用OSM文件的路径。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[buildingLevelHeight].shortDesc, </extracomment>
       <location filename="../src/Settings/Viewer3D.SettingsGroup.json"/>
       <source>Average Height for each level of the buildings</source>
-      <translation type="unfinished">Average Height for each level of the buildings</translation>
+      <translation>建筑物每层的平均高度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[altitudeBias].shortDesc, </extracomment>
       <location filename="../src/Settings/Viewer3D.SettingsGroup.json"/>
       <source>Altitude bias for vehicles in the 3D View</source>
-      <translation type="unfinished">Altitude bias for vehicles in the 3D View</translation>
+      <translation>3D 视图中飞行器的高度偏移</translation>
     </message>
   </context>
   <context>
@@ -1018,13 +1018,13 @@
       <extracomment>.QGC.MetaData.Facts[maxCacheDiskSize].shortDesc, </extracomment>
       <location filename="../src/Settings/Maps.SettingsGroup.json"/>
       <source>Max disk cache</source>
-      <translation type="unfinished">Max disk cache</translation>
+      <translation>最大磁盘缓存</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[maxCacheMemorySize].shortDesc, </extracomment>
       <location filename="../src/Settings/Maps.SettingsGroup.json"/>
       <source>Max memory cache</source>
-      <translation type="unfinished">Max memory cache</translation>
+      <translation>最大内存缓存</translation>
     </message>
   </context>
   <context>
@@ -1033,26 +1033,26 @@
       <extracomment>.QGC.MetaData.Facts[valueDisplay].shortDesc, </extracomment>
       <location filename="../src/Settings/BatteryIndicator.SettingsGroup.json"/>
       <source>Select values to display in indicator</source>
-      <translation type="unfinished">Select values to display in indicator</translation>
+      <translation>选择指示器中显示的值</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[valueDisplay].enumStrings, </extracomment>
       <translatorcomment>Only use english comma &apos;,&apos; to separate strings</translatorcomment>
       <location filename="../src/Settings/BatteryIndicator.SettingsGroup.json"/>
       <source>Percentage,Voltage,Percentage and Voltage</source>
-      <translation type="unfinished">Percentage,Voltage,Percentage and Voltage</translation>
+      <translation>百分比,电压,百分比和电压</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[threshold1].shortDesc, </extracomment>
       <location filename="../src/Settings/BatteryIndicator.SettingsGroup.json"/>
       <source>Battery level threshold 1</source>
-      <translation type="unfinished">Battery level threshold 1</translation>
+      <translation>电池电量阈值 1</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[threshold2].shortDesc, </extracomment>
       <location filename="../src/Settings/BatteryIndicator.SettingsGroup.json"/>
       <source>Battery level threshold 2</source>
-      <translation type="unfinished">Battery level threshold 2</translation>
+      <translation>电池电量阈值 2</translation>
     </message>
   </context>
   <context>
@@ -1061,25 +1061,25 @@
       <extracomment>.QGC.MetaData.Facts[telemetrySave].shortDesc, </extracomment>
       <location filename="../src/Settings/Mavlink.SettingsGroup.json"/>
       <source>Save telemetry Log after each flight</source>
-      <translation type="unfinished">Save telemetry Log after each flight</translation>
+      <translation>每次飞行后保存遥测日志</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[telemetrySave].longDesc, </extracomment>
       <location filename="../src/Settings/Mavlink.SettingsGroup.json"/>
       <source>If this option is enabled a telemetry will be saved after each flight completes.</source>
-      <translation type="unfinished">If this option is enabled a telemetry will be saved after each flight completes.</translation>
+      <translation>如果启用此选项，每次飞行完成后将保存遥测日志。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[telemetrySaveNotArmed].shortDesc, </extracomment>
       <location filename="../src/Settings/Mavlink.SettingsGroup.json"/>
       <source>Save telemetry log even if vehicle was not armed</source>
-      <translation type="unfinished">Save telemetry log even if vehicle was not armed</translation>
+      <translation>即使飞行器未解锁也保存遥测日志</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[telemetrySaveNotArmed].longDesc, </extracomment>
       <location filename="../src/Settings/Mavlink.SettingsGroup.json"/>
       <source>If this option is enabled a telemtry log will be saved even if vehicle was never armed.</source>
-      <translation type="unfinished">If this option is enabled a telemtry log will be saved even if vehicle was never armed.</translation>
+      <translation>如果启用此选项，即使飞行器从未解锁也会保存遥测日志。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[apmStartMavlinkStreams].shortDesc, </extracomment>
@@ -1091,61 +1091,61 @@
       <extracomment>.QGC.MetaData.Facts[saveCsvTelemetry].shortDesc, </extracomment>
       <location filename="../src/Settings/Mavlink.SettingsGroup.json"/>
       <source>Save CSV Telementry Logs</source>
-      <translation type="unfinished">Save CSV Telementry Logs</translation>
+      <translation>保存 CSV 遥测日志</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[saveCsvTelemetry].longDesc, </extracomment>
       <location filename="../src/Settings/Mavlink.SettingsGroup.json"/>
       <source>If this option is enabled, all Facts will be written to a CSV file with a 1 Hertz frequency.</source>
-      <translation type="unfinished">If this option is enabled, all Facts will be written to a CSV file with a 1 Hertz frequency.</translation>
+      <translation>如果启用此选项，所有数据将以 1 Hz 频率写入 CSV 文件。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[forwardMavlink].shortDesc, .QGC.MetaData.Facts[forwardMavlink].longDesc, </extracomment>
       <location filename="../src/Settings/Mavlink.SettingsGroup.json"/>
       <source>Enable mavlink forwarding</source>
-      <translation type="unfinished">Enable mavlink forwarding</translation>
+      <translation>启用 MAVLink 转发</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[forwardMavlinkHostName].shortDesc, </extracomment>
       <location filename="../src/Settings/Mavlink.SettingsGroup.json"/>
       <source>Host name</source>
-      <translation type="unfinished">Host name</translation>
+      <translation>主机名</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[forwardMavlinkHostName].longDesc, </extracomment>
       <location filename="../src/Settings/Mavlink.SettingsGroup.json"/>
       <source>Host name to forward mavlink to. i.e: localhost:14445</source>
-      <translation type="unfinished">Host name to forward mavlink to. i.e: localhost:14445</translation>
+      <translation>要转发 MAVLink 到的主机名。例如：localhost:14445</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[forwardMavlinkAPMSupportHostName].shortDesc, </extracomment>
       <location filename="../src/Settings/Mavlink.SettingsGroup.json"/>
       <source>Ardupilot Support Host name</source>
-      <translation type="unfinished">Ardupilot Support Host name</translation>
+      <translation>ArduPilot 支持主机名</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[forwardMavlinkAPMSupportHostName].longDesc, </extracomment>
       <location filename="../src/Settings/Mavlink.SettingsGroup.json"/>
       <source>Ardupilot Support server to forward mavlink to. i.e: support.ardupilot.org:xxxx</source>
-      <translation type="unfinished">Ardupilot Support server to forward mavlink to. i.e: support.ardupilot.org:xxxx</translation>
+      <translation>要转发 MAVLink 到的 ArduPilot 支持服务器。例如：support.ardupilot.org:xxxx</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[mavlink2SigningKey].shortDesc, </extracomment>
       <location filename="../src/Settings/Mavlink.SettingsGroup.json"/>
       <source>MAVLink 2.0 signing key</source>
-      <translation type="unfinished">MAVLink 2.0 signing key</translation>
+      <translation>MAVLink 2.0 签名密钥</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[sendGCSHeartbeat].shortDesc, </extracomment>
       <location filename="../src/Settings/Mavlink.SettingsGroup.json"/>
       <source>Send GCS Heartbeat</source>
-      <translation type="unfinished">Send GCS Heartbeat</translation>
+      <translation>发送 GCS 心跳</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[gcsMavlinkSystemID].shortDesc, </extracomment>
       <location filename="../src/Settings/Mavlink.SettingsGroup.json"/>
       <source>GCS MAVLink System ID</source>
-      <translation type="unfinished">GCS MAVLink System ID</translation>
+      <translation>GCS MAVLink 系统 ID</translation>
     </message>
   </context>
   <context>
@@ -1154,79 +1154,79 @@
       <extracomment>.QGC.MetaData.Facts[videoSource].shortDesc, </extracomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>Video source</source>
-      <translation type="unfinished">Video source</translation>
+      <translation>视频源</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[videoSource].longDesc, </extracomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>Source for video. UDP, TCP, RTSP and UVC Cameras may be supported depending on Vehicle and ground station version.</source>
-      <translation type="unfinished">Source for video. UDP, TCP, RTSP and UVC Cameras may be supported depending on Vehicle and ground station version.</translation>
+      <translation>视频源。UDP、TCP、RTSP 和 UVC 相机可能受支持，具体取决于飞行器和地面站版本。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[udpUrl].shortDesc, </extracomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>Video UDP Url</source>
-      <translation type="unfinished">Video UDP Url</translation>
+      <translation>视频 UDP 地址</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[udpUrl].longDesc, </extracomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>UDP url address and port to bind to for video stream. Example: 0.0.0.0:5600</source>
-      <translation type="unfinished">UDP url address and port to bind to for video stream. Example: 0.0.0.0:5600</translation>
+      <translation>用于视频流绑定的 UDP 地址和端口。示例：0.0.0.0:5600</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[rtspUrl].shortDesc, </extracomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>Video RTSP Url</source>
-      <translation type="unfinished">Video RTSP Url</translation>
+      <translation>视频 RTSP 地址</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[rtspUrl].longDesc, </extracomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>RTSP url address and port to bind to for video stream. Example: rtsp://192.168.42.1:554/live</source>
-      <translation type="unfinished">RTSP url address and port to bind to for video stream. Example: rtsp://192.168.42.1:554/live</translation>
+      <translation>用于视频流的 RTSP 地址和端口。示例：rtsp://192.168.42.1:554/live</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[tcpUrl].shortDesc, </extracomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>Video TCP Url</source>
-      <translation type="unfinished">Video TCP Url</translation>
+      <translation>视频 TCP 地址</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[tcpUrl].longDesc, </extracomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>TCP url address and port to bind to for video stream. Example: 192.168.143.200:3001</source>
-      <translation type="unfinished">TCP url address and port to bind to for video stream. Example: 192.168.143.200:3001</translation>
+      <translation>用于视频流的 TCP 地址和端口。示例：192.168.143.200:3001</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[videoSavePath].shortDesc, </extracomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>Video save directory</source>
-      <translation type="unfinished">Video save directory</translation>
+      <translation>视频保存目录</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[videoSavePath].longDesc, </extracomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>Directory to save videos to.</source>
-      <translation type="unfinished">Directory to save videos to.</translation>
+      <translation>保存视频的目录。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[aspectRatio].shortDesc, </extracomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>Video Aspect Ratio</source>
-      <translation type="unfinished">Video Aspect Ratio</translation>
+      <translation>视频宽高比</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[aspectRatio].longDesc, </extracomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>Video Aspect Ratio (width / height). Use 0.0 to ignore it.</source>
-      <translation type="unfinished">Video Aspect Ratio (width / height). Use 0.0 to ignore it.</translation>
+      <translation>视频宽高比（宽 / 高）。使用 0.0 表示忽略。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[gridLines].shortDesc, </extracomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>Video Grid Lines</source>
-      <translation type="unfinished">Video Grid Lines</translation>
+      <translation>视频网格线</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[gridLines].longDesc, </extracomment>
@@ -1244,38 +1244,38 @@
       <extracomment>.QGC.MetaData.Facts[videoFit].longDesc, </extracomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>Handle Video Aspect Ratio.</source>
-      <translation type="unfinished">Handle Video Aspect Ratio.</translation>
+      <translation>处理视频宽高比。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[videoFit].enumStrings, </extracomment>
       <translatorcomment>Only use english comma &apos;,&apos; to separate strings</translatorcomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>Fit Width,Fit Height,Fill,No Crop</source>
-      <translation type="unfinished">Fit Width,Fit Height,Fill,No Crop</translation>
+      <translation>适应宽度,适应高度,填充,不裁剪</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[showRecControl].shortDesc, </extracomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>Show Video Record Control</source>
-      <translation type="unfinished">Show Video Record Control</translation>
+      <translation>显示视频录制控制</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[showRecControl].longDesc, </extracomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>Show recording control in the UI.</source>
-      <translation type="unfinished">Show recording control in the UI.</translation>
+      <translation>在界面中显示录制控制。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[recordingFormat].shortDesc, </extracomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>Video Recording Format</source>
-      <translation type="unfinished">Video Recording Format</translation>
+      <translation>视频录制格式</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[recordingFormat].longDesc, </extracomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>Video recording file format.</source>
-      <translation type="unfinished">Video recording file format.</translation>
+      <translation>视频录制文件格式。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[recordingFormat].enumStrings, </extracomment>
@@ -1288,92 +1288,92 @@
       <extracomment>.QGC.MetaData.Facts[maxVideoSize].shortDesc, </extracomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>Max Video Storage Usage</source>
-      <translation type="unfinished">Max Video Storage Usage</translation>
+      <translation>最大视频存储用量</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[maxVideoSize].longDesc, </extracomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>Maximum amount of disk space used by video recording.</source>
-      <translation type="unfinished">Maximum amount of disk space used by video recording.</translation>
+      <translation>视频录制使用的最大磁盘空间。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[enableStorageLimit].shortDesc, </extracomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>Enable/Disable Limits on Storage Usage</source>
-      <translation type="unfinished">Enable/Disable Limits on Storage Usage</translation>
+      <translation>启用/禁用存储用量限制</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[enableStorageLimit].longDesc, </extracomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>When enabled, old video files will be auto-deleted when the total size of QGC-recorded video exceeds the maximum video storage usage.</source>
-      <translation type="unfinished">When enabled, old video files will be auto-deleted when the total size of QGC-recorded video exceeds the maximum video storage usage.</translation>
+      <translation>启用后，当 QGC 录制的视频总大小超过最大视频存储用量时，旧视频文件将被自动删除。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[rtspTimeout].shortDesc, </extracomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>RTSP Video Timeout</source>
-      <translation type="unfinished">RTSP Video Timeout</translation>
+      <translation>RTSP 视频超时</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[rtspTimeout].longDesc, </extracomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>How long to wait before assuming RTSP link is gone.</source>
-      <translation type="unfinished">How long to wait before assuming RTSP link is gone.</translation>
+      <translation>等待多久后判定 RTSP 链路已断开。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[streamEnabled].shortDesc, </extracomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>Video Stream Enabled</source>
-      <translation type="unfinished">Video Stream Enabled</translation>
+      <translation>启用视频流</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[streamEnabled].longDesc, </extracomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>Start/Stop Video Stream.</source>
-      <translation type="unfinished">Start/Stop Video Stream.</translation>
+      <translation>启动/停止视频流。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[disableWhenDisarmed].shortDesc, </extracomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>Video Stream Disnabled When Armed</source>
-      <translation type="unfinished">Video Stream Disnabled When Armed</translation>
+      <translation>已解锁时禁用视频流</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[disableWhenDisarmed].longDesc, </extracomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>Disable Video Stream when disarmed.</source>
-      <translation type="unfinished">Disable Video Stream when disarmed.</translation>
+      <translation>未解锁时禁用视频流。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[lowLatencyMode].shortDesc, </extracomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>Tweaks video for lower latency</source>
-      <translation type="unfinished">Tweaks video for lower latency</translation>
+      <translation>优化视频以降低延迟</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[lowLatencyMode].longDesc, </extracomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>If this option is enabled, the rtpjitterbuffer is removed and the video sink is set to assynchronous mode, reducing the latency by about 200 ms.</source>
-      <translation type="unfinished">If this option is enabled, the rtpjitterbuffer is removed and the video sink is set to assynchronous mode, reducing the latency by about 200 ms.</translation>
+      <translation>如果启用此选项，将移除 rtpjitterbuffer 并将视频接收端设置为异步模式，从而降低约 200 ms 的延迟。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[forceVideoDecoder].shortDesc, </extracomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>Force specific category of video decode</source>
-      <translation type="unfinished">Force specific category of video decode</translation>
+      <translation>强制指定视频解码类别</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[forceVideoDecoder].longDesc, </extracomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>Force the change of prioritization between video decode methods, allowing the user to force some video hardware decode plugins if necessary.</source>
-      <translation type="unfinished">Force the change of prioritization between video decode methods, allowing the user to force some video hardware decode plugins if necessary.</translation>
+      <translation>强制更改视频解码方法之间的优先级，允许用户在必要时强制使用某些视频硬件解码插件。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[forceVideoDecoder].enumStrings, </extracomment>
       <translatorcomment>Only use english comma &apos;,&apos; to separate strings</translatorcomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>Default,Force software decoder,Force NVIDIA decoder,Force VA-API decoder,Force DirectX3D 11 decoder,Force VideoToolbox decoder,Force Intel decoder,Force Vulkan decoder</source>
-      <translation type="unfinished">Default,Force software decoder,Force NVIDIA decoder,Force VA-API decoder,Force DirectX3D 11 decoder,Force VideoToolbox decoder,Force Intel decoder,Force Vulkan decoder</translation>
+      <translation>默认,强制软件解码器,强制 NVIDIA 解码器,强制 VA-API 解码器,强制 DirectX3D 11 解码器,强制 VideoToolbox 解码器,强制 Intel 解码器,强制 Vulkan 解码器</translation>
     </message>
   </context>
   <context>
@@ -1382,286 +1382,286 @@
       <extracomment>.QGC.MetaData.Facts[operatorID].shortDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Operator ID</source>
-      <translation type="unfinished">Operator ID</translation>
+      <translation>操作员 ID</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[operatorID].longDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Operator ID. Maximum 20 characters.</source>
-      <translation type="unfinished">Operator ID. Maximum 20 characters.</translation>
+      <translation>操作员 ID。最多 20 个字符。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[operatorIDValid].shortDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Operator ID is valid</source>
-      <translation type="unfinished">Operator ID is valid</translation>
+      <translation>操作员 ID 有效</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[operatorIDValid].longDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Operator ID has been checked using checksum.</source>
-      <translation type="unfinished">Operator ID has been checked using checksum.</translation>
+      <translation>操作员 ID 已使用校验和检查。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[operatorIDType].shortDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Operator ID type</source>
-      <translation type="unfinished">Operator ID type</translation>
+      <translation>操作员 ID 类型</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[operatorIDType].enumStrings, </extracomment>
       <translatorcomment>Only use english comma &apos;,&apos; to separate strings</translatorcomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>CAA</source>
-      <translation type="unfinished">CAA</translation>
+      <translation>CAA</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[sendOperatorID].shortDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Send Operator ID</source>
-      <translation type="unfinished">Send Operator ID</translation>
+      <translation>发送操作员 ID</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[sendOperatorID].longDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>When enabled, sends operator ID message</source>
-      <translation type="unfinished">When enabled, sends operator ID message</translation>
+      <translation>启用后，发送操作员 ID 消息</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[selfIDFree].shortDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Flight Purpose</source>
-      <translation type="unfinished">Flight Purpose</translation>
+      <translation>飞行目的</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[selfIDFree].longDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Optional plain text for operator to specify operations data (Free Text). Maximum 23 characters.</source>
-      <translation type="unfinished">Optional plain text for operator to specify operations data (Free Text). Maximum 23 characters.</translation>
+      <translation>供操作员指定操作数据的可选纯文本（自由文本）。最多 23 个字符。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[selfIDEmergency].shortDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Emergency Text</source>
-      <translation type="unfinished">Emergency Text</translation>
+      <translation>紧急文本</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[selfIDEmergency].longDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Optional plain text for operator to specify operations data (Emergency Text). Maximum 23 characters.</source>
-      <translation type="unfinished">Optional plain text for operator to specify operations data (Emergency Text). Maximum 23 characters.</translation>
+      <translation>供操作员指定操作数据的可选纯文本（紧急文本）。最多 23 个字符。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[selfIDExtended].shortDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Extended Status</source>
-      <translation type="unfinished">Extended Status</translation>
+      <translation>扩展状态</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[selfIDExtended].longDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Optional plain text for operator to specify operations data (Extended Text). Maximum 23 characters.</source>
-      <translation type="unfinished">Optional plain text for operator to specify operations data (Extended Text). Maximum 23 characters.</translation>
+      <translation>供操作员指定操作数据的可选纯文本（扩展文本）。最多 23 个字符。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[selfIDType].shortDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Self ID type</source>
-      <translation type="unfinished">Self ID type</translation>
+      <translation>自身 ID 类型</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[selfIDType].enumStrings, </extracomment>
       <translatorcomment>Only use english comma &apos;,&apos; to separate strings</translatorcomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Flight Purpose,Emergency,Extended Status</source>
-      <translation type="unfinished">Flight Purpose,Emergency,Extended Status</translation>
+      <translation>飞行目的,紧急,扩展状态</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[sendSelfID].shortDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Send Self ID</source>
-      <translation type="unfinished">Send Self ID</translation>
+      <translation>发送自身 ID</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[sendSelfID].longDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>When enabled, sends self ID message</source>
-      <translation type="unfinished">When enabled, sends self ID message</translation>
+      <translation>启用后，发送自身 ID 消息</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[basicID].shortDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Basic ID</source>
-      <translation type="unfinished">Basic ID</translation>
+      <translation>基本 ID</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[basicIDType].shortDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Basic ID Type</source>
-      <translation type="unfinished">Basic ID Type</translation>
+      <translation>基本 ID 类型</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[basicIDType].enumStrings, </extracomment>
       <translatorcomment>Only use english comma &apos;,&apos; to separate strings</translatorcomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>None,SerialNumber (ANSI/CTA-2063),CAA,UTM (RFC4122),Specific</source>
-      <translation type="unfinished">None,SerialNumber (ANSI/CTA-2063),CAA,UTM (RFC4122),Specific</translation>
+      <translation>无,序列号 (ANSI/CTA-2063),CAA,UTM (RFC4122),特定</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[basicIDUaType].shortDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>UA type</source>
-      <translation type="unfinished">UA type</translation>
+      <translation>UA 类型</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[basicIDUaType].enumStrings, </extracomment>
       <translatorcomment>Only use english comma &apos;,&apos; to separate strings</translatorcomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Undefined,Airplane/FixedWing,Helicopter/Multirrotor,Gyroplane,VTOL,Ornithopter,Glider,Kite,Free Ballon,Captive Ballon,Airship,Parachute,Rocket,Tethered powered aircraft,Ground Obstacle,Other</source>
-      <translation type="unfinished">Undefined,Airplane/FixedWing,Helicopter/Multirrotor,Gyroplane,VTOL,Ornithopter,Glider,Kite,Free Ballon,Captive Ballon,Airship,Parachute,Rocket,Tethered powered aircraft,Ground Obstacle,Other</translation>
+      <translation>未定义,飞机/固定翼,直升机/多旋翼,旋翼机,VTOL,扑翼机,滑翔机,风筝,自由气球,系留气球,飞艇,降落伞,火箭,系留动力飞行器,地面障碍物,其他</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[sendBasicID].shortDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Send Basic ID</source>
-      <translation type="unfinished">Send Basic ID</translation>
+      <translation>发送基本 ID</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[sendBasicID].longDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>When enabled, sends basic ID message</source>
-      <translation type="unfinished">When enabled, sends basic ID message</translation>
+      <translation>启用后发送基本 ID 消息</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[region].shortDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Region of operation</source>
-      <translation type="unfinished">Region of operation</translation>
+      <translation>运行区域</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[region].longDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>The region of operation the mission will take place in</source>
-      <translation type="unfinished">The region of operation the mission will take place in</translation>
+      <translation>任务将执行的运行区域</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[region].enumStrings, </extracomment>
       <translatorcomment>Only use english comma &apos;,&apos; to separate strings</translatorcomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>FAA,EU</source>
-      <translation type="unfinished">FAA,EU</translation>
+      <translation>FAA,EU</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[locationType].shortDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Location Type</source>
-      <translation type="unfinished">Location Type</translation>
+      <translation>位置类型</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[locationType].longDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Operator location Type</source>
-      <translation type="unfinished">Operator location Type</translation>
+      <translation>操作员位置类型</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[locationType].enumStrings, </extracomment>
       <translatorcomment>Only use english comma &apos;,&apos; to separate strings</translatorcomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Takeoff(Not Supported),Live GNNS, Fixed (not for FAA)</source>
-      <translation type="unfinished">Takeoff(Not Supported),Live GNNS, Fixed (not for FAA)</translation>
+      <translation>起飞(不支持),实时 GNNS,固定 (不适用于 FAA)</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[latitudeFixed].shortDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Latitude Fixed</source>
-      <translation type="unfinished">Latitude Fixed</translation>
+      <translation>固定纬度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[latitudeFixed].longDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Fixed latitude to send on SYSTEM message</source>
-      <translation type="unfinished">Fixed latitude to send on SYSTEM message</translation>
+      <translation>在 SYSTEM 消息中发送的固定纬度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[longitudeFixed].shortDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Longitude Fixed</source>
-      <translation type="unfinished">Longitude Fixed</translation>
+      <translation>固定经度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[longitudeFixed].longDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Fixed Longitude to send on SYSTEM message</source>
-      <translation type="unfinished">Fixed Longitude to send on SYSTEM message</translation>
+      <translation>在 SYSTEM 消息中发送的固定经度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[altitudeFixed].shortDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Altitude Fixed</source>
-      <translation type="unfinished">Altitude Fixed</translation>
+      <translation>固定高度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[altitudeFixed].longDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Fixed Altitude to send on SYSTEM message</source>
-      <translation type="unfinished">Fixed Altitude to send on SYSTEM message</translation>
+      <translation>在 SYSTEM 消息中发送的固定高度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[classificationType].shortDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Classification Type</source>
-      <translation type="unfinished">Classification Type</translation>
+      <translation>分类类型</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[classificationType].longDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Classification Type of UAS</source>
-      <translation type="unfinished">Classification Type of UAS</translation>
+      <translation>UAS 的分类类型</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[classificationType].enumStrings, </extracomment>
       <translatorcomment>Only use english comma &apos;,&apos; to separate strings</translatorcomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Undeclared,EU</source>
-      <translation type="unfinished">Undeclared,EU</translation>
+      <translation>未声明,EU</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[categoryEU].shortDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Category</source>
-      <translation type="unfinished">Category</translation>
+      <translation>类别</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[categoryEU].longDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Category of the UAS in the EU region</source>
-      <translation type="unfinished">Category of the UAS in the EU region</translation>
+      <translation>EU 区域内 UAS 的类别</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[categoryEU].enumStrings, </extracomment>
       <translatorcomment>Only use english comma &apos;,&apos; to separate strings</translatorcomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Undeclared,Open,Specific,Certified</source>
-      <translation type="unfinished">Undeclared,Open,Specific,Certified</translation>
+      <translation>未声明,开放,特定,认证</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[classEU].shortDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Class</source>
-      <translation type="unfinished">Class</translation>
+      <translation>等级</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[classEU].longDesc, </extracomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Class of the UAS in the EU region</source>
-      <translation type="unfinished">Class of the UAS in the EU region</translation>
+      <translation>EU 区域内 UAS 的等级</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[classEU].enumStrings, </extracomment>
       <translatorcomment>Only use english comma &apos;,&apos; to separate strings</translatorcomment>
       <location filename="../src/Settings/RemoteID.SettingsGroup.json"/>
       <source>Undeclared,Class 0,Class 1,Class 2,Class 3,Class 4,Class 5,Class 6</source>
-      <translation type="unfinished">Undeclared,Class 0,Class 1,Class 2,Class 3,Class 4,Class 5,Class 6</translation>
+      <translation>未声明,Class 0,Class 1,Class 2,Class 3,Class 4,Class 5,Class 6</translation>
     </message>
   </context>
   <context>
@@ -1670,25 +1670,25 @@
       <extracomment>.QGC.MetaData.Facts[adsbServerConnectEnabled].shortDesc, </extracomment>
       <location filename="../src/Settings/ADSBVehicleManager.SettingsGroup.json"/>
       <source>Connect to ADSB SBS server</source>
-      <translation type="unfinished">Connect to ADSB SBS server</translation>
+      <translation>连接到 ADSB SBS 服务器</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[adsbServerConnectEnabled].longDesc, </extracomment>
       <location filename="../src/Settings/ADSBVehicleManager.SettingsGroup.json"/>
       <source>Connect to ADSB SBS-1 server using specified address/port</source>
-      <translation type="unfinished">Connect to ADSB SBS-1 server using specified address/port</translation>
+      <translation>使用指定地址/端口连接到 ADSB SBS-1 服务器</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[adsbServerHostAddress].shortDesc, </extracomment>
       <location filename="../src/Settings/ADSBVehicleManager.SettingsGroup.json"/>
       <source>Host address</source>
-      <translation type="unfinished">Host address</translation>
+      <translation>主机地址</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[adsbServerPort].shortDesc, </extracomment>
       <location filename="../src/Settings/ADSBVehicleManager.SettingsGroup.json"/>
       <source>Server port</source>
-      <translation type="unfinished">Server port</translation>
+      <translation>服务器端口</translation>
     </message>
   </context>
   <context>
@@ -1697,68 +1697,68 @@
       <extracomment>.QGC.MetaData.Facts[EnableOnScreenControl].shortDesc, </extracomment>
       <location filename="../src/Settings/GimbalController.SettingsGroup.json"/>
       <source>Enable on Screen Camera Control</source>
-      <translation type="unfinished">Enable on Screen Camera Control</translation>
+      <translation>启用屏幕相机控制</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[ControlType].shortDesc, </extracomment>
       <location filename="../src/Settings/GimbalController.SettingsGroup.json"/>
       <source>Type of on-screen control</source>
-      <translation type="unfinished">Type of on-screen control</translation>
+      <translation>屏幕控制类型</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[ControlType].enumStrings, </extracomment>
       <translatorcomment>Only use english comma &apos;,&apos; to separate strings</translatorcomment>
       <location filename="../src/Settings/GimbalController.SettingsGroup.json"/>
       <source>Click to point, click and drag</source>
-      <translation type="unfinished">Click to point, click and drag</translation>
+      <translation>点击指向，点击并拖动</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[CameraVFov].shortDesc, </extracomment>
       <location filename="../src/Settings/GimbalController.SettingsGroup.json"/>
       <source>Vertical camera field of view</source>
-      <translation type="unfinished">Vertical camera field of view</translation>
+      <translation>相机垂直视场角</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[CameraHFov].shortDesc, </extracomment>
       <location filename="../src/Settings/GimbalController.SettingsGroup.json"/>
       <source>Horizontal camera field of view</source>
-      <translation type="unfinished">Horizontal camera field of view</translation>
+      <translation>相机水平视场角</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[CameraSlideSpeed].shortDesc, </extracomment>
       <location filename="../src/Settings/GimbalController.SettingsGroup.json"/>
       <source>Maximum gimbal speed on click and drag (deg/sec)</source>
-      <translation type="unfinished">Maximum gimbal speed on click and drag (deg/sec)</translation>
+      <translation>点击并拖动时的最大云台速度 (deg/sec)</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[showAzimuthIndicatorOnMap].shortDesc, </extracomment>
       <location filename="../src/Settings/GimbalController.SettingsGroup.json"/>
       <source>Show gimbal Azimuth indicator over vehicle icon in map</source>
-      <translation type="unfinished">Show gimbal Azimuth indicator over vehicle icon in map</translation>
+      <translation>在地图飞行器图标上显示云台方位角指示</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[toolbarIndicatorShowAzimuth].shortDesc, </extracomment>
       <location filename="../src/Settings/GimbalController.SettingsGroup.json"/>
       <source>Show Azimuth instead of local yaw on top toolbar gimbal indicator</source>
-      <translation type="unfinished">Show Azimuth instead of local yaw on top toolbar gimbal indicator</translation>
+      <translation>顶部工具栏云台指示器显示方位角而非本地偏航</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[toolbarIndicatorShowAcquireReleaseControl].shortDesc, </extracomment>
       <location filename="../src/Settings/GimbalController.SettingsGroup.json"/>
       <source>Show Azimuth Acquire/release buttons in the gimbal buttons panel</source>
-      <translation type="unfinished">Show Azimuth Acquire/release buttons in the gimbal buttons panel</translation>
+      <translation>在云台按钮面板中显示方位角获取/释放按钮</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[joystickButtonsSpeed].shortDesc, </extracomment>
       <location filename="../src/Settings/GimbalController.SettingsGroup.json"/>
       <source>Rate used for joystick button control (deg/sec)</source>
-      <translation type="unfinished">Rate used for joystick button control (deg/sec)</translation>
+      <translation>摇杆按钮控制使用的速率 (deg/sec)</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[joystickButtonsSpeed].longDesc, </extracomment>
       <location filename="../src/Settings/GimbalController.SettingsGroup.json"/>
       <source>When a joystick button is set to gimbal left/right/up/down, it will send this rate when pressed, and it will stop moving when button is released</source>
-      <translation type="unfinished">When a joystick button is set to gimbal left/right/up/down, it will send this rate when pressed, and it will stop moving when button is released</translation>
+      <translation>当摇杆按钮设为云台左/右/上/下时，按下将发送此速率，松开按钮时停止移动</translation>
     </message>
   </context>
   <context>
@@ -1767,31 +1767,31 @@
       <extracomment>.QGC.MetaData.Facts[displayPresetsTabFirst].shortDesc, </extracomment>
       <location filename="../src/Settings/PlanView.SettingsGroup.json"/>
       <source>Display the presets tab at start</source>
-      <translation type="unfinished">Display the presets tab at start</translation>
+      <translation>启动时显示预设选项卡</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[showMissionItemStatus].shortDesc, </extracomment>
       <location filename="../src/Settings/PlanView.SettingsGroup.json"/>
       <source>Show/Hide the mission item status display</source>
-      <translation type="unfinished">Show/Hide the mission item status display</translation>
+      <translation>显示/隐藏任务项状态显示</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[takeoffItemNotRequired].shortDesc, </extracomment>
       <location filename="../src/Settings/PlanView.SettingsGroup.json"/>
       <source>Allow missions to not require a takeoff item</source>
-      <translation type="unfinished">Allow missions to not require a takeoff item</translation>
+      <translation>允许任务不需要起飞项</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[allowMultipleLandingPatterns].shortDesc, </extracomment>
       <location filename="../src/Settings/PlanView.SettingsGroup.json"/>
       <source>Allow configuring multiple landing sequences if the firmware supports it. The first one will be used for the mission, but in the event of an RTL, the one that is closest will be used instead.</source>
-      <translation type="unfinished">Allow configuring multiple landing sequences if the firmware supports it. The first one will be used for the mission, but in the event of an RTL, the one that is closest will be used instead.</translation>
+      <translation>如果固件支持，允许配置多个降落序列。第一个将用于任务，但在 RTL 情况下，将改用最近的一个。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[useConditionGate].shortDesc, </extracomment>
       <location filename="../src/Settings/PlanView.SettingsGroup.json"/>
       <source>Use MAV_CMD_CONDITION_GATE for pattern generation</source>
-      <translation type="unfinished">Use MAV_CMD_CONDITION_GATE for pattern generation</translation>
+      <translation>使用 MAV_CMD_CONDITION_GATE 进行模式生成</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[showGimbalOnlyWhenSet].shortDesc, </extracomment>
@@ -1803,7 +1803,7 @@
       <extracomment>.QGC.MetaData.Facts[vtolTransitionDistance].shortDesc, </extracomment>
       <location filename="../src/Settings/PlanView.SettingsGroup.json"/>
       <source>Amount of distance required for vehicle to complete a transition</source>
-      <translation type="unfinished">Amount of distance required for vehicle to complete a transition</translation>
+      <translation>飞行器完成过渡所需的距离</translation>
     </message>
   </context>
   <context>
@@ -1812,73 +1812,73 @@
       <extracomment>.QGC.MetaData.Facts[rotationNone].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/DistanceSensorFact.json"/>
       <source>Forward</source>
-      <translation type="unfinished">Forward</translation>
+      <translation>前进</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[rotationYaw45].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/DistanceSensorFact.json"/>
       <source>Forward/Right</source>
-      <translation type="unfinished">Forward/Right</translation>
+      <translation>前进/右</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[rotationYaw90].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/DistanceSensorFact.json"/>
       <source>Right</source>
-      <translation type="unfinished">Right</translation>
+      <translation>右</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[rotationYaw135].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/DistanceSensorFact.json"/>
       <source>Rear/Right</source>
-      <translation type="unfinished">Rear/Right</translation>
+      <translation>后/右</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[rotationYaw180].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/DistanceSensorFact.json"/>
       <source>Rear</source>
-      <translation type="unfinished">Rear</translation>
+      <translation>后</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[rotationYaw225].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/DistanceSensorFact.json"/>
       <source>Rear/Left</source>
-      <translation type="unfinished">Rear/Left</translation>
+      <translation>后/左</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[rotationYaw270].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/DistanceSensorFact.json"/>
       <source>Left</source>
-      <translation type="unfinished">Left</translation>
+      <translation>左</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[rotationYaw315].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/DistanceSensorFact.json"/>
       <source>Forward/Left</source>
-      <translation type="unfinished">Forward/Left</translation>
+      <translation>前/左</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[rotationPitch90].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/DistanceSensorFact.json"/>
       <source>Up</source>
-      <translation type="unfinished">Up</translation>
+      <translation>上</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[rotationPitch270].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/DistanceSensorFact.json"/>
       <source>Down</source>
-      <translation type="unfinished">Down</translation>
+      <translation>下</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[minDistance].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/DistanceSensorFact.json"/>
       <source>Minimum distance sensor can detect</source>
-      <translation type="unfinished">Minimum distance sensor can detect</translation>
+      <translation>传感器可检测的最小距离</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[maxDistance].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/DistanceSensorFact.json"/>
       <source>Maximum distance sensor can detect</source>
-      <translation type="unfinished">Maximum distance sensor can detect</translation>
+      <translation>传感器可检测的最大距离</translation>
     </message>
   </context>
   <context>
@@ -1887,37 +1887,37 @@
       <extracomment>.QGC.MetaData.Facts[roll].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/SetpointFact.json"/>
       <source>Roll Setpoint</source>
-      <translation type="unfinished">Roll Setpoint</translation>
+      <translation>横滚设定值</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[pitch].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/SetpointFact.json"/>
       <source>Pitch Setpoint</source>
-      <translation type="unfinished">Pitch Setpoint</translation>
+      <translation>俯仰设定值</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[yaw].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/SetpointFact.json"/>
       <source>Yaw Setpoint</source>
-      <translation type="unfinished">Yaw Setpoint</translation>
+      <translation>偏航设定值</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[rollRate].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/SetpointFact.json"/>
       <source>Roll Rate Setpoint</source>
-      <translation type="unfinished">Roll Rate Setpoint</translation>
+      <translation>横滚速率设定值</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[pitchRate].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/SetpointFact.json"/>
       <source>Pitch Rate Setpoint</source>
-      <translation type="unfinished">Pitch Rate Setpoint</translation>
+      <translation>俯仰速率设定值</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[yawRate].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/SetpointFact.json"/>
       <source>Yaw Rate Setpoint</source>
-      <translation type="unfinished">Yaw Rate Setpoint</translation>
+      <translation>偏航速率设定值</translation>
     </message>
   </context>
   <context>
@@ -1926,13 +1926,13 @@
       <extracomment>.QGC.MetaData.Facts[id].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/BatteryFact.json"/>
       <source>Battery Id</source>
-      <translation type="unfinished">Battery Id</translation>
+      <translation>电池 ID</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[batteryFunction].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/BatteryFact.json"/>
       <source>Battery Function</source>
-      <translation type="unfinished">Battery Function</translation>
+      <translation>电池功能</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[batteryFunction].enumStrings, </extracomment>
@@ -1945,7 +1945,7 @@
       <extracomment>.QGC.MetaData.Facts[batteryType].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/BatteryFact.json"/>
       <source>Battery Type</source>
-      <translation type="unfinished">Battery Type</translation>
+      <translation>电池类型</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[batteryType].enumStrings, </extracomment>
@@ -1958,49 +1958,49 @@
       <extracomment>.QGC.MetaData.Facts[voltage].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/BatteryFact.json"/>
       <source>Voltage</source>
-      <translation type="unfinished">Voltage</translation>
+      <translation>电压</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[percentRemaining].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/BatteryFact.json"/>
       <source>Percent</source>
-      <translation type="unfinished">Percent</translation>
+      <translation>百分比</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[mahConsumed].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/BatteryFact.json"/>
       <source>Consumed</source>
-      <translation type="unfinished">Consumed</translation>
+      <translation>已消耗</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[current].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/BatteryFact.json"/>
       <source>Current</source>
-      <translation type="unfinished">Current</translation>
+      <translation>电流</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[temperature].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/BatteryFact.json"/>
       <source>Temperature</source>
-      <translation type="unfinished">Temperature</translation>
+      <translation>温度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[instantPower].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/BatteryFact.json"/>
       <source>Watts</source>
-      <translation type="unfinished">Watts</translation>
+      <translation>瓦特</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[timeRemaining].shortDesc, .QGC.MetaData.Facts[timeRemainingStr].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/BatteryFact.json"/>
       <source>Time Remaining</source>
-      <translation type="unfinished">Time Remaining</translation>
+      <translation>剩余时间</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[chargeState].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/BatteryFact.json"/>
       <source>Charge State</source>
-      <translation type="unfinished">Charge State</translation>
+      <translation>充电状态</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[chargeState].enumStrings, </extracomment>
@@ -2016,67 +2016,67 @@
       <extracomment>.QGC.MetaData.Facts[status].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/GeneratorFact.json"/>
       <source>Status</source>
-      <translation type="unfinished">Status</translation>
+      <translation>状态</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[genSpeed].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/GeneratorFact.json"/>
       <source>Generator Speed</source>
-      <translation type="unfinished">Generator Speed</translation>
+      <translation>发电机转速</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[batteryCurrent].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/GeneratorFact.json"/>
       <source>Battery Current</source>
-      <translation type="unfinished">Battery Current</translation>
+      <translation>电池电流</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[loadCurrent].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/GeneratorFact.json"/>
       <source>Load Current</source>
-      <translation type="unfinished">Load Current</translation>
+      <translation>负载电流</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[powerGenerated].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/GeneratorFact.json"/>
       <source>Power Generated</source>
-      <translation type="unfinished">Power Generated</translation>
+      <translation>发电功率</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[busVoltage].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/GeneratorFact.json"/>
       <source>Bus Voltage</source>
-      <translation type="unfinished">Bus Voltage</translation>
+      <translation>总线电压</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[rectifierTemp].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/GeneratorFact.json"/>
       <source>Rectifier Temperature</source>
-      <translation type="unfinished">Rectifier Temperature</translation>
+      <translation>整流器温度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[batCurrentSetpoint].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/GeneratorFact.json"/>
       <source>Battery Current Setpoint</source>
-      <translation type="unfinished">Battery Current Setpoint</translation>
+      <translation>电池电流设定值</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[genTemp].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/GeneratorFact.json"/>
       <source>Generator Temperature</source>
-      <translation type="unfinished">Generator Temperature</translation>
+      <translation>发电机温度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[runtime].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/GeneratorFact.json"/>
       <source>runtime</source>
-      <translation type="unfinished">runtime</translation>
+      <translation>运行时间</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[timeMaintenance].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/GeneratorFact.json"/>
       <source>Time until Maintenance</source>
-      <translation type="unfinished">Time until Maintenance</translation>
+      <translation>距维护时间</translation>
     </message>
   </context>
   <context>
@@ -2085,43 +2085,43 @@
       <extracomment>.QGC.MetaData.Facts[lat].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/GPSFact.json"/>
       <source>Latitude</source>
-      <translation type="unfinished">Latitude</translation>
+      <translation>纬度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[lon].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/GPSFact.json"/>
       <source>Longitude</source>
-      <translation type="unfinished">Longitude</translation>
+      <translation>经度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[mgrs].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/GPSFact.json"/>
       <source>MGRS Position</source>
-      <translation type="unfinished">MGRS Position</translation>
+      <translation>MGRS 位置</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[hdop].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/GPSFact.json"/>
       <source>HDOP</source>
-      <translation type="unfinished">HDOP</translation>
+      <translation>HDOP</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[vdop].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/GPSFact.json"/>
       <source>VDOP</source>
-      <translation type="unfinished">VDOP</translation>
+      <translation>VDOP</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[courseOverGround].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/GPSFact.json"/>
       <source>Course Over Ground</source>
-      <translation type="unfinished">Course Over Ground</translation>
+      <translation>对地航向</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[lock].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/GPSFact.json"/>
       <source>GPS Lock</source>
-      <translation type="unfinished">GPS Lock</translation>
+      <translation>GPS 锁定</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[lock].enumStrings, </extracomment>
@@ -2134,7 +2134,7 @@
       <extracomment>.QGC.MetaData.Facts[count].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/GPSFact.json"/>
       <source>Sat Count</source>
-      <translation type="unfinished">Sat Count</translation>
+      <translation>卫星数</translation>
     </message>
   </context>
   <context>
@@ -2143,25 +2143,25 @@
       <extracomment>.QGC.MetaData.Facts[xAxis].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/VibrationFact.json"/>
       <source>Vibe xAxis</source>
-      <translation type="unfinished">Vibe xAxis</translation>
+      <translation>振动 xAxis</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[yAxis].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/VibrationFact.json"/>
       <source>Vibe yAxis</source>
-      <translation type="unfinished">Vibe yAxis</translation>
+      <translation>振动 yAxis</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[zAxis].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/VibrationFact.json"/>
       <source>Vibe zAxis</source>
-      <translation type="unfinished">Vibe zAxis</translation>
+      <translation>振动 zAxis</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[clipCount1].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/VibrationFact.json"/>
       <source>Clip Count (1)</source>
-      <translation type="unfinished">Clip Count (1)</translation>
+      <translation>削波计数 (1)</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[clipCount2].shortDesc, </extracomment>
@@ -2173,7 +2173,7 @@
       <extracomment>.QGC.MetaData.Facts[clipCount3].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/VibrationFact.json"/>
       <source>Clip Count (3)</source>
-      <translation type="unfinished">Clip Count (3)</translation>
+      <translation>削波计数 (3)</translation>
     </message>
   </context>
   <context>
@@ -2182,19 +2182,19 @@
       <extracomment>.QGC.MetaData.Facts[direction].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/WindFact.json"/>
       <source>Wind Direction</source>
-      <translation type="unfinished">Wind Direction</translation>
+      <translation>风向</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[speed].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/WindFact.json"/>
       <source>Wind Spd</source>
-      <translation type="unfinished">Wind Spd</translation>
+      <translation>风速</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[verticalSpeed].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/WindFact.json"/>
       <source>Wind Spd (vert)</source>
-      <translation type="unfinished">Wind Spd (vert)</translation>
+      <translation>风速 (垂直)</translation>
     </message>
   </context>
   <context>
@@ -2203,25 +2203,25 @@
       <extracomment>.QGC.MetaData.Facts[index].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EscStatusFactGroup.json"/>
       <source>Index Of The First ESC In This Message</source>
-      <translation type="unfinished">Index Of The First ESC In This Message</translation>
+      <translation>此消息中第一个 ESC 的索引</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[rpmFirst].shortDesc, .QGC.MetaData.Facts[rpmSecond].shortDesc, .QGC.MetaData.Facts[rpmThird].shortDesc, .QGC.MetaData.Facts[rpmFourth].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EscStatusFactGroup.json"/>
       <source>Rotation Per Minute</source>
-      <translation type="unfinished">Rotation Per Minute</translation>
+      <translation>每分钟转数</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[currentFirst].shortDesc, .QGC.MetaData.Facts[currentSecond].shortDesc, .QGC.MetaData.Facts[currentThird].shortDesc, .QGC.MetaData.Facts[currentFourth].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EscStatusFactGroup.json"/>
       <source>Current</source>
-      <translation type="unfinished">Current</translation>
+      <translation>电流</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[voltageFirst].shortDesc, .QGC.MetaData.Facts[voltageSecond].shortDesc, .QGC.MetaData.Facts[voltageThird].shortDesc, .QGC.MetaData.Facts[voltageFourth].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EscStatusFactGroup.json"/>
       <source>Voltage</source>
-      <translation type="unfinished">Voltage</translation>
+      <translation>电压</translation>
     </message>
   </context>
   <context>
@@ -2230,13 +2230,13 @@
       <extracomment>.QGC.MetaData.Facts[blocksPending].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/TerrainFactGroup.json"/>
       <source>Blocks Pending</source>
-      <translation type="unfinished">Blocks Pending</translation>
+      <translation>待处理块</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[blocksLoaded].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/TerrainFactGroup.json"/>
       <source>Blocks Loaded</source>
-      <translation type="unfinished">Blocks Loaded</translation>
+      <translation>已加载块</translation>
     </message>
   </context>
   <context>
@@ -2245,103 +2245,103 @@
       <extracomment>.QGC.MetaData.Facts[health].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EFIFact.json"/>
       <source>Health</source>
-      <translation type="unfinished">Health</translation>
+      <translation>健康</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[ecuIndex].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EFIFact.json"/>
       <source>Ecu Index</source>
-      <translation type="unfinished">Ecu Index</translation>
+      <translation>ECU 索引</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[rpm].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EFIFact.json"/>
       <source>Rpm</source>
-      <translation type="unfinished">Rpm</translation>
+      <translation>转速</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[fuelConsumed].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EFIFact.json"/>
       <source>Fuel Consumed</source>
-      <translation type="unfinished">Fuel Consumed</translation>
+      <translation>燃油消耗</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[fuelFlow].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EFIFact.json"/>
       <source>Fuel Flow</source>
-      <translation type="unfinished">Fuel Flow</translation>
+      <translation>燃油流量</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[engineLoad].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EFIFact.json"/>
       <source>Engine Load</source>
-      <translation type="unfinished">Engine Load</translation>
+      <translation>发动机负载</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[throttlePos].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EFIFact.json"/>
       <source>Throttle Position</source>
-      <translation type="unfinished">Throttle Position</translation>
+      <translation>油门位置</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[sparkTime].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EFIFact.json"/>
       <source>Spark dwell time</source>
-      <translation type="unfinished">Spark dwell time</translation>
+      <translation>火花停留时间</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[baroPress].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EFIFact.json"/>
       <source>BarometricPressure</source>
-      <translation type="unfinished">BarometricPressure</translation>
+      <translation>大气压力</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[intakePress].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EFIFact.json"/>
       <source>Intake mainfold pressure</source>
-      <translation type="unfinished">Intake mainfold pressure</translation>
+      <translation>进气歧管压力</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[intakeTemp].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EFIFact.json"/>
       <source>Intake mainfold temperature</source>
-      <translation type="unfinished">Intake mainfold temperature</translation>
+      <translation>进气歧管温度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[cylinderTemp].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EFIFact.json"/>
       <source>Cylinder head temperature</source>
-      <translation type="unfinished">Cylinder head temperature</translation>
+      <translation>气缸盖温度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[ignTime].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EFIFact.json"/>
       <source>Ignition Timing</source>
-      <translation type="unfinished">Ignition Timing</translation>
+      <translation>点火正时</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[injTime].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EFIFact.json"/>
       <source>Injection Time</source>
-      <translation type="unfinished">Injection Time</translation>
+      <translation>喷射时间</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[exGasTemp].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EFIFact.json"/>
       <source>Exhaust gas Temperature</source>
-      <translation type="unfinished">Exhaust gas Temperature</translation>
+      <translation>排气温度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[throttleOut].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EFIFact.json"/>
       <source>Throttle Out</source>
-      <translation type="unfinished">Throttle Out</translation>
+      <translation>油门输出</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[ptComp].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EFIFact.json"/>
       <source>Pt Compensation</source>
-      <translation type="unfinished">Pt Compensation</translation>
+      <translation>云台补偿</translation>
     </message>
   </context>
   <context>
@@ -2350,7 +2350,7 @@
       <extracomment>.QGC.MetaData.Facts[temperature1].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/TemperatureFact.json"/>
       <source>Temperature (1)</source>
-      <translation type="unfinished">Temperature (1)</translation>
+      <translation>温度 (1)</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[temperature2].shortDesc, </extracomment>
@@ -2362,7 +2362,7 @@
       <extracomment>.QGC.MetaData.Facts[temperature3].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/TemperatureFact.json"/>
       <source>Temperature (3)</source>
-      <translation type="unfinished">Temperature (3)</translation>
+      <translation>温度 (3)</translation>
     </message>
   </context>
   <context>
@@ -2371,37 +2371,37 @@
       <extracomment>.QGC.MetaData.Facts[cameraTilt].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/SubmarineFact.json"/>
       <source>Camera Tilt</source>
-      <translation type="unfinished">Camera Tilt</translation>
+      <translation>相机俯仰</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[tetherTurns].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/SubmarineFact.json"/>
       <source>Tether Turns</source>
-      <translation type="unfinished">Tether Turns</translation>
+      <translation>系绳圈数</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[lights1].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/SubmarineFact.json"/>
       <source>Lights 1 level</source>
-      <translation type="unfinished">Lights 1 level</translation>
+      <translation>灯光 1 亮度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[lights2].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/SubmarineFact.json"/>
       <source>Lights 2 level</source>
-      <translation type="unfinished">Lights 2 level</translation>
+      <translation>灯光 2 亮度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[pilotGain].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/SubmarineFact.json"/>
       <source>Pilot Gain</source>
-      <translation type="unfinished">Pilot Gain</translation>
+      <translation>飞手增益</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[inputHold].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/SubmarineFact.json"/>
       <source>Input Hold</source>
-      <translation type="unfinished">Input Hold</translation>
+      <translation>输入保持</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[inputHold].enumStrings, </extracomment>
@@ -2414,19 +2414,19 @@
       <extracomment>.QGC.MetaData.Facts[rangefinderDistance].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/SubmarineFact.json"/>
       <source>Rangefinder</source>
-      <translation type="unfinished">Rangefinder</translation>
+      <translation>测距仪</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[rangefinderTarget].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/SubmarineFact.json"/>
       <source>RFTarget</source>
-      <translation type="unfinished">RFTarget</translation>
+      <translation>RFTarget</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[rollPitchToggle].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/SubmarineFact.json"/>
       <source>Roll/Pitch Toggle</source>
-      <translation type="unfinished">Roll/Pitch Toggle</translation>
+      <translation>横滚/俯仰切换</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[rollPitchToggle].enumStrings, </extracomment>
@@ -2442,145 +2442,145 @@
       <extracomment>.QGC.MetaData.Facts[roll].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/VehicleFact.json"/>
       <source>Roll</source>
-      <translation type="unfinished">Roll</translation>
+      <translation>横滚</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[pitch].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/VehicleFact.json"/>
       <source>Pitch</source>
-      <translation type="unfinished">Pitch</translation>
+      <translation>俯仰</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[heading].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/VehicleFact.json"/>
       <source>Heading</source>
-      <translation type="unfinished">Heading</translation>
+      <translation>航向</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[rollRate].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/VehicleFact.json"/>
       <source>Roll Rate</source>
-      <translation type="unfinished">Roll Rate</translation>
+      <translation>横滚速率</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[pitchRate].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/VehicleFact.json"/>
       <source>Pitch Rate</source>
-      <translation type="unfinished">Pitch Rate</translation>
+      <translation>俯仰速率</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[yawRate].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/VehicleFact.json"/>
       <source>Yaw Rate</source>
-      <translation type="unfinished">Yaw Rate</translation>
+      <translation>偏航速率</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[groundSpeed].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/VehicleFact.json"/>
       <source>Ground Speed</source>
-      <translation type="unfinished">Ground Speed</translation>
+      <translation>地速</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[airSpeed].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/VehicleFact.json"/>
       <source>Air Speed</source>
-      <translation type="unfinished">Air Speed</translation>
+      <translation>空速</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[climbRate].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/VehicleFact.json"/>
       <source>Climb Rate</source>
-      <translation type="unfinished">Climb Rate</translation>
+      <translation>爬升率</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[altitudeRelative].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/VehicleFact.json"/>
       <source>Alt (Rel)</source>
-      <translation type="unfinished">Alt (Rel)</translation>
+      <translation>高度 (相对)</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[altitudeAMSL].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/VehicleFact.json"/>
       <source>Alt (AMSL)</source>
-      <translation type="unfinished">Alt (AMSL)</translation>
+      <translation>高度 (AMSL)</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[altitudeAboveTerr].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/VehicleFact.json"/>
       <source>Alt (Above Terrain)</source>
-      <translation type="unfinished">Alt (Above Terrain)</translation>
+      <translation>高度 (相对地形)</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[flightDistance].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/VehicleFact.json"/>
       <source>Flight Distance</source>
-      <translation type="unfinished">Flight Distance</translation>
+      <translation>飞行距离</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[distanceToHome].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/VehicleFact.json"/>
       <source>Distance to Home</source>
-      <translation type="unfinished">Distance to Home</translation>
+      <translation>距家距离</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[timeToHome].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/VehicleFact.json"/>
       <source>Time to Home</source>
-      <translation type="unfinished">Time to Home</translation>
+      <translation>到家时间</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[headingToHome].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/VehicleFact.json"/>
       <source>Heading to Home</source>
-      <translation type="unfinished">Heading to Home</translation>
+      <translation>到家航向</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[distanceToGCS].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/VehicleFact.json"/>
       <source>Distance to GCS</source>
-      <translation type="unfinished">Distance to GCS</translation>
+      <translation>距地面站距离</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[missionItemIndex].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/VehicleFact.json"/>
       <source>Mission Item Index</source>
-      <translation type="unfinished">Mission Item Index</translation>
+      <translation>任务项索引</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[headingToNextWP].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/VehicleFact.json"/>
       <source>Next WP Heading</source>
-      <translation type="unfinished">Next WP Heading</translation>
+      <translation>下一航点航向</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[distanceToNextWP].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/VehicleFact.json"/>
       <source>Next WP distance</source>
-      <translation type="unfinished">Next WP distance</translation>
+      <translation>下一航点距离</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[flightTime].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/VehicleFact.json"/>
       <source>Flight Time</source>
-      <translation type="unfinished">Flight Time</translation>
+      <translation>飞行时间</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[hobbs].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/VehicleFact.json"/>
       <source>Hobbs Meter</source>
-      <translation type="unfinished">Hobbs Meter</translation>
+      <translation>霍布斯计时器</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[throttlePct].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/VehicleFact.json"/>
       <source>Throttle %</source>
-      <translation type="unfinished">Throttle %</translation>
+      <translation>油门 %</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[imuTemp].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/VehicleFact.json"/>
       <source>Imu temperature</source>
-      <translation type="unfinished">Imu temperature</translation>
+      <translation>IMU 温度</translation>
     </message>
   </context>
   <context>
@@ -2589,19 +2589,19 @@
       <extracomment>.QGC.MetaData.Facts[currentTime].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/ClockFact.json"/>
       <source>Time</source>
-      <translation type="unfinished">Time</translation>
+      <translation>时间</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[currentUTCTime].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/ClockFact.json"/>
       <source>UTC Time</source>
-      <translation type="unfinished">UTC Time</translation>
+      <translation>UTC 时间</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[currentDate].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/ClockFact.json"/>
       <source>Date</source>
-      <translation type="unfinished">Date</translation>
+      <translation>日期</translation>
     </message>
   </context>
   <context>
@@ -2610,37 +2610,37 @@
       <extracomment>.QGC.MetaData.Facts[x].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/LocalPositionFact.json"/>
       <source>X</source>
-      <translation type="unfinished">X</translation>
+      <translation>X</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[y].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/LocalPositionFact.json"/>
       <source>Y</source>
-      <translation type="unfinished">Y</translation>
+      <translation>Y</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[z].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/LocalPositionFact.json"/>
       <source>Z</source>
-      <translation type="unfinished">Z</translation>
+      <translation>Z</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[vx].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/LocalPositionFact.json"/>
       <source>VX</source>
-      <translation type="unfinished">VX</translation>
+      <translation>VX</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[vy].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/LocalPositionFact.json"/>
       <source>Vy</source>
-      <translation type="unfinished">Vy</translation>
+      <translation>Vy</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[vz].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/LocalPositionFact.json"/>
       <source>Vz</source>
-      <translation type="unfinished">Vz</translation>
+      <translation>Vz</translation>
     </message>
   </context>
   <context>
@@ -2649,19 +2649,19 @@
       <extracomment>.QGC.MetaData.Facts[temperature].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/HygrometerFact.json"/>
       <source>Temperature</source>
-      <translation type="unfinished">Temperature</translation>
+      <translation>温度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[humidity].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/HygrometerFact.json"/>
       <source>Humidity %</source>
-      <translation type="unfinished">Humidity %</translation>
+      <translation>湿度 %</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[hygrometerid].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/HygrometerFact.json"/>
       <source>ID</source>
-      <translation type="unfinished">ID</translation>
+      <translation>ID</translation>
     </message>
   </context>
   <context>
@@ -2670,25 +2670,25 @@
       <extracomment>.QGC.MetaData.Facts[rpm1].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/RPMFact.json"/>
       <source>RPM 1</source>
-      <translation type="unfinished">RPM 1</translation>
+      <translation>RPM 1</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[rpm2].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/RPMFact.json"/>
       <source>RPM 2</source>
-      <translation type="unfinished">RPM 2</translation>
+      <translation>RPM 2</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[rpm3].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/RPMFact.json"/>
       <source>RPM 3</source>
-      <translation type="unfinished">RPM 3</translation>
+      <translation>RPM 3</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[rpm4].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/RPMFact.json"/>
       <source>RPM 4</source>
-      <translation type="unfinished">RPM 4</translation>
+      <translation>RPM 4</translation>
     </message>
   </context>
   <context>
@@ -2697,121 +2697,121 @@
       <extracomment>.QGC.MetaData.Facts[goodAttitudeEsimate].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EstimatorStatusFactGroup.json"/>
       <source>Good Attitude Esimate</source>
-      <translation type="unfinished">Good Attitude Esimate</translation>
+      <translation>姿态估计良好</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[goodHorizVelEstimate].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EstimatorStatusFactGroup.json"/>
       <source>Good Horiz Vel Estimate</source>
-      <translation type="unfinished">Good Horiz Vel Estimate</translation>
+      <translation>水平速度估计良好</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[goodVertVelEstimate].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EstimatorStatusFactGroup.json"/>
       <source>Good Vert Vel Estimate</source>
-      <translation type="unfinished">Good Vert Vel Estimate</translation>
+      <translation>垂直速度估计良好</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[goodHorizPosRelEstimate].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EstimatorStatusFactGroup.json"/>
       <source>Good Horiz Pos Rel Estimate</source>
-      <translation type="unfinished">Good Horiz Pos Rel Estimate</translation>
+      <translation>相对水平位置估计良好</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[goodHorizPosAbsEstimate].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EstimatorStatusFactGroup.json"/>
       <source>Good Horiz Pos Abs Estimate</source>
-      <translation type="unfinished">Good Horiz Pos Abs Estimate</translation>
+      <translation>绝对水平位置估计良好</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[goodVertPosAbsEstimate].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EstimatorStatusFactGroup.json"/>
       <source>Good Vert Pos Abs Estimate</source>
-      <translation type="unfinished">Good Vert Pos Abs Estimate</translation>
+      <translation>绝对垂直位置估计良好</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[goodVertPosAGLEstimate].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EstimatorStatusFactGroup.json"/>
       <source>Good Vert Pos AGL Estimate</source>
-      <translation type="unfinished">Good Vert Pos AGL Estimate</translation>
+      <translation>AGL垂直位置估计良好</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[goodConstPosModeEstimate].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EstimatorStatusFactGroup.json"/>
       <source>Good Const Pos Mode Estimate</source>
-      <translation type="unfinished">Good Const Pos Mode Estimate</translation>
+      <translation>恒定位置模式估计良好</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[goodPredHorizPosRelEstimate].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EstimatorStatusFactGroup.json"/>
       <source>Good Pred Horiz Pos Rel Estimate</source>
-      <translation type="unfinished">Good Pred Horiz Pos Rel Estimate</translation>
+      <translation>预测相对水平位置估计良好</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[goodPredHorizPosAbsEstimate].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EstimatorStatusFactGroup.json"/>
       <source>Good Pred Horiz Pos Abs Estimate</source>
-      <translation type="unfinished">Good Pred Horiz Pos Abs Estimate</translation>
+      <translation>预测绝对水平位置估计良好</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[gpsGlitch].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EstimatorStatusFactGroup.json"/>
       <source>Gps Glitch</source>
-      <translation type="unfinished">Gps Glitch</translation>
+      <translation>GPS异常</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[accelError].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EstimatorStatusFactGroup.json"/>
       <source>Accel Error</source>
-      <translation type="unfinished">Accel Error</translation>
+      <translation>加速度计错误</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[velRatio].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EstimatorStatusFactGroup.json"/>
       <source>Vel Ratio</source>
-      <translation type="unfinished">Vel Ratio</translation>
+      <translation>速度比</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[horizPosRatio].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EstimatorStatusFactGroup.json"/>
       <source>Horiz Pos Ratio</source>
-      <translation type="unfinished">Horiz Pos Ratio</translation>
+      <translation>水平位置比</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[vertPosRatio].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EstimatorStatusFactGroup.json"/>
       <source>Vert Pos Ratio</source>
-      <translation type="unfinished">Vert Pos Ratio</translation>
+      <translation>垂直位置比</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[magRatio].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EstimatorStatusFactGroup.json"/>
       <source>Mag Ratio</source>
-      <translation type="unfinished">Mag Ratio</translation>
+      <translation>磁罗盘比</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[haglRatio].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EstimatorStatusFactGroup.json"/>
       <source>HAGL Ratio</source>
-      <translation type="unfinished">HAGL Ratio</translation>
+      <translation>HAGL比</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[tasRatio].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EstimatorStatusFactGroup.json"/>
       <source>TAS Ratio</source>
-      <translation type="unfinished">TAS Ratio</translation>
+      <translation>TAS比</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[horizPosAccuracy].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EstimatorStatusFactGroup.json"/>
       <source>Horiz Pos Accuracy</source>
-      <translation type="unfinished">Horiz Pos Accuracy</translation>
+      <translation>水平位置精度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[vertPosAccuracy].shortDesc, </extracomment>
       <location filename="../src/Vehicle/FactGroups/EstimatorStatusFactGroup.json"/>
       <source>Vert Pos Accuracy</source>
-      <translation type="unfinished">Vert Pos Accuracy</translation>
+      <translation>垂直位置精度</translation>
     </message>
   </context>
   <context>
@@ -2820,55 +2820,55 @@
       <extracomment>.QGC.MetaData.Facts[connected].shortDesc, </extracomment>
       <location filename="../src/GPS/GPSRTKFact.json"/>
       <source>Connected</source>
-      <translation type="unfinished">Connected</translation>
+      <translation>已连接</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[currentAccuracy].shortDesc, </extracomment>
       <location filename="../src/GPS/GPSRTKFact.json"/>
       <source>Current Survey-In Accuracy</source>
-      <translation type="unfinished">Current Survey-In Accuracy</translation>
+      <translation>当前Survey-In精度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[currentLatitude].shortDesc, </extracomment>
       <location filename="../src/GPS/GPSRTKFact.json"/>
       <source>Current Survey-In Latitude</source>
-      <translation type="unfinished">Current Survey-In Latitude</translation>
+      <translation>当前Survey-In纬度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[currentLongitude].shortDesc, </extracomment>
       <location filename="../src/GPS/GPSRTKFact.json"/>
       <source>Current Survey-In Longitude</source>
-      <translation type="unfinished">Current Survey-In Longitude</translation>
+      <translation>当前测量输入经度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[currentAltitude].shortDesc, </extracomment>
       <location filename="../src/GPS/GPSRTKFact.json"/>
       <source>Current Survey-In Altitude</source>
-      <translation type="unfinished">Current Survey-In Altitude</translation>
+      <translation>当前测量输入高度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[currentDuration].shortDesc, </extracomment>
       <location filename="../src/GPS/GPSRTKFact.json"/>
       <source>Current Survey-In Duration</source>
-      <translation type="unfinished">Current Survey-In Duration</translation>
+      <translation>当前测量输入时长</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[valid].shortDesc, </extracomment>
       <location filename="../src/GPS/GPSRTKFact.json"/>
       <source>Survey-In Valid</source>
-      <translation type="unfinished">Survey-In Valid</translation>
+      <translation>测量输入有效</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[active].shortDesc, </extracomment>
       <location filename="../src/GPS/GPSRTKFact.json"/>
       <source>Survey-In Active</source>
-      <translation type="unfinished">Survey-In Active</translation>
+      <translation>测量输入激活</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[numSatellites].shortDesc, </extracomment>
       <location filename="../src/GPS/GPSRTKFact.json"/>
       <source>Number of Satellites</source>
-      <translation type="unfinished">Number of Satellites</translation>
+      <translation>卫星数量</translation>
     </message>
   </context>
   <context>
@@ -2877,25 +2877,25 @@
       <extracomment>.QGC.MetaData.Facts[Scale].shortDesc, </extracomment>
       <location filename="../src/QmlControls/RCToParamDialog.FactMetaData.json"/>
       <source>Scale the RC range</source>
-      <translation type="unfinished">Scale the RC range</translation>
+      <translation>缩放RC范围</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[CenterValue].shortDesc, </extracomment>
       <location filename="../src/QmlControls/RCToParamDialog.FactMetaData.json"/>
       <source>Parameter value when RC output is 0</source>
-      <translation type="unfinished">Parameter value when RC output is 0</translation>
+      <translation>RC输出为0时的参数值</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[MinValue].shortDesc, </extracomment>
       <location filename="../src/QmlControls/RCToParamDialog.FactMetaData.json"/>
       <source>Minimum parameter value</source>
-      <translation type="unfinished">Minimum parameter value</translation>
+      <translation>最小参数值</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[MaxValue].shortDesc, </extracomment>
       <location filename="../src/QmlControls/RCToParamDialog.FactMetaData.json"/>
       <source>Maximum parameter value</source>
-      <translation type="unfinished">Maximum parameter value</translation>
+      <translation>最大参数值</translation>
     </message>
   </context>
   <context>
@@ -2904,37 +2904,37 @@
       <extracomment>.QGC.MetaData.Facts[Latitude].shortDesc, </extracomment>
       <location filename="../src/QmlControls/EditPositionDialog.FactMetaData.json"/>
       <source>Latitude of item position</source>
-      <translation type="unfinished">Latitude of item position</translation>
+      <translation>项目位置纬度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[Longitude].shortDesc, </extracomment>
       <location filename="../src/QmlControls/EditPositionDialog.FactMetaData.json"/>
       <source>Longitude of item position</source>
-      <translation type="unfinished">Longitude of item position</translation>
+      <translation>项目位置经度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[Easting].shortDesc, </extracomment>
       <location filename="../src/QmlControls/EditPositionDialog.FactMetaData.json"/>
       <source>Easting of item position</source>
-      <translation type="unfinished">Easting of item position</translation>
+      <translation>项目位置东向坐标</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[Northing].shortDesc, </extracomment>
       <location filename="../src/QmlControls/EditPositionDialog.FactMetaData.json"/>
       <source>Northing of item position</source>
-      <translation type="unfinished">Northing of item position</translation>
+      <translation>项目位置北向坐标</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[Zone].shortDesc, </extracomment>
       <location filename="../src/QmlControls/EditPositionDialog.FactMetaData.json"/>
       <source>UTM zone</source>
-      <translation type="unfinished">UTM zone</translation>
+      <translation>UTM分区</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[Hemisphere].shortDesc, </extracomment>
       <location filename="../src/QmlControls/EditPositionDialog.FactMetaData.json"/>
       <source>Hemisphere for position</source>
-      <translation type="unfinished">Hemisphere for position</translation>
+      <translation>位置半球</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[Hemisphere].enumStrings, </extracomment>
@@ -2947,7 +2947,7 @@
       <extracomment>.QGC.MetaData.Facts[MGRS].shortDesc, </extracomment>
       <location filename="../src/QmlControls/EditPositionDialog.FactMetaData.json"/>
       <source>MGRS coordinate</source>
-      <translation type="unfinished">MGRS coordinate</translation>
+      <translation>MGRS坐标</translation>
     </message>
   </context>
   <context>
@@ -2956,7 +2956,7 @@
       <extracomment>.QGC.MetaData.Facts[Radius].shortDesc, </extracomment>
       <location filename="../src/QmlControls/QGCMapCircle.Facts.json"/>
       <source>Radius for geofence circle.</source>
-      <translation type="unfinished">Radius for geofence circle.</translation>
+      <translation>地理围栏圆半径。</translation>
     </message>
   </context>
   <context>
@@ -2965,19 +2965,19 @@
       <extracomment>.QGC.MetaData.Facts[angle].shortDesc, </extracomment>
       <location filename="../src/AutoPilotPlugins/APM/APMFollowComponent.FactMetaData.json"/>
       <source>Angle from ground station to vehicle</source>
-      <translation type="unfinished">Angle from ground station to vehicle</translation>
+      <translation>从地面站到飞行器的角度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[distance].shortDesc, </extracomment>
       <location filename="../src/AutoPilotPlugins/APM/APMFollowComponent.FactMetaData.json"/>
       <source>Horizontal distance from ground station to vehicle</source>
-      <translation type="unfinished">Horizontal distance from ground station to vehicle</translation>
+      <translation>从地面站到飞行器的水平距离</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[height].shortDesc, </extracomment>
       <location filename="../src/AutoPilotPlugins/APM/APMFollowComponent.FactMetaData.json"/>
       <source>Vertical distance from Launch (home) position to vehicle</source>
-      <translation type="unfinished">Vertical distance from Launch (home) position to vehicle</translation>
+      <translation>从起飞(Home)位置到飞行器的垂直距离</translation>
     </message>
   </context>
   <context>
@@ -2986,43 +2986,43 @@
       <extracomment>.QGC.MetaData.Facts[TurnAroundDistance].shortDesc, .QGC.MetaData.Facts[TurnAroundDistanceMultiRotor].shortDesc, </extracomment>
       <location filename="../src/MissionManager/TransectStyle.SettingsGroup.json"/>
       <source>Amount of additional distance to add outside the survey area for vehicle turn around.</source>
-      <translation type="unfinished">Amount of additional distance to add outside the survey area for vehicle turn around.</translation>
+      <translation>在勘测区域外额外增加的距离，用于飞行器转弯。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[CameraTriggerInTurnAround].shortDesc, </extracomment>
       <location filename="../src/MissionManager/TransectStyle.SettingsGroup.json"/>
       <source>Camera continues taking images in turn arounds.</source>
-      <translation type="unfinished">Camera continues taking images in turn arounds.</translation>
+      <translation>相机在转弯过程中继续拍摄图像。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[HoverAndCapture].shortDesc, </extracomment>
       <location filename="../src/MissionManager/TransectStyle.SettingsGroup.json"/>
       <source>Stop and Hover at each image point before taking image</source>
-      <translation type="unfinished">Stop and Hover at each image point before taking image</translation>
+      <translation>在每个图像点停止并悬停后再拍摄图像</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[Refly90Degrees].shortDesc, </extracomment>
       <location filename="../src/MissionManager/TransectStyle.SettingsGroup.json"/>
       <source>Refly the pattern at a 90 degree angle</source>
-      <translation type="unfinished">Refly the pattern at a 90 degree angle</translation>
+      <translation>以90度角重新飞行该模式</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[TerrainAdjustTolerance].shortDesc, </extracomment>
       <location filename="../src/MissionManager/TransectStyle.SettingsGroup.json"/>
       <source>Additional waypoints within the transect will be added if the terrain altitude difference grows larger than this tolerance.</source>
-      <translation type="unfinished">Additional waypoints within the transect will be added if the terrain altitude difference grows larger than this tolerance.</translation>
+      <translation>如果地形高度差超过此容差，将在测区内添加额外的航点。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[TerrainAdjustMaxClimbRate].shortDesc, </extracomment>
       <location filename="../src/MissionManager/TransectStyle.SettingsGroup.json"/>
       <source>The maximum climb rate from one waypoint to another when adjusting for terrain. Set to 0 for no max.</source>
-      <translation type="unfinished">The maximum climb rate from one waypoint to another when adjusting for terrain. Set to 0 for no max.</translation>
+      <translation>根据地形调整时，从一个航点到另一个航点的最大爬升率。设为 0 表示无上限。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[TerrainAdjustMaxDescentRate].shortDesc, </extracomment>
       <location filename="../src/MissionManager/TransectStyle.SettingsGroup.json"/>
       <source>The maximum descent rate from one waypoint to another when adjusting for terrain. Set to 0 for no max.</source>
-      <translation type="unfinished">The maximum descent rate from one waypoint to another when adjusting for terrain. Set to 0 for no max.</translation>
+      <translation>根据地形调整时，从一个航点到另一个航点的最大下降率。设为 0 表示无上限。</translation>
     </message>
   </context>
   <context>
@@ -3031,55 +3031,55 @@
       <extracomment>.QGC.MetaData.Facts[LandingDistance].shortDesc, </extracomment>
       <location filename="../src/MissionManager/VTOLLandingPattern.FactMetaData.json"/>
       <source>Distance between landing and approach points.</source>
-      <translation type="unfinished">Distance between landing and approach points.</translation>
+      <translation>降落点与进近点之间的距离。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[LandingHeading].shortDesc, </extracomment>
       <location filename="../src/MissionManager/VTOLLandingPattern.FactMetaData.json"/>
       <source>Heading from approach to land point.</source>
-      <translation type="unfinished">Heading from approach to land point.</translation>
+      <translation>从进近点到降落点的航向。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[FinalApproachAltitude].shortDesc, </extracomment>
       <location filename="../src/MissionManager/VTOLLandingPattern.FactMetaData.json"/>
       <source>Altitude to begin landing approach from.</source>
-      <translation type="unfinished">Altitude to begin landing approach from.</translation>
+      <translation>开始降落进近的高度。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[LoiterRadius].shortDesc, </extracomment>
       <location filename="../src/MissionManager/VTOLLandingPattern.FactMetaData.json"/>
       <source>Loiter radius.</source>
-      <translation type="unfinished">Loiter radius.</translation>
+      <translation>悬停半径。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[LoiterClockwise].shortDesc, </extracomment>
       <location filename="../src/MissionManager/VTOLLandingPattern.FactMetaData.json"/>
       <source>Loiter clockwise around the final approach point.</source>
-      <translation type="unfinished">Loiter clockwise around the final approach point.</translation>
+      <translation>围绕最终进近点顺时针悬停。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[LandingAltitude].shortDesc, </extracomment>
       <location filename="../src/MissionManager/VTOLLandingPattern.FactMetaData.json"/>
       <source>Altitude for landing point on ground.</source>
-      <translation type="unfinished">Altitude for landing point on ground.</translation>
+      <translation>地面降落点的高度。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[UseLoiterToAlt].shortDesc, </extracomment>
       <location filename="../src/MissionManager/VTOLLandingPattern.FactMetaData.json"/>
       <source>Use a loiter to altitude item for final appoach. Otherwise use a regular waypoint.</source>
-      <translation type="unfinished">Use a loiter to altitude item for final appoach. Otherwise use a regular waypoint.</translation>
+      <translation>最终进近使用悬停到高度项。否则使用普通航点。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[StopTakingPhotos].shortDesc, </extracomment>
       <location filename="../src/MissionManager/VTOLLandingPattern.FactMetaData.json"/>
       <source>Stop taking photos</source>
-      <translation type="unfinished">Stop taking photos</translation>
+      <translation>停止拍照</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[StopTakingVideo].shortDesc, </extracomment>
       <location filename="../src/MissionManager/VTOLLandingPattern.FactMetaData.json"/>
       <source>Stop taking video</source>
-      <translation type="unfinished">Stop taking video</translation>
+      <translation>停止录像</translation>
     </message>
   </context>
   <context>
@@ -3088,31 +3088,31 @@
       <extracomment>.QGC.MetaData.Facts[Altitude].shortDesc, </extracomment>
       <location filename="../src/MissionManager/CorridorScan.SettingsGroup.json"/>
       <source>Altitude for the bottom layer of the structure scan.</source>
-      <translation type="unfinished">Altitude for the bottom layer of the structure scan.</translation>
+      <translation>结构扫描底层的高度。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[CorridorWidth].shortDesc, </extracomment>
       <location filename="../src/MissionManager/CorridorScan.SettingsGroup.json"/>
       <source>Corridor width. Specify 0 width for a single pass scan.</source>
-      <translation type="unfinished">Corridor width. Specify 0 width for a single pass scan.</translation>
+      <translation>走廊宽度。指定 0 宽度表示单次扫描。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[Trigger distance].shortDesc, </extracomment>
       <location filename="../src/MissionManager/CorridorScan.SettingsGroup.json"/>
       <source>Distance between each triggering of the camera. 0 specifies not camera trigger.</source>
-      <translation type="unfinished">Distance between each triggering of the camera. 0 specifies not camera trigger.</translation>
+      <translation>每次触发相机之间的距离。0 表示不触发相机。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[GridSpacing].shortDesc, </extracomment>
       <location filename="../src/MissionManager/CorridorScan.SettingsGroup.json"/>
       <source>Amount of spacing in between parallel grid lines.</source>
-      <translation type="unfinished">Amount of spacing in between parallel grid lines.</translation>
+      <translation>平行网格线之间的间距。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[TurnaroundDistance].shortDesc, </extracomment>
       <location filename="../src/MissionManager/CorridorScan.SettingsGroup.json"/>
       <source>Amount of additional distance to add outside the survey area for vehicle turnaround.</source>
-      <translation type="unfinished">Amount of additional distance to add outside the survey area for vehicle turnaround.</translation>
+      <translation>在勘测区域外额外增加的距离，用于飞行器转向。</translation>
     </message>
   </context>
   <context>
@@ -3121,37 +3121,37 @@
       <extracomment>.QGC.MetaData.Facts[GimbalPitch].shortDesc, </extracomment>
       <location filename="../src/MissionManager/StructureScan.SettingsGroup.json"/>
       <source>Gimbal pitch rotation.</source>
-      <translation type="unfinished">Gimbal pitch rotation.</translation>
+      <translation>云台俯仰旋转。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[EntranceAltitude].shortDesc, </extracomment>
       <location filename="../src/MissionManager/StructureScan.SettingsGroup.json"/>
       <source>Vehicle will fly to/from the structure at this altitude.</source>
-      <translation type="unfinished">Vehicle will fly to/from the structure at this altitude.</translation>
+      <translation>飞行器将在此高度飞往/飞离结构。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[ScanBottomAlt].shortDesc, </extracomment>
       <location filename="../src/MissionManager/StructureScan.SettingsGroup.json"/>
       <source>Altitude for the bottomost covered area of the scan. You can adjust this value such that the Bottom Layer Alt will fly above obstacles on the ground.</source>
-      <translation type="unfinished">Altitude for the bottomost covered area of the scan. You can adjust this value such that the Bottom Layer Alt will fly above obstacles on the ground.</translation>
+      <translation>扫描覆盖区域最底部的高度。您可以调整此值，使底层高度在飞行时高于地面障碍物。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[Layers].shortDesc, </extracomment>
       <location filename="../src/MissionManager/StructureScan.SettingsGroup.json"/>
       <source>Number of scan layers.</source>
-      <translation type="unfinished">Number of scan layers.</translation>
+      <translation>扫描层数。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[StructureHeight].shortDesc, </extracomment>
       <location filename="../src/MissionManager/StructureScan.SettingsGroup.json"/>
       <source>Height of structure being scanned.</source>
-      <translation type="unfinished">Height of structure being scanned.</translation>
+      <translation>被扫描结构的高度。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[StartFromTop].shortDesc, </extracomment>
       <location filename="../src/MissionManager/StructureScan.SettingsGroup.json"/>
       <source>Start scanning from top of structure.</source>
-      <translation type="unfinished">Start scanning from top of structure.</translation>
+      <translation>从结构顶部开始扫描。</translation>
     </message>
   </context>
   <context>
@@ -3169,7 +3169,7 @@
       <extracomment>.QGC.MetaData.Facts[PlannedHomePositionAltitude].shortDesc, </extracomment>
       <location filename="../src/MissionManager/MissionSettings.FactMetaData.json"/>
       <source>Launch position altitude</source>
-      <translation type="unfinished">Launch position altitude</translation>
+      <translation>起飞位置高度</translation>
     </message>
   </context>
   <context>
@@ -3178,55 +3178,55 @@
       <extracomment>.QGC.MetaData.Facts[Name].shortDesc, </extracomment>
       <location filename="../src/MissionManager/CameraSpec.FactMetaData.json"/>
       <source>Camera name.</source>
-      <translation type="unfinished">Camera name.</translation>
+      <translation>相机名称。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[SensorWidth].shortDesc, </extracomment>
       <location filename="../src/MissionManager/CameraSpec.FactMetaData.json"/>
       <source>Width of camera image sensor.</source>
-      <translation type="unfinished">Width of camera image sensor.</translation>
+      <translation>相机图像传感器宽度。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[SensorHeight].shortDesc, </extracomment>
       <location filename="../src/MissionManager/CameraSpec.FactMetaData.json"/>
       <source>Height of camera image sensor.</source>
-      <translation type="unfinished">Height of camera image sensor.</translation>
+      <translation>相机图像传感器高度。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[ImageWidth].shortDesc, </extracomment>
       <location filename="../src/MissionManager/CameraSpec.FactMetaData.json"/>
       <source>Camera image resolution width.</source>
-      <translation type="unfinished">Camera image resolution width.</translation>
+      <translation>相机图像分辨率宽度。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[ImageHeight].shortDesc, </extracomment>
       <location filename="../src/MissionManager/CameraSpec.FactMetaData.json"/>
       <source>Camera image resolution height.</source>
-      <translation type="unfinished">Camera image resolution height.</translation>
+      <translation>相机图像分辨率高度。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[FocalLength].shortDesc, </extracomment>
       <location filename="../src/MissionManager/CameraSpec.FactMetaData.json"/>
       <source>Focal length of camera lens.</source>
-      <translation type="unfinished">Focal length of camera lens.</translation>
+      <translation>相机镜头焦距。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[Landscape].shortDesc, </extracomment>
       <location filename="../src/MissionManager/CameraSpec.FactMetaData.json"/>
       <source>Camera on vehicle is in landscape orientation.</source>
-      <translation type="unfinished">Camera on vehicle is in landscape orientation.</translation>
+      <translation>飞行器上的相机为横向。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[FixedOrientation].shortDesc, </extracomment>
       <location filename="../src/MissionManager/CameraSpec.FactMetaData.json"/>
       <source>Camera orientation ix fixed and cannot be changed.</source>
-      <translation type="unfinished">Camera orientation ix fixed and cannot be changed.</translation>
+      <translation>相机方向已固定，无法更改。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[MinTriggerInterval].shortDesc, </extracomment>
       <location filename="../src/MissionManager/CameraSpec.FactMetaData.json"/>
       <source>Minimum amount of time between each camera trigger.</source>
-      <translation type="unfinished">Minimum amount of time between each camera trigger.</translation>
+      <translation>每次相机触发之间的最短时间。</translation>
     </message>
   </context>
   <context>
@@ -3244,37 +3244,37 @@
       <extracomment>.QGC.MetaData.Facts[CameraName].shortDesc, </extracomment>
       <location filename="../src/MissionManager/CameraCalc.FactMetaData.json"/>
       <source>Camera name.</source>
-      <translation type="unfinished">Camera name.</translation>
+      <translation>相机名称。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[ValueSetIsDistance].shortDesc, </extracomment>
       <location filename="../src/MissionManager/CameraCalc.FactMetaData.json"/>
       <source>Value specified is distance to surface.</source>
-      <translation type="unfinished">Value specified is distance to surface.</translation>
+      <translation>指定值为到表面的距离。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[DistanceToSurface].shortDesc, </extracomment>
       <location filename="../src/MissionManager/CameraCalc.FactMetaData.json"/>
       <source>Distance vehicle is away from surface.</source>
-      <translation type="unfinished">Distance vehicle is away from surface.</translation>
+      <translation>飞行器距表面的距离。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[ImageDensity].shortDesc, </extracomment>
       <location filename="../src/MissionManager/CameraCalc.FactMetaData.json"/>
       <source>Image desity at surface.</source>
-      <translation type="unfinished">Image desity at surface.</translation>
+      <translation>表面图像密度。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[FrontalOverlap].shortDesc, </extracomment>
       <location filename="../src/MissionManager/CameraCalc.FactMetaData.json"/>
       <source>Amount of overlap between images in the forward facing direction.</source>
-      <translation type="unfinished">Amount of overlap between images in the forward facing direction.</translation>
+      <translation>前向图像之间的重叠量。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[SideOverlap].shortDesc, </extracomment>
       <location filename="../src/MissionManager/CameraCalc.FactMetaData.json"/>
       <source>Amount of overlap between images in the side facing direction.</source>
-      <translation type="unfinished">Amount of overlap between images in the side facing direction.</translation>
+      <translation>侧向图像之间的重叠量。</translation>
     </message>
   </context>
   <context>
@@ -3283,7 +3283,7 @@
       <extracomment>.QGC.MetaData.Facts[FlightSpeed].shortDesc, </extracomment>
       <location filename="../src/MissionManager/SpeedSection.FactMetaData.json"/>
       <source>Set the current flight speed</source>
-      <translation type="unfinished">Set the current flight speed</translation>
+      <translation>设置当前飞行速度</translation>
     </message>
   </context>
   <context>
@@ -3292,79 +3292,79 @@
       <extracomment>.QGC.MetaData.Facts[LandingDistance].shortDesc, </extracomment>
       <location filename="../src/MissionManager/FWLandingPattern.FactMetaData.json"/>
       <source>Distance between approach and land points.</source>
-      <translation type="unfinished">Distance between approach and land points.</translation>
+      <translation>接近点与降落点之间的距离。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[LandingHeading].shortDesc, </extracomment>
       <location filename="../src/MissionManager/FWLandingPattern.FactMetaData.json"/>
       <source>Heading from approach to land point.</source>
-      <translation type="unfinished">Heading from approach to land point.</translation>
+      <translation>从接近点到降落点的航向。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[FinalApproachAltitude].shortDesc, </extracomment>
       <location filename="../src/MissionManager/FWLandingPattern.FactMetaData.json"/>
       <source>Altitude to begin landing approach from.</source>
-      <translation type="unfinished">Altitude to begin landing approach from.</translation>
+      <translation>开始降落进近的高度。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[UseDoChangeSpeed].shortDesc, </extracomment>
       <location filename="../src/MissionManager/FWLandingPattern.FactMetaData.json"/>
       <source>Command a specific speed for the approach, useful for reducing energy before the glide slope.</source>
-      <translation type="unfinished">Command a specific speed for the approach, useful for reducing energy before the glide slope.</translation>
+      <translation>为进近指定速度，有助于在滑翔坡度前降低能量。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[FinalApproachSpeed].shortDesc, </extracomment>
       <location filename="../src/MissionManager/FWLandingPattern.FactMetaData.json"/>
       <source>Speed to perform the approach at.</source>
-      <translation type="unfinished">Speed to perform the approach at.</translation>
+      <translation>执行进近的速度。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[LoiterRadius].shortDesc, </extracomment>
       <location filename="../src/MissionManager/FWLandingPattern.FactMetaData.json"/>
       <source>Loiter radius.</source>
-      <translation type="unfinished">Loiter radius.</translation>
+      <translation>悬停半径。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[LoiterClockwise].shortDesc, </extracomment>
       <location filename="../src/MissionManager/FWLandingPattern.FactMetaData.json"/>
       <source>Loiter clockwise around the final approach point.</source>
-      <translation type="unfinished">Loiter clockwise around the final approach point.</translation>
+      <translation>围绕最终进近点顺时针悬停。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[LandingAltitude].shortDesc, </extracomment>
       <location filename="../src/MissionManager/FWLandingPattern.FactMetaData.json"/>
       <source>Altitude for landing point.</source>
-      <translation type="unfinished">Altitude for landing point.</translation>
+      <translation>降落点高度。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[GlideSlope].shortDesc, </extracomment>
       <location filename="../src/MissionManager/FWLandingPattern.FactMetaData.json"/>
       <source>The glide slope between the loiter and landing point.</source>
-      <translation type="unfinished">The glide slope between the loiter and landing point.</translation>
+      <translation>悬停点与降落点之间的滑翔坡度。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[ValueSetIsDistance].shortDesc, </extracomment>
       <location filename="../src/MissionManager/FWLandingPattern.FactMetaData.json"/>
       <source>Value controller approach point is distance</source>
-      <translation type="unfinished">Value controller approach point is distance</translation>
+      <translation>控制器进近点的距离值</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[UseLoiterToAlt].shortDesc, </extracomment>
       <location filename="../src/MissionManager/FWLandingPattern.FactMetaData.json"/>
       <source>Use a loiter to altitude item for final appoach. Otherwise use a regular waypoint.</source>
-      <translation type="unfinished">Use a loiter to altitude item for final appoach. Otherwise use a regular waypoint.</translation>
+      <translation>最终进近使用悬停到高度项。否则使用常规航点。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[StopTakingPhotos].shortDesc, </extracomment>
       <location filename="../src/MissionManager/FWLandingPattern.FactMetaData.json"/>
       <source>Stop taking photos</source>
-      <translation type="unfinished">Stop taking photos</translation>
+      <translation>停止拍照</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[StopTakingVideo].shortDesc, </extracomment>
       <location filename="../src/MissionManager/FWLandingPattern.FactMetaData.json"/>
       <source>Stop taking video</source>
-      <translation type="unfinished">Stop taking video</translation>
+      <translation>停止录像</translation>
     </message>
   </context>
   <context>
@@ -3373,19 +3373,19 @@
       <extracomment>.QGC.MetaData.Facts[Latitude].shortDesc, </extracomment>
       <location filename="../src/MissionManager/RallyPoint.FactMetaData.json"/>
       <source>Latitude of rally point position</source>
-      <translation type="unfinished">Latitude of rally point position</translation>
+      <translation>集结点的纬度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[Longitude].shortDesc, </extracomment>
       <location filename="../src/MissionManager/RallyPoint.FactMetaData.json"/>
       <source>Longitude of rally point position</source>
-      <translation type="unfinished">Longitude of rally point position</translation>
+      <translation>集结点的经度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[RelativeAltitude].shortDesc, </extracomment>
       <location filename="../src/MissionManager/RallyPoint.FactMetaData.json"/>
       <source>Altitude of rally point position (home relative)</source>
-      <translation type="unfinished">Altitude of rally point position (home relative)</translation>
+      <translation>集结点的高度（相对home）</translation>
     </message>
   </context>
   <context>
@@ -3394,19 +3394,19 @@
       <extracomment>.QGC.MetaData.Facts[Latitude].shortDesc, </extracomment>
       <location filename="../src/MissionManager/BreachReturn.FactMetaData.json"/>
       <source>Latitude of breach return point position</source>
-      <translation type="unfinished">Latitude of breach return point position</translation>
+      <translation>越界返回点的纬度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[Longitude].shortDesc, </extracomment>
       <location filename="../src/MissionManager/BreachReturn.FactMetaData.json"/>
       <source>Longitude of breach return point position</source>
-      <translation type="unfinished">Longitude of breach return point position</translation>
+      <translation>越界返回点的经度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[Altitude].shortDesc, </extracomment>
       <location filename="../src/MissionManager/BreachReturn.FactMetaData.json"/>
       <source>Altitude of breach return point position (Rel)</source>
-      <translation type="unfinished">Altitude of breach return point position (Rel)</translation>
+      <translation>越界返回点的高度（相对）</translation>
     </message>
   </context>
   <context>
@@ -3838,7 +3838,7 @@
       <extracomment>.mavCmdInfo[MAV_CMD_NAV_DELAY].description, </extracomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Delay until the specified time is reached.</source>
-      <translation type="unfinished">Delay until the specified time is reached.</translation>
+      <translation>延迟直到达到指定时间。</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_NAV_DELAY].param2.label, </extracomment>
@@ -3941,7 +3941,7 @@
       <translatorcomment>Only use english comma &apos;,&apos; to separate strings</translatorcomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Clockwise,Shortest,Counter-Clockwise</source>
-      <translation type="unfinished">Clockwise,Shortest,Counter-Clockwise</translation>
+      <translation>顺时针,最短,逆时针</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_CONDITION_YAW].param4.label, .mavCmdInfo[MAV_CMD_DO_CHANGE_SPEED].param4.label, </extracomment>
@@ -4033,7 +4033,7 @@
       <translatorcomment>Only use english comma &apos;,&apos; to separate strings</translatorcomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Airspeed,Ground Speed,Ascend Speed,Descend Speed</source>
-      <translation type="unfinished">Airspeed,Ground Speed,Ascend Speed,Descend Speed</translation>
+      <translation>空速,地速,上升速度,下降速度</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_DO_CHANGE_SPEED].param2.label, </extracomment>
@@ -4154,37 +4154,37 @@
       <extracomment>.mavCmdInfo[MAV_CMD_DO_SET_ACTUATOR].friendlyName, </extracomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Set actuator</source>
-      <translation type="unfinished">Set actuator</translation>
+      <translation>设置执行器</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_DO_SET_ACTUATOR].description, </extracomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Set actuator to specified output value (range [-1, 1]).</source>
-      <translation type="unfinished">Set actuator to specified output value (range [-1, 1]).</translation>
+      <translation>将执行器设置为指定的输出值（范围 [-1, 1]）。</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_DO_SET_ACTUATOR].param1.label, </extracomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Actuator 1</source>
-      <translation type="unfinished">Actuator 1</translation>
+      <translation>执行器 1</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_DO_SET_ACTUATOR].param2.label, </extracomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Actuator 2</source>
-      <translation type="unfinished">Actuator 2</translation>
+      <translation>执行器 2</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_DO_SET_ACTUATOR].param3.label, </extracomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Actuator 3</source>
-      <translation type="unfinished">Actuator 3</translation>
+      <translation>执行器 3</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_DO_SET_ACTUATOR].param4.label, </extracomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Actuator 4</source>
-      <translation type="unfinished">Actuator 4</translation>
+      <translation>执行器 4</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_DO_FLIGHTTERMINATION].friendlyName, </extracomment>
@@ -4506,57 +4506,57 @@
       <extracomment>.mavCmdInfo[MAV_CMD_DO_GIMBAL_MANAGER_PITCHYAW].friendlyName, </extracomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Gimbal Manager PitchYaw</source>
-      <translation type="unfinished">Gimbal Manager PitchYaw</translation>
+      <translation>云台管理器 俯仰偏航</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_DO_GIMBAL_MANAGER_PITCHYAW].description, </extracomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Control the gimbal during the mission</source>
-      <translation type="unfinished">Control the gimbal during the mission</translation>
+      <translation>在任务期间控制云台</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_DO_GIMBAL_MANAGER_PITCHYAW].param1.label, </extracomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Pitch</source>
-      <translation type="unfinished">Pitch</translation>
+      <translation>俯仰</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_DO_GIMBAL_MANAGER_PITCHYAW].param3.label, </extracomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Pitch rate</source>
-      <translation type="unfinished">Pitch rate</translation>
+      <translation>俯仰速率</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_DO_GIMBAL_MANAGER_PITCHYAW].param4.label, </extracomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Yaw rate</source>
-      <translation type="unfinished">Yaw rate</translation>
+      <translation>偏航速率</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_DO_GIMBAL_MANAGER_PITCHYAW].param5.label, </extracomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Follow yaw</source>
-      <translation type="unfinished">Follow yaw</translation>
+      <translation>跟随偏航</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_DO_GIMBAL_MANAGER_PITCHYAW].param5.enumStrings, </extracomment>
       <translatorcomment>Only use english comma &apos;,&apos; to separate strings</translatorcomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Follow yaw, Lock yaw</source>
-      <translation type="unfinished">Follow yaw, Lock yaw</translation>
+      <translation>跟随偏航，锁定偏航</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_DO_GIMBAL_MANAGER_PITCHYAW].param7.label, </extracomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Gimbal</source>
-      <translation type="unfinished">Gimbal</translation>
+      <translation>云台</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_DO_GIMBAL_MANAGER_PITCHYAW].param7.enumStrings, </extracomment>
       <translatorcomment>Only use english comma &apos;,&apos; to separate strings</translatorcomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Primary,first gimbal,second gimbal</source>
-      <translation type="unfinished">Primary,first gimbal,second gimbal</translation>
+      <translation>主云台,第一云台,第二云台</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_DO_SET_CAM_TRIGG_DIST].friendlyName, </extracomment>
@@ -4624,7 +4624,7 @@
       <extracomment>.mavCmdInfo[MAV_CMD_DO_PARACHUTE].description, </extracomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Enable/Disable auto-release or Release a parachute</source>
-      <translation type="unfinished">Enable/Disable auto-release or Release a parachute</translation>
+      <translation>启用/禁用自动释放或释放降落伞</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_DO_PARACHUTE].param1.enumStrings, </extracomment>
@@ -4668,13 +4668,13 @@
       <extracomment>.mavCmdInfo[MAV_CMD_DO_GRIPPER].friendlyName, </extracomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Gripper Mechanism</source>
-      <translation type="unfinished">Gripper Mechanism</translation>
+      <translation>夹爪机构</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_DO_GRIPPER].description, </extracomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Control a gripper mechanism.</source>
-      <translation type="unfinished">Control a gripper mechanism.</translation>
+      <translation>控制夹爪机构。</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_DO_GRIPPER].param1.label, </extracomment>
@@ -5000,7 +5000,7 @@
       <extracomment>.QGC.MetaData.Facts[CameraAction].shortDesc, </extracomment>
       <location filename="../src/MissionManager/CameraSection.FactMetaData.json"/>
       <source>Specify whether the camera should take photos or video</source>
-      <translation type="unfinished">Specify whether the camera should take photos or video</translation>
+      <translation>指定相机应拍照还是录像</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[CameraAction].enumStrings, </extracomment>
@@ -5013,31 +5013,31 @@
       <extracomment>.QGC.MetaData.Facts[CameraPhotoIntervalDistance].shortDesc, </extracomment>
       <location filename="../src/MissionManager/CameraSection.FactMetaData.json"/>
       <source>Specify the distance between each photo</source>
-      <translation type="unfinished">Specify the distance between each photo</translation>
+      <translation>指定每张照片之间的距离</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[CameraPhotoIntervalTime].shortDesc, </extracomment>
       <location filename="../src/MissionManager/CameraSection.FactMetaData.json"/>
       <source>Specify the time between each photo</source>
-      <translation type="unfinished">Specify the time between each photo</translation>
+      <translation>指定每张照片之间的时间间隔</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[GimbalPitch].shortDesc, </extracomment>
       <location filename="../src/MissionManager/CameraSection.FactMetaData.json"/>
       <source>Gimbal pitch rotation.</source>
-      <translation type="unfinished">Gimbal pitch rotation.</translation>
+      <translation>云台俯仰旋转。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[GimbalYaw].shortDesc, </extracomment>
       <location filename="../src/MissionManager/CameraSection.FactMetaData.json"/>
       <source>Gimbal yaw rotation.</source>
-      <translation type="unfinished">Gimbal yaw rotation.</translation>
+      <translation>云台偏航旋转。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[CameraMode].shortDesc, </extracomment>
       <location filename="../src/MissionManager/CameraSection.FactMetaData.json"/>
       <source>Specify whether the camera should switch to Photo, Video or Survey mode</source>
-      <translation type="unfinished">Specify whether the camera should switch to Photo, Video or Survey mode</translation>
+      <translation>指定相机应切换到照片、视频或测绘模式</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[CameraMode].enumStrings, </extracomment>
@@ -5053,19 +5053,19 @@
       <extracomment>.QGC.MetaData.Facts[GridAngle].shortDesc, </extracomment>
       <location filename="../src/MissionManager/Survey.SettingsGroup.json"/>
       <source>Angle for parallel lines of grid.</source>
-      <translation type="unfinished">Angle for parallel lines of grid.</translation>
+      <translation>网格平行线的角度。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[FlyAlternateTransects].shortDesc, </extracomment>
       <location filename="../src/MissionManager/Survey.SettingsGroup.json"/>
       <source>Fly every other transect in each pass.</source>
-      <translation type="unfinished">Fly every other transect in each pass.</translation>
+      <translation>每趟飞行间隔一条测线。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[SplitConcavePolygons].shortDesc, </extracomment>
       <location filename="../src/MissionManager/Survey.SettingsGroup.json"/>
       <source>Split mission concave polygons into separate regular, convex polygons.</source>
-      <translation type="unfinished">Split mission concave polygons into separate regular, convex polygons.</translation>
+      <translation>将任务中的凹多边形拆分为独立的规则凸多边形。</translation>
     </message>
   </context>
   <context>

@@ -18184,7 +18184,22 @@ ROTATION_NONE indicates component points in direction of flight.</source>
       <source>Weight</source>
       <translation>重量</translation>
     </message>
-  </context>
+      <message>
+      <source>Feet/second</source>
+      <translation>英尺/秒</translation>
+    </message>
+    <message>
+      <source>Meters/second</source>
+      <translation>米/秒</translation>
+    </message>
+    <message>
+      <source>Miles/hour</source>
+      <translation>英里/小时</translation>
+    </message>
+    <message>
+      <source>Kilometers/hour</source>
+      <translation>公里/小时</translation>
+    </message>  </context>
   <context>
     <name>VTOLChecklist</name>
     <message>
