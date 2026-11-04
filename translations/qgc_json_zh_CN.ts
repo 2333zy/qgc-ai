@@ -299,7 +299,7 @@
       <translatorcomment>Only use english comma &apos;,&apos; to separate strings</translatorcomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Fixed Wing,Multi-Rotor,VTOL,Rover,Sub,Mavlink Generic</source>
-      <translation>Fixed Wing,Multi-Rotor,VTOL,Rover,Sub,Mavlink Generic</translation>
+      <translation>固定翼,多旋翼,VTOL,车辆,潜艇,Mavlink 通用</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[offlineEditingCruiseSpeed].shortDesc, </extracomment>
@@ -438,7 +438,7 @@
       <translatorcomment>Only use english comma &apos;,&apos; to separate strings</translatorcomment>
       <location filename="../src/Settings/App.SettingsGroup.json"/>
       <source>Disabled,Error,Warning,FixMe,Info,Debug,Log,Trace</source>
-      <translation>Disabled,Error,Warning,FixMe,Info,Debug,Log,Trace</translation>
+      <translation>禁用,错误,警告,FixMe,信息,调试,日志,跟踪</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[useChecklist].shortDesc, </extracomment>
@@ -681,7 +681,7 @@
       <translatorcomment>Only use english comma &apos;,&apos; to separate strings</translatorcomment>
       <location filename="../src/Settings/FirmwareUpgrade.SettingsGroup.json"/>
       <source>ChibiOS,NuttX</source>
-      <translation>ChibiOS，NuttX</translation>
+      <translation>ChibiOS,NuttX</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[apmVehicleType].enumStrings, </extracomment>
@@ -769,7 +769,7 @@
       <extracomment>.QGC.MetaData.Facts[surveyInAccuracyLimit].longDesc, </extracomment>
       <location filename="../src/Settings/RTK.SettingsGroup.json"/>
       <source>The minimum accuracy value that Survey-In must achieve before it can complete.</source>
-      <translation>Survey-In 完成前必须达到的最小精度值。</translation>
+      <translation>自测量 完成前必须达到的最小精度值。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[surveyInMinObservationDuration].shortDesc, </extracomment>
@@ -793,7 +793,7 @@
       <extracomment>.QGC.MetaData.Facts[useFixedBasePosition].longDesc, </extracomment>
       <location filename="../src/Settings/RTK.SettingsGroup.json"/>
       <source>Specify the values for the RTK base position without having to do a survey in.</source>
-      <translation>无需执行 Survey-In 即可指定 RTK 基准位置的值。</translation>
+      <translation>无需执行 自测量 即可指定 RTK 基准位置的值。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[fixedBasePositionLatitude].shortDesc, </extracomment>
@@ -1282,7 +1282,7 @@
       <translatorcomment>Only use english comma &apos;,&apos; to separate strings</translatorcomment>
       <location filename="../src/Settings/Video.SettingsGroup.json"/>
       <source>mkv,mov,mp4</source>
-      <translation>mkv，mov，mp4</translation>
+      <translation>mkv,mov,mp4</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[maxVideoSize].shortDesc, </extracomment>
@@ -1939,7 +1939,7 @@
       <translatorcomment>Only use english comma &apos;,&apos; to separate strings</translatorcomment>
       <location filename="../src/Vehicle/FactGroups/BatteryFact.json"/>
       <source>n/a,All Flight Systems,Propulsion,Avionics,Payload</source>
-      <translation>n/a,All Flight Systems,Propulsion,Avionics,Payload</translation>
+      <translation>n/a,所有飞行系统,动力系统,航电系统,载荷</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[batteryType].shortDesc, </extracomment>
@@ -2007,7 +2007,7 @@
       <translatorcomment>Only use english comma &apos;,&apos; to separate strings</translatorcomment>
       <location filename="../src/Vehicle/FactGroups/BatteryFact.json"/>
       <source>n/a,Ok,Low,Critical,Emergency,Failed,Unhealthy,Charging</source>
-      <translation>n/a,Ok,Low,Critical,Emergency,Failed,Unhealthy,Charging</translation>
+      <translation>n/a,正常,低,严重,紧急,失败,不健康,充电中</translation>
     </message>
   </context>
   <context>
@@ -2826,19 +2826,19 @@
       <extracomment>.QGC.MetaData.Facts[currentAccuracy].shortDesc, </extracomment>
       <location filename="../src/GPS/GPSRTKFact.json"/>
       <source>Current Survey-In Accuracy</source>
-      <translation>当前Survey-In精度</translation>
+      <translation>当前自测量精度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[currentLatitude].shortDesc, </extracomment>
       <location filename="../src/GPS/GPSRTKFact.json"/>
       <source>Current Survey-In Latitude</source>
-      <translation>当前Survey-In纬度</translation>
+      <translation>当前自测量纬度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[currentLongitude].shortDesc, </extracomment>
       <location filename="../src/GPS/GPSRTKFact.json"/>
       <source>Current Survey-In Longitude</source>
-      <translation>当前测量输入经度</translation>
+      <translation>当前自测量经度</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[currentAltitude].shortDesc, </extracomment>
@@ -2977,7 +2977,7 @@
       <extracomment>.QGC.MetaData.Facts[height].shortDesc, </extracomment>
       <location filename="../src/AutoPilotPlugins/APM/APMFollowComponent.FactMetaData.json"/>
       <source>Vertical distance from Launch (home) position to vehicle</source>
-      <translation>从起飞(Home)位置到飞行器的垂直距离</translation>
+      <translation>从起飞(起飞点)位置到飞行器的垂直距离</translation>
     </message>
   </context>
   <context>
@@ -3160,7 +3160,7 @@
       <extracomment>.mavCmdInfo[MAV_CMD_NAV_TAKEOFF].param4.label, </extracomment>
       <location filename="../src/MissionManager/MavCmdInfoMultiRotor.json"/>
       <source>Yaw</source>
-      <translation>Yaw</translation>
+      <translation>偏航</translation>
     </message>
   </context>
   <context>
@@ -3235,7 +3235,7 @@
       <extracomment>.mavCmdInfo[MAV_CMD_NAV_TAKEOFF].param1.label, </extracomment>
       <location filename="../src/MissionManager/MavCmdInfoFixedWing.json"/>
       <source>Pitch</source>
-      <translation>Pitch</translation>
+      <translation>俯仰</translation>
     </message>
   </context>
   <context>
@@ -3292,13 +3292,13 @@
       <extracomment>.QGC.MetaData.Facts[LandingDistance].shortDesc, </extracomment>
       <location filename="../src/MissionManager/FWLandingPattern.FactMetaData.json"/>
       <source>Distance between approach and land points.</source>
-      <translation>接近点与降落点之间的距离。</translation>
+      <translation>进近点与降落点之间的距离。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[LandingHeading].shortDesc, </extracomment>
       <location filename="../src/MissionManager/FWLandingPattern.FactMetaData.json"/>
       <source>Heading from approach to land point.</source>
-      <translation>从接近点到降落点的航向。</translation>
+      <translation>从进近点到降落点的航向。</translation>
     </message>
     <message>
       <extracomment>.QGC.MetaData.Facts[FinalApproachAltitude].shortDesc, </extracomment>
@@ -3524,7 +3524,7 @@
       <translatorcomment>Only use english comma &apos;,&apos; to separate strings</translatorcomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Direction of next waypoint,Any direction</source>
-      <translation>Direction of next waypoint,Any direction</translation>
+      <translation>下一航点方向,任意方向</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_NAV_LOITER_TURNS].param4.label, .mavCmdInfo[MAV_CMD_NAV_LOITER_TIME].param4.label, .mavCmdInfo[MAV_CMD_NAV_LOITER_TO_ALT].param4.label, </extracomment>
@@ -3549,20 +3549,20 @@
       <extracomment>.mavCmdInfo[MAV_CMD_NAV_LOITER_TIME].description, </extracomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Travel to a position and Loiter around the specified position for an amount of time.</source>
-      <translation>Travel to a position and Loiter around the specified position for an amount of time.</translation>
+      <translation>飞往某位置并在指定位置周围悬停一段时间。</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_NAV_LOITER_TIME].param1.label, </extracomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Loiter Time</source>
-      <translation>Loiter Time</translation>
+      <translation>悬停时间</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_NAV_LOITER_TIME].param2.enumStrings, </extracomment>
       <translatorcomment>Only use english comma &apos;,&apos; to separate strings</translatorcomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Direction of next waypoint,Current direction</source>
-      <translation>Direction of next waypoint,Current direction</translation>
+      <translation>下一航点方向,当前方向</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_NAV_RETURN_TO_LAUNCH].friendlyName, </extracomment>
@@ -3598,14 +3598,14 @@
       <extracomment>.mavCmdInfo[MAV_CMD_NAV_LAND].param2.label, </extracomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Precision Land</source>
-      <translation>Precision Land</translation>
+      <translation>精准降落</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_NAV_LAND].param2.enumStrings, </extracomment>
       <translatorcomment>Only use english comma &apos;,&apos; to separate strings</translatorcomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Disabled,Opportunistic,Required</source>
-      <translation>Disabled,Opportunistic,Required</translation>
+      <translation>禁用,机会性,必需</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_NAV_TAKEOFF].friendlyName, </extracomment>
@@ -3746,7 +3746,7 @@
       <extracomment>.mavCmdInfo[MAV_CMD_NAV_SPLINE_WAYPOINT].friendlyName, </extracomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Spline waypoint</source>
-      <translation>样条航路点</translation>
+      <translation>样条航点</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_NAV_SPLINE_WAYPOINT].description, </extracomment>
@@ -3776,14 +3776,14 @@
       <extracomment>.mavCmdInfo[MAV_CMD_NAV_VTOL_TAKEOFF].param2.label, </extracomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Transition Heading</source>
-      <translation>Transition Heading</translation>
+      <translation>过渡航向</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_NAV_VTOL_TAKEOFF].param2.enumStrings, </extracomment>
       <translatorcomment>Only use english comma &apos;,&apos; to separate strings</translatorcomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Default,Next waypoint,Takeoff,Specified,Any</source>
-      <translation>Default,Next waypoint,Takeoff,Specified,Any</translation>
+      <translation>默认,下一航点,起飞,指定,任意</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_NAV_VTOL_LAND].friendlyName, </extracomment>
@@ -3801,7 +3801,7 @@
       <extracomment>.mavCmdInfo[MAV_CMD_NAV_VTOL_LAND].param3.label, </extracomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Approach Alt</source>
-      <translation>Approach Alt</translation>
+      <translation>进近高度</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_NAV_GUIDED_ENABLE].friendlyName, </extracomment>
@@ -3922,13 +3922,13 @@
       <extracomment>.mavCmdInfo[MAV_CMD_CONDITION_YAW].description, </extracomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Delay the mission until the specified heading is reached.</source>
-      <translation>Delay the mission until the specified heading is reached.</translation>
+      <translation>延迟任务直到达到指定航向。</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_CONDITION_YAW].param1.label, </extracomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Heading</source>
-      <translation>Heading</translation>
+      <translation>航向</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_CONDITION_YAW].param3.label, .mavCmdInfo[MAV_CMD_DO_SET_REVERSE].param1.label, </extracomment>
@@ -4020,7 +4020,7 @@
       <extracomment>.mavCmdInfo[MAV_CMD_DO_CHANGE_SPEED].description, </extracomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Change speed and/or throttle set points.</source>
-      <translation>更改速度和/或节点设定。</translation>
+      <translation>更改速度和/或油门设定。</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_DO_CHANGE_SPEED].param1.label, </extracomment>
@@ -4208,7 +4208,7 @@
       <extracomment>.mavCmdInfo[MAV_CMD_DO_RALLY_LAND].friendlyName, </extracomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Rally land</source>
-      <translation>集合地</translation>
+      <translation>集结点降落</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_DO_GO_AROUND].friendlyName, </extracomment>
@@ -4923,7 +4923,7 @@
       <extracomment>.mavCmdInfo[MAV_CMD_CONTROL_HIGH_LATENCY].friendlyName, </extracomment>
       <location filename="../src/MissionManager/MavCmdInfoCommon.json"/>
       <source>Control high latency link</source>
-      <translation>Control high latency link</translation>
+      <translation>控制高延迟链路</translation>
     </message>
     <message>
       <extracomment>.mavCmdInfo[MAV_CMD_PANORAMA_CREATE].friendlyName, </extracomment>
